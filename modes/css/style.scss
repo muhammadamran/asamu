@@ -128,7 +128,7 @@ a:focus {
 .header_section {
   .header_top {
     padding: 15px 0;
-    background-color: #150757;
+    background-color: $primary2;
 
     .contact_nav {
       display: flex;
@@ -161,7 +161,7 @@ a:focus {
   }
 
   .header_bottom {
-    background: linear-gradient(120deg, $white 25%, #aeb0ff 25%);
+    background: linear-gradient(120deg, $white 25%, $primary1 25%);
     padding: 15px 0;
 
     .container-fluid {

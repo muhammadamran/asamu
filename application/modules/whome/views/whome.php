@@ -1,7 +1,7 @@
 <div class="hero_area">
    <section class="slider_section ">
       <div class="slider_bg_box">
-         <img src="<?= base_url('modes/images/asamu/banner3.jpg'); ?>" alt="">
+         <img src="<?= base_url('modes/'); ?>images/slider-bg.jpg" alt="">
       </div>
       <div id="customCarousel1" class="carousel slide" data-ride="carousel">
          <div class="carousel-inner">
@@ -11,11 +11,11 @@
                      <div class="col-md-8 col-lg-7 mx-auto">
                         <div class="detail-box">
                            <h1>
-                              WE ARE<br>
-                              YOUR TRUSTED LOGISTIC PARTNER
+                              Professional<br>
+                              Industrial Services
                            </h1>
                            <p>
-                              We are digital logistic experts who will commit to support your supply chain needs. Our best solution will be provided by our expert team and our digital platform.
+                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum magnam, voluptates distinctio, officia architecto tenetur debitis hic aspernatur libero commodi atque fugit adipisci, blanditiis quidem dolorum odit voluptas? Voluptate, eveniet?
                            </p>
                            <div class="btn-box">
                               <a href="" class="btn1">
@@ -78,6 +78,7 @@
             <li data-target="#customCarousel1" data-slide-to="2">03</li>
          </ol>
       </div>
+
    </section>
 </div>
 <section class="service_section layout_padding">
@@ -85,10 +86,10 @@
       <div class="container ">
          <div class="heading_container heading_center">
             <h2>
-               Our <span style="color:  #aeb0ff;">Services</span>
+               Our <span>Services</span>
             </h2>
             <p>
-               We provide best in class fully provide visibility, real time updates and tracking to provide up to date information to customer.
+               There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
             </p>
          </div>
          <div class="row">
@@ -99,7 +100,7 @@
                   </div>
                   <div class="detail-box">
                      <h5>
-                        Air Logistic
+                        Oil & Gas Production
                      </h5>
                      <p>
                         fact that a reader will be distracted by the readable content of a page when looking at its layout.
@@ -120,7 +121,7 @@
                   </div>
                   <div class="detail-box">
                      <h5>
-                        Sea Logistic
+                        Mechanical Engineering
                      </h5>
                      <p>
                         fact that a reader will be distracted by the readable content of a page when looking at its layout.
@@ -141,7 +142,7 @@
                   </div>
                   <div class="detail-box">
                      <h5>
-                        Customs Clearance
+                        Chemical Research
                      </h5>
                      <p>
                         fact that a reader will be distracted by the readable content of a page when looking at its layout.
@@ -162,7 +163,7 @@
                   </div>
                   <div class="detail-box">
                      <h5>
-                        Overland - Trucking
+                        Power & Energy
                      </h5>
                      <p>
                         fact that a reader will be distracted by the readable content of a page when looking at its layout.
@@ -183,7 +184,7 @@
                   </div>
                   <div class="detail-box">
                      <h5>
-                        Warehousing Service
+                        Civil Engineering
                      </h5>
                      <p>
                         fact that a reader will be distracted by the readable content of a page when looking at its layout.
@@ -204,7 +205,7 @@
                   </div>
                   <div class="detail-box">
                      <h5>
-                        Permit and License
+                        Metal Industry
                      </h5>
                      <p>
                         fact that a reader will be distracted by the readable content of a page when looking at its layout.
@@ -238,10 +239,10 @@
                   </h2>
                </div>
                <p>
-                  We are a company engaged in Multimode Transportation Services and other transportation support activities which were established in February 2020 supported by by competent and experienced staff in their respective fields.
-               </p>
-               <p>
-                  Strong business partner, highly focused with your target. We will represent your business in the highest degree. We will work seamlessly with your teams to deliver the highest quality of service to you and your customers.
+                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                  in some form, by injected humour, or randomised words which don't look even slightly believable. If you
+                  are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
+                  the middle of text. All
                </p>
                <a href="">
                   Read More
@@ -259,15 +260,51 @@
       <div class="container">
          <div class="box_container">
             <div class="row">
-               <div class="col-sm-12 col-md-12">
+               <div class="col-sm-6 col-md-3">
                   <div class="box">
                      <div class="num-box">
                         <span id="countDay" class="count">
-                           <i>Strong business partner, highly focused with your target</i>
+                           3850
                         </span>
                      </div>
                      <h5>
-                        Asamu Solusi Mandiri
+                        Hours Of Work
+                     </h5>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-md-3">
+                  <div class="box">
+                     <div class="num-box">
+                        <span id="countSec" class="count">
+                           219
+                        </span>
+                     </div>
+                     <h5>
+                        Projects Completed
+                     </h5>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-md-3">
+                  <div class="box">
+                     <div class="num-box">
+                        <span id="countMin" class="count">
+                           16
+                        </span>
+                     </div>
+                     <h5>
+                        Industries Served
+                     </h5>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-md-3">
+                  <div class="box">
+                     <div class="num-box">
+                        <span id="countHour" class="count">
+                           198
+                        </span>
+                     </div>
+                     <h5>
+                        Satisfied Clients
                      </h5>
                   </div>
                </div>
@@ -280,7 +317,7 @@
    <div class="container">
       <div class="heading_container">
          <h2>
-            Our <span style="color:  #aeb0ff;">Clients</span>
+            What Says Our <span>Clients</span>
          </h2>
       </div>
       <div class="carousel-wrap ">
@@ -289,16 +326,23 @@
                <div class="box">
                   <div class="client_id">
                      <div class="img-box">
-                        <img src="<?= base_url('modes/images/asamu/client.png'); ?>" alt="" class="box-img">
+                        <img src="<?= base_url('modes/images/c1.jpg'); ?>" alt="" class="box-img">
                      </div>
                      <h5>
-                        Mitsubishi Motor
+                        Mike Trope
                      </h5>
                   </div>
                   <div class="detail-box">
                      <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                      </p>
+                     <h6 class="rating">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                     </h6>
                   </div>
                </div>
             </div>
@@ -306,16 +350,23 @@
                <div class="box">
                   <div class="client_id">
                      <div class="img-box">
-                        <img src="<?= base_url('modes/images/asamu/client.png'); ?>" alt="" width="100px" class="box-img">
+                        <img src="<?= base_url('modes/images/c2.jpg'); ?>" alt="" class="box-img">
                      </div>
                      <h5>
-                        Mitsubishi Motor
+                        Jonas Bell
                      </h5>
                   </div>
                   <div class="detail-box">
                      <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                      </p>
+                     <h6 class="rating">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                     </h6>
                   </div>
                </div>
             </div>
@@ -329,7 +380,7 @@
          <div class="col-lg-4 col-md-5 offset-md-1">
             <div class="heading_container">
                <h2>
-                  Contact <span style="color:  #aeb0ff;">Us</span>
+                  Contact <span>Us</span>
                </h2>
             </div>
          </div>
