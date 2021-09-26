@@ -1,5 +1,9 @@
 ###################
-Bank Sampah 1.0
+Asamu Solusi v2.0 by Hellos-ID http://hellos-id.com/
+###################
+
+###################
+https://asamusolusi.com/
 ###################
 
 CodeIgniter is an Application Development Framework - a toolkit - for people
