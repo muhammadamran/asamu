@@ -1,86 +1,55 @@
-<div class="hero_area">
-   <section class="slider_section ">
-      <div class="slider_bg_box">
-         <img src="<?= base_url('modes/'); ?>images/slider-bg.jpg" alt="">
-      </div>
-      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-         <div class="carousel-inner">
-            <div class="carousel-item active">
-               <div class="container ">
-                  <div class="row">
-                     <div class="col-md-8 col-lg-7 mx-auto">
-                        <div class="detail-box">
-                           <h1>
-                              Professional<br>
-                              Industrial Services
-                           </h1>
-                           <p>
-                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum magnam, voluptates distinctio, officia architecto tenetur debitis hic aspernatur libero commodi atque fugit adipisci, blanditiis quidem dolorum odit voluptas? Voluptate, eveniet?
-                           </p>
-                           <div class="btn-box">
-                              <a href="" class="btn1">
-                                 Read More
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="carousel-item">
-               <div class="container ">
-                  <div class="row">
-                     <div class="col-md-8 col-lg-7 mx-auto">
-                        <div class="detail-box">
-                           <h1>
-                              Professional<br>
-                              Industrial Services
-                           </h1>
-                           <p>
-                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum magnam, voluptates distinctio, officia architecto tenetur debitis hic aspernatur libero commodi atque fugit adipisci, blanditiis quidem dolorum odit voluptas? Voluptate, eveniet?
-                           </p>
-                           <div class="btn-box">
-                              <a href="" class="btn1">
-                                 Read More
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="carousel-item">
-               <div class="container ">
-                  <div class="row">
-                     <div class="col-md-8 col-lg-7 mx-auto">
-                        <div class="detail-box">
-                           <h1>
-                              Professional<br>
-                              Industrial Services
-                           </h1>
-                           <p>
-                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum magnam, voluptates distinctio, officia architecto tenetur debitis hic aspernatur libero commodi atque fugit adipisci, blanditiis quidem dolorum odit voluptas? Voluptate, eveniet?
-                           </p>
-                           <div class="btn-box">
-                              <a href="" class="btn1">
-                                 Read More
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
+<!-- Slider -->
+<div id="carousel" class="carousel slide" data-ride="carousel">
+   <ol class="carousel-indicators">
+      <li data-target="#carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel" data-slide-to="1" class=""></li>
+      <li data-target="#carousel" data-slide-to="2" class=""></li>
+      <li data-target="#carousel" data-slide-to="3" class=""></li>
+   </ol>
+   <div class="carousel-inner">
+      <div class="carousel-item active">
+         <img src="<?= base_url('modes/images/asamu/banner/banner3.jpg'); ?>" alt="Carousel Image">
+         <div class="carousel-caption">
+            <p class="animated fadeInRight">01</p>
+            <h1 class="animated fadeInLeft">Isi 01</h1>
+            <a class="btn animated fadeInUp" href="https://htmlcodex.com/construction-company-website-template">Get Started</a>
          </div>
-         <ol class="carousel-indicators">
-            <li data-target="#customCarousel1" data-slide-to="0" class="active">01</li>
-            <li data-target="#customCarousel1" data-slide-to="1">02</li>
-            <li data-target="#customCarousel1" data-slide-to="2">03</li>
-         </ol>
       </div>
-
-   </section>
+      <div class="carousel-item">
+         <img src="<?= base_url('modes/images/asamu/banner/banner6.jpg'); ?>" alt="Carousel Image">
+         <div class="carousel-caption">
+            <p class="animated fadeInRight">02</p>
+            <h1 class="animated fadeInLeft">Isi 02</h1>
+            <a class="btn animated fadeInUp" href="https://htmlcodex.com/construction-company-website-template">Get Started</a>
+         </div>
+      </div>
+      <div class="carousel-item">
+         <img src="<?= base_url('modes/images/asamu/banner/banner7.jpg'); ?>" alt="Carousel Image">
+         <div class="carousel-caption">
+            <p class="animated fadeInRight">03</p>
+            <h1 class="animated fadeInLeft">Isi 03</h1>
+            <a class="btn animated fadeInUp" href="https://htmlcodex.com/construction-company-website-template">Get Started</a>
+         </div>
+      </div>
+      <div class="carousel-item">
+         <img src="<?= base_url('modes/images/asamu/banner/banner1.jpg'); ?>" alt="Carousel Image">
+         <div class="carousel-caption">
+            <p class="animated fadeInRight">04</p>
+            <h1 class="animated fadeInLeft">Isi 04</h1>
+            <a class="btn animated fadeInUp" href="https://htmlcodex.com/construction-company-website-template">Get Started</a>
+         </div>
+      </div>
+   </div>
+   <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+   </a>
+   <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+   </a>
 </div>
+<!-- End Slider -->
 <section class="service_section layout_padding">
    <div class="service_container">
       <div class="container ">
@@ -159,6 +128,27 @@
             <div class="col-sm-6 col-lg-4 ">
                <div class="box ">
                   <div class="img-box">
+                     <img src="<?= base_url('modes/images/s3.png'); ?>" alt="">
+                  </div>
+                  <div class="detail-box">
+                     <h5>
+                        Chemical Research
+                     </h5>
+                     <p>
+                        fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                        The
+                        point of using
+                     </p>
+                     <a href="">
+                        Read More
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 ">
+               <div class="box ">
+                  <div class="img-box">
                      <img src="<?= base_url('modes/images/s4.png'); ?>" alt="">
                   </div>
                   <div class="detail-box">
@@ -198,37 +188,16 @@
                   </div>
                </div>
             </div>
-            <div class="col-sm-6 col-lg-4 ">
-               <div class="box ">
-                  <div class="img-box">
-                     <img src="<?= base_url('modes/images/s6.png'); ?>" alt="">
-                  </div>
-                  <div class="detail-box">
-                     <h5>
-                        Metal Industry
-                     </h5>
-                     <p>
-                        fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                        The
-                        point of using
-                     </p>
-                     <a href="">
-                        Read More
-                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                     </a>
-                  </div>
-               </div>
-            </div>
          </div>
       </div>
    </div>
 </section>
 <section class="about_section layout_padding-bottom">
-   <div class="container  ">
+   <div class="container">
       <div class="row">
          <div class="col-md-5 ">
-            <div class="img-box">
-               <img src="<?= base_url('modes/images/about-img.jpg'); ?>" alt="">
+            <div class="img-box aos-animate" data-aos="zoom-out" data-aos-delay="300">
+               <img src="<?= base_url('modes/images/about-img.jpg'); ?>" alt="" style="max-height: 435px;">
             </div>
          </div>
          <div class="col-md-7">
@@ -263,7 +232,7 @@
                <div class="col-sm-6 col-md-3">
                   <div class="box">
                      <div class="num-box">
-                        <span id="countDay" class="count">
+                        <span id="countDay" class="count" data-toggle="counter-up">
                            3850
                         </span>
                      </div>
@@ -313,63 +282,41 @@
       </div>
    </div>
 </section>
-<section class="client_section layout_padding">
+<section id="clients" class="section-bg">
    <div class="container">
-      <div class="heading_container">
+      <div class="heading_container heading_center">
          <h2>
-            What Says Our <span>Clients</span>
+            Our <span>Services</span>
          </h2>
+         <p>
+            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+         </p>
       </div>
-      <div class="carousel-wrap ">
-         <div class="owl-carousel client_owl-carousel">
-            <div class="item">
-               <div class="box">
-                  <div class="client_id">
-                     <div class="img-box">
-                        <img src="<?= base_url('modes/images/c1.jpg'); ?>" alt="" class="box-img">
-                     </div>
-                     <h5>
-                        Mike Trope
-                     </h5>
-                  </div>
-                  <div class="detail-box">
-                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                     </p>
-                     <h6 class="rating">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                     </h6>
-                  </div>
-               </div>
-            </div>
-            <div class="item">
-               <div class="box">
-                  <div class="client_id">
-                     <div class="img-box">
-                        <img src="<?= base_url('modes/images/c2.jpg'); ?>" alt="" class="box-img">
-                     </div>
-                     <h5>
-                        Jonas Bell
-                     </h5>
-                  </div>
-                  <div class="detail-box">
-                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                     </p>
-                     <h6 class="rating">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                     </h6>
-                  </div>
-               </div>
-            </div>
+      <br>
+      <div class="row no-gutters clients-wrap clearfix wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+         <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460149/abof.png" class="img-fluid" alt=""> </div>
+         </div>
+         <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460224/cropped-cropped-20170720-lucuLogo-squ2-e1500543540803.png" class="img-fluid" alt=""> </div>
+         </div>
+         <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460269/104840a62d46c05d285762857fecb61a.png" class="img-fluid" alt=""> </div>
+         </div>
+         <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460358/client-4.png" class="img-fluid" alt=""> </div>
+         </div>
+         <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460379/client-5.png" class="img-fluid" alt=""> </div>
+         </div>
+         <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460398/client-6.png" class="img-fluid" alt=""> </div>
+         </div>
+         <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460418/client-7.png" class="img-fluid" alt=""> </div>
+         </div>
+         <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460418/client-7.png" class="img-fluid" alt=""> </div>
          </div>
       </div>
    </div>

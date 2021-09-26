@@ -357,7 +357,7 @@ a:focus {
 .slider_section .detail-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #40a798;
+  background-color: #150757;
   color: #ffffff;
   border-radius: 0;
   -webkit-transition: all 0.3s;
@@ -368,20 +368,20 @@ a:focus {
 
 .slider_section .detail-box a:hover {
   -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
+  transform: translateY(-3px);
   -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 6px 3px 1px 0px #058ccc;
 }
 
 .slider_section .carousel-indicators {
   position: unset;
   margin: 0;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 45px;
 }
 
@@ -419,11 +419,11 @@ a:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 55px;
   border-radius: 5px;
 }
@@ -433,11 +433,11 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 90px;
   min-width: 90px;
   height: 90px;
@@ -453,14 +453,27 @@ a:focus {
   z-index: 3;
 }
 
-.service_section .box .img-box::before, .service_section .box .img-box::after {
+.service_section .box .img-box::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #40a798;
+  background-color: #150757;
+  z-index: 2;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.service_section .box .img-box::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #058ccc;
   z-index: 2;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -468,12 +481,12 @@ a:focus {
 
 .service_section .box .img-box::before {
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .service_section .box .img-box::after {
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .service_section .box .detail-box {
@@ -482,23 +495,34 @@ a:focus {
   text-align: center;
 }
 
+.service_section .box .detail-box:hover {
+  /* background-color: #000000; */
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.74), rgba(76, 119, 224, 0.75)), url(https://dsbanking.com/wp-content/uploads/2017/10/TRAINING-INTEGRATED-LOGISTIC-AND-PROCUREMENT-MANAGEMENT-SYSTEM.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 75px 20px 20px 20px;
+  text-align: center;
+  color: #fff;
+}
+
 .service_section .box .detail-box h5 {
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .service_section .box .detail-box a {
-  color: #476269;
+  color: #058ccc;
   font-weight: 600;
 }
 
 .service_section .box .detail-box a:hover {
-  color: #40a798;
+  color: #fff;
 }
 
 .service_section .box:hover .img-box::before {
   -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .about_section .row {
@@ -523,9 +547,9 @@ a:focus {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: calc(100% - 45px);
+  width: calc(105% - 45px);
   height: 450px;
-  background-color: #476269;
+  background-color: #058ccc;
   z-index: 1;
   opacity: 0.45;
 }
@@ -538,7 +562,7 @@ a:focus {
 .about_section .detail-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #40a798;
+  background-color: #150757;
   color: #ffffff;
   border-radius: 0px;
   -webkit-transition: all 0.3s;
@@ -549,9 +573,9 @@ a:focus {
 
 .about_section .detail-box a:hover {
   -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
+  transform: translateY(-3px);
   -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 6px 3px 1px 0px #058ccc;
 }
 
 /* why us section */
@@ -812,9 +836,9 @@ a:focus {
   text-transform: uppercase;
   display: inline-block;
   padding: 12px 55px;
-  background-color: #40a798;
+  background-color: #150757;
   color: #ffffff;
-  border-radius: 5px;
+  border-radius: 0px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: none;
@@ -822,9 +846,9 @@ a:focus {
 
 .contact_section .form_container button:hover {
   -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
+  transform: translateY(-3px);
   -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 6px 3px 1px 0px #058ccc;
 }
 
 .contact_section .map_container {
@@ -851,7 +875,7 @@ a:focus {
 }
 
 .info_section {
-  background-color: #476269;
+  background-color: #058ccc;
   color: #ffffff;
   padding: 45px 0 15px 0;
 }
@@ -974,7 +998,7 @@ a:focus {
   text-align: center;
   display: inline-block;
   padding: 10px 55px;
-  background-color: #40a798;
+  background-color: #150757;
   color: #ffffff;
   border-radius: 0;
   -webkit-transition: all 0.3s;
@@ -985,9 +1009,10 @@ a:focus {
 
 .info_section form button:hover {
   -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
+  transform: translateY(-3px);
   -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15); */
+  box-shadow: 6px 3px 1px 0px #105e83;
 }
 
 /* footer section*/
@@ -1007,3 +1032,162 @@ a:focus {
   color: inherit;
 }
 /*# sourceMappingURL=style.css.map */
+
+/*******************************/
+/******** Carousel CSS *********/
+/*******************************/
+.carousel {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 170px);
+  min-height: 400px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.carousel .carousel-inner,
+.carousel .carousel-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel .carousel-item::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .3);
+  z-index: 1;
+}
+
+.carousel .carousel-caption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100vh - 170px);
+  min-height: 400px;
+}
+
+.carousel .carousel-caption p {
+  color: #ffffff;
+  font-size: 30px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.carousel .carousel-caption h1 {
+  color: #ffffff;
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+.carousel .carousel-caption .btn {
+  padding: 15px 35px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 0;
+  transition: .3s;
+}
+
+.carousel .carousel-caption .btn:hover {
+  color: #fff;
+  background: #150757;
+  border-color: #150757;
+}
+
+@media (max-width: 767.98px) {
+  .carousel .carousel-caption h1 {
+      font-size: 40px;
+      font-weight: 700;
+  }
+  
+  .carousel .carousel-caption p {
+      font-size: 20px;
+  }
+  
+  .carousel .carousel-caption .btn {
+      padding: 12px 30px;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .carousel .carousel-caption h1 {
+      font-size: 30px;
+      font-weight: 500;
+  }
+  
+  .carousel .carousel-caption p {
+      font-size: 16px;
+  }
+  
+  .carousel .carousel-caption .btn {
+      padding: 10px 25px;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0;
+  }
+}
+
+.carousel .animated {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+
+/* OUR CLIENTS */
+#clients {
+  padding: 60px 0
+}
+
+#clients .clients-wrap {
+  border-top: 1px solid #d6eaff;
+  border-left: 1px solid #d6eaff;
+  margin-bottom: 30px
+}
+
+#clients .client-logo {
+  padding: 64px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-right: 1px solid #d6eaff;
+  border-bottom: 1px solid #d6eaff;
+  overflow: hidden;
+  background: #fff;
+  height: 160px
+}
+
+#clients img {
+  transition: all 0.4s ease-in-out
+}

@@ -76,34 +76,76 @@
 <header id="header" class="d-flex align-items-center">
    <div class="container d-flex justify-content-between">
       <div id="logo">
-         <!-- Uncomment below if you prefer to use an image logo -->
          <a href="index.html"><img src="<?= base_url('modes/images/asamu/asamu-logo2.png'); ?>" alt=""></a>
       </div>
       <nav id="navbar" class="navbar">
          <ul>
             <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-            <li><a class="nav-link scrollto" href="#about">About</a></li>
-            <li><a class="nav-link scrollto" href="#services">Services</a></li>
-            <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-            <li><a class="nav-link scrollto" href="#team">Team</a></li>
-            <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <li class="dropdown"><a href="#"><span>Company</span> <i class="bi bi-chevron-down"></i></a>
                <ul>
                   <li><a href="#">Drop Down 1</a></li>
-                  <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                     <ul>
-                        <li><a href="#">Deep Drop Down 1</a></li>
-                        <li><a href="#">Deep Drop Down 2</a></li>
-                        <li><a href="#">Deep Drop Down 3</a></li>
-                        <li><a href="#">Deep Drop Down 4</a></li>
-                        <li><a href="#">Deep Drop Down 5</a></li>
-                     </ul>
-                  </li>
                   <li><a href="#">Drop Down 2</a></li>
                   <li><a href="#">Drop Down 3</a></li>
                   <li><a href="#">Drop Down 4</a></li>
                </ul>
             </li>
-            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+               <ul>
+                  <li><a href="#">Drop Down 1</a></li>
+                  <li><a href="#">Drop Down 2</a></li>
+                  <li><a href="#">Drop Down 3</a></li>
+                  <li><a href="#">Drop Down 4</a></li>
+               </ul>
+            </li>
+            <li class="dropdown"><a href="#"><span>Our Tech</span> <i class="bi bi-chevron-down"></i></a>
+               <ul>
+                  <li><a href="#">Drop Down 1</a></li>
+                  <li><a href="#">Drop Down 2</a></li>
+                  <li><a href="#">Drop Down 3</a></li>
+                  <li><a href="#">Drop Down 4</a></li>
+               </ul>
+            </li>
+            <li class="dropdown"><a href="#"><span>Team</span> <i class="bi bi-chevron-down"></i></a>
+               <ul>
+                  <li><a href="#">Drop Down 1</a></li>
+                  <li><a href="#">Drop Down 2</a></li>
+                  <li><a href="#">Drop Down 3</a></li>
+                  <li><a href="#">Drop Down 4</a></li>
+               </ul>
+            </li>
+            <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+            <li class="dropdown"><a href="#"><span><img src="https://lipis.github.io/flag-icon-css/flags/4x3/gb.svg" style="width: 20px;margin-bottom: 3px;" alt="" srcset=""> EN</span> <i class="fa fa-globe"></i></a>
+               <ul>
+                  <li><a href="#"><img src="https://lipis.github.io/flag-icon-css/flags/4x3/id.svg" style="width: 20px;margin-bottom: -2px;" alt="" srcset="">
+                        <font style="color: #fff;margin-right: 110px;"> INA</font>
+                     </a></li>
+               </ul>
+            </li>
+            <li><a class="nav-link scrollto" href="#contact"><i class="fa fa-user"></i> &nbsp; Login</a></li>
+            <style>
+               .get-started {
+                  color: #ffffff;
+                  font-weight: 500;
+                  background-color: #150757;
+                  padding: 7px 12px;
+                  box-shadow: 0px 4px 4px rgb(0 0 0 / 30%);
+                  border: 0;
+                  border-radius: 10px 0 10px 0;
+                  border-color: #150757;
+               }
+
+               .get-started:hover {
+                  color: #ffffff;
+                  font-weight: 500;
+                  background-color: #150757;
+                  padding: 7px 12px;
+                  box-shadow: 4px 3px 0px rgb(24 29 44);
+                  border: 0;
+                  border-radius: 10px 0 10px 0;
+                  border-color: #150757;
+               }
+            </style>
+            <li><a class="nav-link scrollto" href="#contact"><button class="get-started">Get Started</button></a></li>
          </ul>
          <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>

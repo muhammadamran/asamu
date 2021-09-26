@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .back-to-top:hover {
-  background: #71dfbe;
+  background: #08597f;
   color: #fff;
 }
 
@@ -324,7 +324,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: #fff;
+  background-color: #058ccc;
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -332,11 +332,11 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-mobile a {
   padding: 10px 20px;
   font-size: 15px;
-  color: #0c2e8a;
+  color: #fff;
 }
 
 .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
-  color: #50d8af;
+  color: #150757;
 }
 
 .navbar-mobile .getstarted {
@@ -351,7 +351,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 99;
   opacity: 1;
   visibility: visible;
-  background: #fff;
+  background: #0584c1;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 }
 
@@ -368,7 +368,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
-  color: #50d8af;
+  color: #150757;
 }
 
 .navbar-mobile .dropdown > .dropdown-active {
