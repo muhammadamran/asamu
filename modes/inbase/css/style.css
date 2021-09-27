@@ -126,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 80px;
   transition: all 0.5s;
   z-index: 997;
-  background: linear-gradient(120deg, #ffffff 25%, #058ccc 25%);
+  background: linear-gradient(120deg, #ffffff 25%, #aeb0ff  25%);
   box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
 }
 
@@ -223,7 +223,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background: #058ccc;
+  background: #aeb0ff ;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
 }
@@ -336,6 +336,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+  padding: 10px 20px;
+  font-size: 15px;
   color: #150757;
 }
 

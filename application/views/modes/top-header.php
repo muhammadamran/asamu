@@ -114,14 +114,42 @@
                </ul>
             </li>
             <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
-            <li class="dropdown"><a href="#"><span><img src="https://lipis.github.io/flag-icon-css/flags/4x3/gb.svg" style="width: 20px;margin-bottom: 3px;" alt="" srcset=""> EN</span> <i class="fa fa-globe"></i></a>
+            <li class="dropdown">
+               <a href="#">
+                  <span><i class="fa fa-globe" style="font-size: 16px;"></i> &nbsp; <img src="https://lipis.github.io/flag-icon-css/flags/4x3/gb.svg" style="width: 20px;margin-bottom: 4px;" alt="" srcset=""></span>
+               </a>
                <ul>
-                  <li><a href="#"><img src="https://lipis.github.io/flag-icon-css/flags/4x3/id.svg" style="width: 20px;margin-bottom: -2px;" alt="" srcset="">
-                        <font style="color: #fff;margin-right: 110px;"> INA</font>
-                     </a></li>
+                  <li>
+                     <a href="#">
+                        <img src="https://lipis.github.io/flag-icon-css/flags/4x3/id.svg" style="width: 20px;margin-bottom: -1px;margin-right: 110px;" alt="" srcset="">
+                     </a>
+                  </li>
                </ul>
             </li>
-            <li><a class="nav-link scrollto" href="#contact"><i class="fa fa-user"></i> &nbsp; Login</a></li>
+            <style>
+               .get-login {
+                  color: #ffffff;
+                  font-weight: 500;
+                  background-color: #058ccd;
+                  padding: 7px 12px;
+                  /* box-shadow: 0px 4px 4px rgb(0 0 0 / 30%); */
+                  border: 0;
+                  /* border-radius: 10px 0 10px 0; */
+                  border-color: #058ccd;
+               }
+
+               .get-login:hover {
+                  color: #ffffff;
+                  font-weight: 500;
+                  background-color: #058ccd;
+                  padding: 7px 12px;
+                  box-shadow: 4px 3px 0px rgb(24 29 44);
+                  border: 0;
+                  /* border-radius: 10px 0 10px 0; */
+                  border-color: #058ccd;
+               }
+            </style>
+            <li><a class="nav-link scrollto" href="#contact"><button class="get-login"><i class="fa fa-user" style="font-size: 16px;"></i> Login</button></a></li>
             <style>
                .get-started {
                   color: #ffffff;
