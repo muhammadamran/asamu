@@ -1,5 +1,5 @@
 <?php
-class Wvisionmission_model extends CI_Model
+class Wabout_model extends CI_Model
 {
 
     public function get_slider()

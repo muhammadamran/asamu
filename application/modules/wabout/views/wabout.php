@@ -1,13 +1,3 @@
-<style>
-   .hero-image {
-      background-image: url("<?= base_url('modes/images/asamu/bg.png') ?>"), url("<?= base_url('modes/images/asamu/bg.png') ?>");
-      background-color: #090078;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      padding: 82px;
-   }
-</style>
 <!-- HEADER -->
 <div class="breadcrumb-area bg-img bg-black-overlay section-padding-130 hero-image">
    <div class="container">

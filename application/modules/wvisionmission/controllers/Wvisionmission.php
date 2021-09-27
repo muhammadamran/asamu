@@ -22,7 +22,7 @@ class Wvisionmission extends CI_Controller
 		$this->load->view('modes/top-header');
 		$this->load->view('modes/alert');
 		// $this->load->view('whome', $value);
-		$this->load->view('visionmission');
+		$this->load->view('wvisionmission');
 		$this->load->view('modes/footer');
 	}
 }

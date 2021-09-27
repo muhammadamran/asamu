@@ -119,9 +119,9 @@
                                     </div>
                                     <div class="form-group col-md-12" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
                                         <hr>
-                                        <h5 style="color: #fff;"><i class="fa fa-link"></i> Informasi Sosial Media</h5>
+                                        <h5 style="color: #fff;"><i class="fa fa-link"></i> Social Media Information</h5>
+                                        <span class="d-block m-t-5"><small style="color: #fff;">Make sure the URL use - </small><code>http://</code> <small style="color: #fff;">or</small> <code>https://</code><code>Ex: https://facebook.com</code> </span>
                                         <hr>
-                                        <span class="d-block m-t-5"><small style="color: #fff;">Last update - </small><code><?= tanggal_indo(date('d-m-Y'), true) ?></code> </span>
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label class="form-label" for="Facebook">Facebook</label>
@@ -170,19 +170,19 @@
                 <div class="col-sm-4">
                     <div class="card">
                         <div class="card-header" style="background: linear-gradient(298deg, #150757, #150757, #150757)">
-                            <h5 style="color: #fff;"><i class="fa fa-images"></i> Foto</h5>
+                            <h5 style="color: #fff;"><i class="fa fa-images"></i> Icon & Company Logo</h5>
                         </div>
                         <div class="card-body">
                             <div class="form-group">
                                 <label class="form-label"><u>Icon</u> </label>
                                 <div class="input-group">
-                                    <img src="<?= base_url('assets/images/sericon1.png'); ?>" alt="" srcset="">
+                                    <img src="<?= base_url('modes/images/asamu/logo.png'); ?>" alt="" srcset="">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="form-label"><u>Logo Perusahaan</u> </label>
+                                <label class="form-label"><u>Company Logo</u> </label>
                                 <div class="input-group">
-                                    <img src="<?= base_url('assets/images/logo-dark-svg.png'); ?>" alt="" srcset="">
+                                    <img src="<?= base_url('modes/images/asamu/asamu-logo.png'); ?>" alt="" srcset="">
                                 </div>
                             </div>
                         </div>
@@ -252,8 +252,8 @@
                                     </div>
                                     <div class="form-group col-md-12" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
                                         <hr>
-                                        <h5 style="color: #fff;"><i class="fa fa-link"></i> Informasi Sosial Media</h5>
-                                        <span class="d-block m-t-5"><small style="color: #fff;">Pastikan URL menggunakan - </small><code>http:// atau https://</code><br><code>Ex: https://facebook.com</code> </span>
+                                        <h5 style="color: #fff;"><i class="fa fa-link"></i> Social Media Information</h5>
+                                        <span class="d-block m-t-5"><small style="color: #fff;">Make sure the URL use - </small><code>http://</code> <small style="color: #fff;">or</small> <code>https://</code><code>Ex: https://facebook.com</code> </span>
                                         <hr>
                                     </div>
                                     <div class="form-group col-md-4">
@@ -304,19 +304,19 @@
                 <div class="col-sm-4">
                     <div class="card">
                         <div class="card-header" style="background: linear-gradient(298deg, #150757, #150757, #150757)">
-                            <h5 style="color: #fff;"><i class="fa fa-images"></i> Foto</h5>
+                            <h5 style="color: #fff;"><i class="fa fa-images"></i> Icon & Company Logo</h5>
                         </div>
                         <div class="card-body">
                             <div class="form-group">
                                 <label class="form-label"><u>Icon</u> </label>
                                 <div class="input-group">
-                                    <img src="<?= base_url('assets/images/sericon1.png'); ?>" alt="" srcset="">
+                                    <img src="<?= base_url('modes/images/asamu/logo.png'); ?>" alt="" srcset="">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="form-label"><u>Logo Perusahaan</u> </label>
+                                <label class="form-label"><u>Company Logo</u> </label>
                                 <div class="input-group">
-                                    <img src="<?= base_url('assets/images/logo-dark-svg.png'); ?>" alt="" srcset="">
+                                    <img src="<?= base_url('modes/images/asamu/asamu-logo.png'); ?>" alt="" srcset="">
                                 </div>
                             </div>
                         </div>
