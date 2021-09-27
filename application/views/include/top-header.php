@@ -1,7 +1,7 @@
 <!-- [ Mobile header ] start -->
 <div class="pc-mob-header pc-header">
 	<div class="pcm-logo">
-		<img src="<?= base_url('assets/images/logo-svg.png')?>" alt="" class="logo logo-lg">
+		<img src="<?= base_url('modes/images/asamu/asamu-logo2.png') ?>" alt="" class="logo logo-lg">
 	</div>
 	<div class="pcm-toolbar">
 		<a href="#!" class="pc-head-link" id="mobile-collapse">
@@ -27,7 +27,7 @@
 			<ul class="list-unstyled">
 				<li class="dropdown pc-h-item">
 					<a class="pc-head-link active dropdown-toggle arrow-none mr-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-						<i class="fa fa-lock" style="font-size: 14px;"></i>&nbsp; Active Role : <?= $this->session->userdata('role');?>
+						<i class="fa fa-lock" style="font-size: 14px;"></i>&nbsp; Active Role : <?= $this->session->userdata('role'); ?>
 					</a>
 				</li>
 			</ul>
@@ -41,7 +41,7 @@
 					<div class="dropdown-menu dropdown-menu-right pc-h-dropdown drp-search">
 						<form class="px-3">
 							<div class="form-group mb-0 d-flex align-items-center">
-								<i data-feather="search"></i>
+								<i data-feather="search"></i>&nbsp;&nbsp;&nbsp;
 								<input type="search" class="form-control border-0 shadow-none" placeholder="Search here. . .">
 							</div>
 						</form>
@@ -49,25 +49,25 @@
 				</li>
 				<li class="dropdown pc-h-item">
 					<a class="pc-head-link dropdown-toggle arrow-none mr-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-						<?php 
-							$cek_profile = $this->session->userdata('profile');
-						?>	
+						<?php
+						$cek_profile = $this->session->userdata('profile');
+						?>
 						<?php if ($cek_profile == NULL) { ?>
-							<img src="<?= base_url('assets/images/user/User_Circle.png')?>" alt="user-image" class="user-avtar">
+							<img src="<?= base_url('assets/images/user/User_Circle.png') ?>" alt="user-image" class="user-avtar">
 						<?php } else { ?>
-							<img src="<?= base_url('assets/images/user/'.$this->session->userdata('profile'));?>" alt="user-image" class="user-avtar">
+							<img src="<?= base_url('assets/images/user/' . $this->session->userdata('profile')); ?>" alt="user-image" class="user-avtar">
 						<?php } ?>
 						<span>
-							<span class="user-name"><?= $this->session->userdata('username');?></span>
-							<span class="user-desc"><?= $this->session->userdata('job_position');?></span>
+							<span class="user-name"><?= $this->session->userdata('username'); ?></span>
+							<span class="user-desc"><?= $this->session->userdata('job_position'); ?></span>
 						</span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right pc-h-dropdown">
-						<a href="<?= base_url('profile')?>" class="dropdown-item">
+						<a href="<?= base_url('profile') ?>" class="dropdown-item">
 							<i class="material-icons-two-tone">account_circle</i>
 							<span>My Account</span>
 						</a>
-						<a href="<?= base_url('login/logout')?>" class="dropdown-item">
+						<a href="<?= base_url('login/logout') ?>" class="dropdown-item">
 							<i class="material-icons-two-tone">chrome_reader_mode</i>
 							<span>Logout</span>
 						</a>

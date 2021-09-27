@@ -76,9 +76,16 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
+	// Server
+	// 'username' => 'k7817517_user_asamu',
+	// 'password' => '{B+_3;]*pnB}',
+	// 'database' => 'k7817517_dbasamu',
+	// End Server
+	// Local
 	'username' => 'root',
 	'password' => '',
 	'database' => 'pro_asamu',
+	// End Local
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

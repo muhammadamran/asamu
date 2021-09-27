@@ -1,79 +1,18 @@
-<section class="info_section layout_padding2">
+<!-- Subcribe -->
+<section class="info_section layout_padding2" style="background-image: url(<?= base_url('modes/images/asamu/bg-3.png'); ?>);">
    <div class="container">
       <div class="row">
-         <div class="col-md-6 col-lg-3 info_col">
-            <div class="info_detail">
+         <div class="col-md-6 col-lg-6 info_col">
+            <div class="info_contact">
                <h4>
-                  About Us
+                  Get Free Weekly Latest Export Import News
                </h4>
                <p>
-                  Consectetur nobis minima harum beatae repudiandae ad adipisci recusandae unde, quaerat, voluptatibus voluptatum aut eveniet est assumenda iusto quos. Nam soluta, error illum
+                  Subscribe for the latest news on trade lanes, customs and tariff changes, and expert economic insight.
                </p>
             </div>
          </div>
-         <div class="col-md-6 col-lg-2 mx-auto info_col">
-            <div class="info_link_box">
-               <h4>
-                  Links
-               </h4>
-               <div class="info_links">
-                  <a class="active" href="index.html">
-                     Home
-                  </a>
-                  <a class="" href="service.html">
-                     Services
-                  </a>
-                  <a class="" href="about.html">
-                     About
-                  </a>
-                  <a class="" href="contact.html">
-                     Contact Us
-                  </a>
-               </div>
-            </div>
-         </div>
-         <div class="col-md-6 col-lg-3 info_col">
-            <div class="info_contact">
-               <h4>
-                  Get In Touch
-               </h4>
-               <div class="contact_link_box">
-                  <a href="">
-                     <i class="fa fa-map-marker" aria-hidden="true"></i>
-                     <span>
-                        Location
-                     </span>
-                  </a>
-                  <a href="">
-                     <i class="fa fa-phone" aria-hidden="true"></i>
-                     <span>
-                        Call +01 1234567890
-                     </span>
-                  </a>
-                  <a href="">
-                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                     <span>
-                        demo@gmail.com
-                     </span>
-                  </a>
-               </div>
-            </div>
-            <div class="info_social">
-               <a href="">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-               </a>
-               <a href="">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-               </a>
-               <a href="">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-               </a>
-               <a href="">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-               </a>
-            </div>
-         </div>
-         <div class="col-md-6 col-lg-3 info_col ">
+         <div class="col-md-6 col-lg-6 info_col ">
             <h4>
                Subscribe
             </h4>
@@ -83,6 +22,86 @@
                   Subscribe
                </button>
             </form>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- End Subcribe -->
+<section class="info_section layout_padding2">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-6 col-lg-3 info_col">
+            <div class="info_detail">
+               <style>
+                  .footer-asamu-logo {
+                     padding: 10px 10px 10px 10px;
+                     background: #fff;
+                     border-radius: 0px;
+                  }
+               </style>
+               <h4 class="footer-asamu-logo">
+                  <img src="<?= base_url('modes/images/asamu/asamu-logo.png'); ?>" style="width: 100%;height: auto;">
+               </h4>
+               <p align="justify">
+                  Consectetur nobis minima harum beatae repudiandae ad adipisci recusandae unde, quaerat, voluptatibus voluptatum aut eveniet est assumenda iusto quos. Nam soluta, error illum
+               </p>
+               <div class="info_social">
+                  <a href="">
+                     <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                     <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                     <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                     <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6 col-lg-2 mx-auto info_col">
+            <div class="info_link_box">
+               <h4>
+                  Company
+               </h4>
+               <div class="info_links">
+                  <a class="active" href="<?= base_url(''); ?>">
+                     About Asamu Solusi Mandiri
+                  </a>
+                  <a class="" href="service.html">
+                     Vision & Mission
+                  </a>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6 col-lg-3 info_col">
+            <div class="info_contact">
+               <h4>
+                  Services
+               </h4>
+               <div class="info_links">
+                  <a class="active" href="<?= base_url(''); ?>">
+                     About Asamu Solusi Mandiri
+                  </a>
+                  <a class="" href="service.html">
+                     Vision & Mission
+                  </a>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6 col-lg-3 info_col">
+            <div class="info_contact">
+               <h4>
+                  Team
+               </h4>
+               <div class="info_links">
+                  <a class="active" href="<?= base_url(''); ?>">
+                     Team of Expert
+                  </a>
+               </div>
+            </div>
          </div>
       </div>
    </div>

@@ -76,41 +76,29 @@
 <header id="header" class="d-flex align-items-center">
    <div class="container d-flex justify-content-between">
       <div id="logo">
-         <a href="index.html"><img src="<?= base_url('modes/images/asamu/asamu-logo2.png'); ?>" alt=""></a>
+         <a href="<?= base_url(''); ?>"><img src="<?= base_url('modes/images/asamu/asamu-logo2.png'); ?>" alt=""></a>
       </div>
       <nav id="navbar" class="navbar">
          <ul>
-            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+            <li><a class="nav-link scrollto active" href="<?= base_url(''); ?>">Home</a></li>
             <li class="dropdown"><a href="#"><span>Company</span> <i class="bi bi-chevron-down"></i></a>
                <ul>
-                  <li><a href="#">Drop Down 1</a></li>
-                  <li><a href="#">Drop Down 2</a></li>
-                  <li><a href="#">Drop Down 3</a></li>
-                  <li><a href="#">Drop Down 4</a></li>
+                  <li><a href="<?= base_url('wabout'); ?>">About Asamu Solusi Mandiri</a></li>
+                  <li><a href="<?= base_url('wvisionmission'); ?>">Vision & Mission</a></li>
                </ul>
             </li>
             <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
                <ul>
-                  <li><a href="#">Drop Down 1</a></li>
-                  <li><a href="#">Drop Down 2</a></li>
-                  <li><a href="#">Drop Down 3</a></li>
-                  <li><a href="#">Drop Down 4</a></li>
-               </ul>
-            </li>
-            <li class="dropdown"><a href="#"><span>Our Tech</span> <i class="bi bi-chevron-down"></i></a>
-               <ul>
-                  <li><a href="#">Drop Down 1</a></li>
-                  <li><a href="#">Drop Down 2</a></li>
-                  <li><a href="#">Drop Down 3</a></li>
-                  <li><a href="#">Drop Down 4</a></li>
+                  <li><a href="#">Air Cargo & Air Courier</a></li>
+                  <li><a href="#">Ocean FCL & LCL</a></li>
+                  <li><a href="#">Project Shipment</a></li>
+                  <li><a href="#">Customs Clearance</a></li>
+                  <li><a href="#">Alibaba Gold Supplier</a></li>
                </ul>
             </li>
             <li class="dropdown"><a href="#"><span>Team</span> <i class="bi bi-chevron-down"></i></a>
                <ul>
-                  <li><a href="#">Drop Down 1</a></li>
-                  <li><a href="#">Drop Down 2</a></li>
-                  <li><a href="#">Drop Down 3</a></li>
-                  <li><a href="#">Drop Down 4</a></li>
+                  <li><a href="#">Team of Expert</a></li>
                </ul>
             </li>
             <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>

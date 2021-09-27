@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Home extends CI_Controller
+{
 
     public function __construct()
     {
@@ -20,7 +21,6 @@ class Home extends CI_Controller {
 
                 $this->session->set_flashdata('n_session', "The identity does not match our data!");
                 redirect('login');
-
             } else if ($this->session->userdata('status') == '1') {
                 $deposit = $this->Home_model->get_cashflow_deposit();
                 $value['deposit'] = !empty($deposit) ? $deposit[0] : 0;
@@ -41,8 +41,8 @@ class Home extends CI_Controller {
         }
     }
 
-	public function deposit()
-	{
+    public function deposit()
+    {
         if ($this->session->userdata('username') == NULL) {
             $this->session->set_flashdata('n_session', "The identity does not match our data!");
             redirect('login');
@@ -54,10 +54,10 @@ class Home extends CI_Controller {
                 'tanggal_cashflow' => $this->input->post('tanggal'),
                 'deskripsi_cashflow' => 'Deposit Keuangan Bank Sampah'
             );
-    
-            $this->db->insert('tbl_cashflow', $dataDeposit);
+
+            // $this->db->insert('tbl_cashflow', $dataDeposit);
             $this->session->set_flashdata('success', "Data saved successfully!");
             redirect('home');
         }
-	}
+    }
 }

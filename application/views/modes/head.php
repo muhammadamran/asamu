@@ -26,8 +26,73 @@
    <link href="<?= base_url('modes/inbase/vendor/glightbox/css/glightbox.min.css'); ?>" rel="stylesheet">
    <link href="<?= base_url('modes/inbase/vendor/swiper/swiper-bundle.min.css'); ?>" rel="stylesheet">
    <link href="<?= base_url('modes/inbase/css/style.css'); ?>" rel="stylesheet">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
+<style type="text/css">
+   .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background-color: #fff;
+   }
 
+   .preloader .loading {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font: 14px arial;
+   }
+
+   .line-1 {
+      position: relative;
+      top: 50%;
+      width: 24em;
+      margin: 0 auto;
+      border-right: 2px solid rgba(255, 255, 255, .75);
+      font-size: 180%;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      transform: translateY(-50%);
+   }
+
+   /* Animation */
+   .anim-typewriter {
+      animation: typewriter 4s steps(44) 1s 1 normal both,
+         blinkTextCursor 500ms steps(44) infinite normal;
+   }
+
+   @keyframes typewriter {
+      from {
+         width: 0;
+      }
+
+      to {
+         width: 24em;
+      }
+   }
+
+   @keyframes blinkTextCursor {
+      from {
+         border-right-color: rgba(255, 255, 255, .75);
+      }
+
+      to {
+         border-right-color: transparent;
+      }
+   }
+
+   .load {
+      font-weight: 700;
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      text-transform: uppercase;
+   }
+</style>
 <?php
 date_default_timezone_set("Asia/Jakarta");
 ?>
@@ -75,5 +140,20 @@ function Rupiah($angka)
    return $hasil;
 }
 ?>
+<script>
+   $(document).ready(function() {
+      $(".preloader").delay(2000).fadeOut();
+   })
+</script>
 
 <body>
+   <div class="preloader">
+      <div class="loading">
+         <div class="heading_container heading_center">
+            <img src="<?= base_url('modes/images/asamu/asamu-logo.png') ?>" width="200">
+            <br>
+            <!-- <label style="font-weight:700"></label> -->
+            <p class="line-1 anim-typewriter load">On Progress...</p>
+         </div>
+      </div>
+   </div>

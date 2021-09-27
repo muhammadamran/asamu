@@ -1,9 +1,10 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class Login extends CI_Controller
+{
 
-	
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -25,21 +26,26 @@ class Login extends CI_Controller {
 			$data = array(
 				'username' => $username,
 				'password' => md5(md5($password)),
-            );
+			);
 
-			$cek = $this->login_model->cek_login('tbl_users',$data);
-			
-			if(@$cek){
+			// LOG FIELD
+			$host = gethostname();
+			$IP = $_SERVER['REMOTE_ADDR'];
+			$note = 'Login Asamu Solusi Mandiri v1.0';
+
+			$cek = $this->login_model->cek_login('tbl_users', $data);
+
+			if (@$cek) {
 
 				$get_status = $this->login_model->get_status($cek->username);
 				$cek_status = $value['status'] = $get_status[0]->status;
-				
+
 				if ($cek_status == '2') {
 					$this->session->set_flashdata('n_unonaktif', "Empty");
 					redirect('login');
 				} else {
 					$get_role = $this->login_model->get_role($cek->username);
-					$cek_role = $value['role'] = $get_role[0]->role; 
+					$cek_role = $value['role'] = $get_role[0]->role;
 
 					if ($cek_role == 'masyarakat') {
 						$this->session->set_flashdata('n_role', "Empty");
@@ -51,13 +57,13 @@ class Login extends CI_Controller {
 						$get_site = $this->login_model->post_data_site();
 						// var_dump($get_employees[0]->login);exit;
 						$data_session = array(
-							'id_members' => $cek->id_members,
+							'id_employee' => $cek->id_employee,
 							'username' => $username,
 							'password' => $password,
 							'created_date' => $cek->created_date,
 							'role' => $cek->role,
 							'status' => $cek->status,
-							'id_members' => $get_employees[0]->id_members,
+							'id_employee' => $get_employees[0]->id_employee,
 							'login' => $get_employees[0]->login,
 							'full_name' => $get_employees[0]->full_name,
 							'placebrithday' => $get_employees[0]->placebrithday,
@@ -79,6 +85,8 @@ class Login extends CI_Controller {
 							'slogan' => $get_site[0]->slogan,
 							'motto' => $get_site[0]->motto,
 							'name' => $get_site[0]->name,
+							'vision' => $get_site[0]->vision,
+							'mission' => $get_site[0]->mission,
 							'address' => $get_site[0]->address,
 							'email' => $get_site[0]->email,
 							'telp' => $get_site[0]->telp,
@@ -94,34 +102,39 @@ class Login extends CI_Controller {
 							'created_date' => $get_site[0]->created_date,
 							'status' => $get_site[0]->status
 						);
-						
+
 						$data_log = array(
 							'username' => $username,
 							'role' => $cek->role,
 							'datetime' => date('Y-m-d H:i:s'),
-							'status' => 'Login'
+							'status' => 'Login',
+							'attemps_date' => date('Y-m-d H:i:s'),
+							'attemps_ip' => $IP,
+							'note' => $note,
+							'host' => $host
 						);
 
 						// echo "<pre>";
 						// var_dump($data_session);exit;
 						// echo "</pre>";
-						
+
 						$this->session->set_userdata($data_session);
 						$this->login_model->input_log('tbl_log', $data_log);
 						$this->session->set_flashdata('s_sigin', $this->input->post('username'));
 						redirect('home');
 					}
 				}
-			}else{
+			} else {
 				$this->session->set_flashdata('f_sigin', "Empty");
 				redirect('login');
 			}
 		}
 	}
 
-	public function logout(){
+	public function logout()
+	{
 		$this->session->sess_destroy();
-		$this->session->set_flashdata('n_glogin','Anda Berhasil Logout!');
+		$this->session->set_flashdata('n_glogin', 'Empty!');
 		redirect('login');
 	}
 }

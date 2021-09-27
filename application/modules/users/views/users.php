@@ -19,18 +19,20 @@
             </div>
         </div>
         <!-- [ breadcrumb ] end -->
-        <?php if ($this->session->flashdata('filed')): ?>
+        <?php if ($this->session->flashdata('filed')) : ?>
             <style>
                 .alert {
                     display: flex;
                     padding: 40px 12px 38px;
                     margin-bottom: -30px;
                 }
+
                 .alert-danger {
                     background-color: #dc3545;
                     border-radius: 7px;
                     padding: 15px 5px 0 15px;
                 }
+
                 .closebtn {
                     margin-left: 15px;
                     color: white;
@@ -45,8 +47,9 @@
             </style>
             <div class="row alert">
                 <div class="col-lg-12 alert-danger">
-                <h4 style="color: #000;"><i class="fa fa-info-circle"></i> Informasi!</h4><hr>
-                <p style="color: #000;">Data Manajemen Users sudah <b>aktif</b> di sistem, pastikan status tidak ada yang <b>aktif</b>!</p>
+                    <h4 style="color: #000;"><i class="fa fa-info-circle"></i> Informasi!</h4>
+                    <hr>
+                    <p style="color: #000;">Data Manajemen Users sudah <b>aktif</b> di sistem, pastikan status tidak ada yang <b>aktif</b>!</p>
                 </div>
             </div>
         <?php endif; ?>
@@ -55,64 +58,64 @@
             <!-- [ table ] start -->
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header" style="background: linear-gradient(45deg, #1f3d40, #1f3d40);">
+                    <div class="card-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
                         <h4 style="color: #fff;">[Tables] Data Manajemen Users </h4>
-                        <span class="d-block m-t-5"><small style="color: #fff;">Last update - </small><code><?= tanggal_indo(date('d-m-Y'),true) ?></code> </span>
+                        <span class="d-block m-t-5"><small style="color: #fff;">Last update - </small><code><?= tanggal_indo(date('d-m-Y'), true) ?></code> </span>
                     </div>
                     <div class="card-body table-border-style">
                         <!-- Add Data Manajemen Users -->
-                            <button type="button" class="btn btn-sm btn-icon btn-success" data-toggle="modal" data-target="#exampleModalCenter"><i data-feather="check-circle"></i> Tambah Data</button>
-                            <div id="exampleModalCenter" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="background: linear-gradient(45deg, #79ccb880, #79ccb880);">
-                                <div class="modal-dialog modal-lg" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header" style="background: linear-gradient(45deg, #1f3d40, #1f3d40);">
-                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Add Data [Manajemen Users]</h2>
-                                            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <form method="POST" action="<?= base_url('users/registration')?>" enctype="multipart/form-data">
-                                            <div class="modal-body">
-                                                <div class="row">
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="Nama Lengkap">Nama Lengkap</label>
-                                                        <input type="text" name="full_name" class="form-control" id="Nama Lengkap" placeholder="Nama Lengkap" required>
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="Hak Akses">Hak Akses</label>
-                                                        <select name="role" class="form-control" id="Hak Akses" required>
-                                                            <option value="">-- Pilih Hak Akses Users --</option>
-                                                            <option value="admin">admin</option>
-                                                            <option value="petugas">petugas</option>
-                                                            <!-- <option value="masyarakat">masyarakat</option> -->
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="Username">Username</label>
-                                                        <input type="text" name="username" class="form-control" id="Username" placeholder="Username" required>
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="Password">Password</label>
-                                                        <input type="text" name="password" class="form-control" id="Password" value="changeme" readonly>
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="Alamat Email">Alamat Email</label>
-                                                        <input type="email" name="email" class="form-control" id="Alamat Email" placeholder="Alamat Email" required>
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="No. Handphone">No. Handphone</label>
-                                                        <input type="text" name="phone" class="form-control" id="No. Handphone" placeholder="No. Handphone" required>
-                                                        <input type="hidden" name="created_date" value="<?= date('Y-m-d h:m:i') ?>">
-                                                        <input type="hidden" name="status" value="1">
-                                                    </div>
+                        <button type="button" class="btn btn-sm btn-icon btn-success" data-toggle="modal" data-target="#exampleModalCenter"><i data-feather="check-circle"></i> Tambah Data</button>
+                        <div id="exampleModalCenter" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="background: linear-gradient(45deg, rgb(174 176 255 / 0%), rgb(174, 176, 255));">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
+                                        <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Add Data [Manajemen Users]</h2>
+                                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <form method="POST" action="<?= base_url('users/registration') ?>" enctype="multipart/form-data">
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="form-group col-md-6">
+                                                    <label class="form-label" for="Nama Lengkap">Nama Lengkap</label>
+                                                    <input type="text" name="full_name" class="form-control" id="Nama Lengkap" placeholder="Nama Lengkap" required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label class="form-label" for="Hak Akses">Hak Akses</label>
+                                                    <select name="role" class="form-control" id="Hak Akses" required>
+                                                        <option value="">-- Pilih Hak Akses Users --</option>
+                                                        <option value="admin">admin</option>
+                                                        <option value="petugas">petugas</option>
+                                                        <!-- <option value="masyarakat">masyarakat</option> -->
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label class="form-label" for="Username">Username</label>
+                                                    <input type="text" name="username" class="form-control" id="Username" placeholder="Username" required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label class="form-label" for="Password">Password</label>
+                                                    <input type="text" name="password" class="form-control" id="Password" value="changeme" readonly>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label class="form-label" for="Alamat Email">Alamat Email</label>
+                                                    <input type="email" name="email" class="form-control" id="Alamat Email" placeholder="Alamat Email" required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label class="form-label" for="No. Handphone">No. Handphone</label>
+                                                    <input type="text" name="phone" class="form-control" id="No. Handphone" placeholder="No. Handphone" required>
+                                                    <input type="hidden" name="created_date" value="<?= date('Y-m-d h:m:i') ?>">
+                                                    <input type="hidden" name="status" value="1">
                                                 </div>
                                             </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Tutup</button>
-                                                <button type="submit" class="btn btn-sm btn-success">Save</button>
-                                            </div>
-                                        </form>
-                                    </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Tutup</button>
+                                            <button type="submit" class="btn btn-sm btn-success">Save</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
+                        </div>
                         <!-- End Add Data Manajemen Users -->
                         <hr>
                         <div class="table-responsive">
@@ -131,61 +134,62 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php if ($data_users): $no = 0; foreach ($data_users as $row): $no++;?>
-                                        <tr>
-                                            <td><?= $no ?></td>
-                                            <?php if ($row['profile'] == NULL) { ?>
-                                                <td style="display:block;text-align:center;">
-                                                    <img src="<?= base_url('assets/images/user/User_Circle.png');?>" style="width: 35px;height: 35px;">
+                                    <?php if ($data_users) : $no = 0;
+                                        foreach ($data_users as $row) : $no++; ?>
+                                            <tr>
+                                                <td><?= $no ?></td>
+                                                <?php if ($row['profile'] == NULL) { ?>
+                                                    <td style="display:block;text-align:center;">
+                                                        <img src="<?= base_url('assets/images/user/User_Circle.png'); ?>" style="width: 35px;height: 35px;">
+                                                    </td>
+                                                <?php } else { ?>
+                                                    <td style="display:block;text-align:center;">
+                                                        <img src="<?= base_url('assets/images/user/' . $row['profile']); ?>" style="width: 35px;height: 35px;border-radius: 50%;">
+                                                    </td>
+                                                <?php } ?>
+                                                <td><?= $row['username']; ?></td>
+                                                <td><?= $row['full_name']; ?></td>
+                                                <td style="text-align: center;"><?= $row['phone']; ?></td>
+                                                <td><?= $row['email']; ?></td>
+                                                <!-- STATUS -->
+                                                <?php if ($row['status'] == '1') { ?>
+                                                    <td style="text-align: center;"><i class="fa fa-check" aria-hidden="true"></i> Aktif</td>
+                                                <?php } else if ($row['status'] == '2') { ?>
+                                                    <td style="color:red;text-align: center;"><i class="fa fa-ban" aria-hidden="true"></i> <i>Non-Aktif</i></td>
+                                                <?php } ?>
+                                                <td style="text-align: center;"><?= $row['role']; ?></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-warning dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aksi</button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#Detail<?= $row['id_employee']; ?>"><i class="fa fa-eye"></i> Detail</a>
+                                                        <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#ERole<?= $row['id_employee']; ?>"><i class="fa fa-edit"></i> Ganti Role</a>
+                                                        <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#ChangePass<?= $row['id_employee']; ?>"><i class="fa fa-lock"></i> Ganti Password</a>
+                                                        <?php if ($row['status'] == '1') { ?>
+                                                            <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#Non-Aktif<?= $row['id_employee']; ?>"><i class="fa fa-ban" aria-hidden="true"></i> Non-Aktif</a>
+                                                        <?php } else if ($row['status'] == '2') { ?>
+                                                            <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#Aktif<?= $row['id_employee']; ?>"><i class="fa fa-check" aria-hidden="true"></i> Aktif</a>
+                                                        <?php } ?>
+                                                        <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#Delete<?= $row['id_employee']; ?>"><i class="fa fa-trash"></i> Hapus</a>
+                                                    </div>
                                                 </td>
-                                            <?php } else { ?>
-                                                <td style="display:block;text-align:center;">
-                                                    <img src="<?= base_url('assets/images/user/'.$row['profile']);?>" style="width: 35px;height: 35px;border-radius: 50%;">
-                                                </td>
-                                            <?php } ?>
-                                            <td><?= $row['username']; ?></td>
-                                            <td><?= $row['full_name']; ?></td>
-                                            <td style="text-align: center;"><?= $row['phone']; ?></td>
-                                            <td><?= $row['email']; ?></td>
-                                            <!-- STATUS -->
-                                            <?php if ($row['status'] == '1') { ?>
-                                                <td style="text-align: center;"><i class="fa fa-check" aria-hidden="true"></i> Aktif</td>
-                                            <?php } else if ($row['status'] == '2') { ?>
-                                                <td style="color:red;text-align: center;"><i class="fa fa-ban" aria-hidden="true"></i> <i>Non-Aktif</i></td>
-                                            <?php } ?>
-                                            <td style="text-align: center;"><?= $row['role']; ?></td>
-                                            <td>
-                                                <button class="btn btn-sm btn-warning dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aksi</button>
-                                                <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#Detail<?= $row['id_members']; ?>"><i class="fa fa-eye"></i> Detail</a>
-                                                    <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#ERole<?= $row['id_members']; ?>"><i class="fa fa-edit"></i> Ganti Role</a>
-                                                    <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#ChangePass<?= $row['id_members']; ?>"><i class="fa fa-lock"></i> Ganti Password</a>
-                                                    <?php if ($row['status'] == '1') { ?>
-                                                        <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#Non-Aktif<?= $row['id_members']; ?>"><i class="fa fa-ban" aria-hidden="true"></i> Non-Aktif</a>
-                                                    <?php } else if ($row['status'] == '2') { ?>
-                                                        <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#Aktif<?= $row['id_members']; ?>"><i class="fa fa-check" aria-hidden="true"></i> Aktif</a>
-                                                    <?php } ?>
-                                                    <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#Delete<?= $row['id_members']; ?>"><i class="fa fa-trash"></i> Hapus</a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <!-- Detail -->
-                                            <div id="Detail<?= $row['id_members']; ?>" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            </tr>
+                                            <!-- Detail -->
+                                            <div id="Detail<?= $row['id_employee']; ?>" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                 <div class="modal-dialog modal-lg" role="document">
                                                     <div class="modal-content">
-                                                        <div class="modal-header" style="background: linear-gradient(45deg, #1f3d40, #1f3d40);">
-                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Detail [Manajemen Users] - ID <?= $row['id_members']; ?></h2>
+                                                        <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
+                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Detail [Manajemen Users] - ID <?= $row['id_employee']; ?></h2>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
-                                                        <form method="POST" action="<?= base_url('users/changepass')?>" enctype="multipart/form-data">
+                                                        <form method="POST" action="<?= base_url('users/changepass') ?>" enctype="multipart/form-data">
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="form-group col-md-6">
                                                                         <center>
                                                                             <?php if ($row['profile'] == NULL) { ?>
-                                                                                <img src="<?= base_url('assets/images/user/User_Circle.png');?>" style="width: 144px;height: 144px;">
+                                                                                <img src="<?= base_url('assets/images/user/User_Circle.png'); ?>" style="width: 144px;height: 144px;">
                                                                             <?php } else { ?>
-                                                                                <img src="<?= base_url('assets/images/user/'.$row['profile']);?>" style="width: 144px;height: 144px;border-radius: 50%;">
+                                                                                <img src="<?= base_url('assets/images/user/' . $row['profile']); ?>" style="width: 144px;height: 144px;border-radius: 50%;">
                                                                             <?php } ?>
                                                                         </center>
                                                                     </div>
@@ -279,16 +283,16 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        <!-- End Detail -->
-                                        <!-- Edit Role -->
-                                            <div id="ERole<?= $row['id_members']; ?>" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <!-- End Detail -->
+                                            <!-- Edit Role -->
+                                            <div id="ERole<?= $row['id_employee']; ?>" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                 <div class="modal-dialog modal-lg" role="document">
                                                     <div class="modal-content">
-                                                        <div class="modal-header" style="background: linear-gradient(45deg, #1f3d40, #1f3d40);">
-                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Ganti Role [Manajemen Users] - ID <?= $row['id_members']; ?></h2>
+                                                        <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
+                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Ganti Role [Manajemen Users] - ID <?= $row['id_employee']; ?></h2>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
-                                                        <form method="POST" action="<?= base_url('users/changerole')?>" enctype="multipart/form-data">
+                                                        <form method="POST" action="<?= base_url('users/changerole') ?>" enctype="multipart/form-data">
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="form-group col-md-6">
@@ -334,16 +338,16 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        <!-- End Edit Role -->
-                                        <!-- ChangePass -->
-                                            <div id="ChangePass<?= $row['id_members']; ?>" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <!-- End Edit Role -->
+                                            <!-- ChangePass -->
+                                            <div id="ChangePass<?= $row['id_employee']; ?>" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                 <div class="modal-dialog modal-lg" role="document">
                                                     <div class="modal-content">
-                                                        <div class="modal-header" style="background: linear-gradient(45deg, #1f3d40, #1f3d40);">
-                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Ganti Password [Manajemen Users] - ID <?= $row['id_members']; ?></h2>
+                                                        <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
+                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Ganti Password [Manajemen Users] - ID <?= $row['id_employee']; ?></h2>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
-                                                        <form method="POST" action="<?= base_url('users/changepass')?>" enctype="multipart/form-data">
+                                                        <form method="POST" action="<?= base_url('users/changepass') ?>" enctype="multipart/form-data">
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="form-group col-md-6">
@@ -395,23 +399,23 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        <!-- End ChangePass -->
-                                        <!-- Non-Aktif -->
-                                            <div id="Non-Aktif<?= $row['id_members']; ?>" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <!-- End ChangePass -->
+                                            <!-- Non-Aktif -->
+                                            <div id="Non-Aktif<?= $row['id_employee']; ?>" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                 <div class="modal-dialog modal-lg" role="document">
                                                     <div class="modal-content">
-                                                        <div class="modal-header" style="background: linear-gradient(45deg, #1f3d40, #1f3d40);">
-                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Non-Aktif [Manajemen Users] - ID <?= $row['id_members']; ?></h2>
+                                                        <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
+                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Non-Aktif [Manajemen Users] - ID <?= $row['id_employee']; ?></h2>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
-                                                        <form method="POST" action="<?= base_url('users/nonaktif')?>" enctype="multipart/form-data">
+                                                        <form method="POST" action="<?= base_url('users/nonaktif') ?>" enctype="multipart/form-data">
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="form-group col-md-12">
                                                                         <h5>Apa kamu yakin ingin Non-Aktif Users?</h5>
                                                                         <hr>
                                                                         <div style="text-align:center">
-                                                                            <label class="form-label">ID.<?= $row['id_members']; ?> - <?= $row['username']; ?></label><br>
+                                                                            <label class="form-label">ID.<?= $row['id_employee']; ?> - <?= $row['username']; ?></label><br>
                                                                             <label class="form-label"><?= $row['full_name']; ?></label><br>
                                                                         </div>
                                                                         <input type="hidden" name="username" class="form-control" value="<?= $row['username']; ?>">
@@ -428,23 +432,23 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        <!-- End Non-Aktif -->
-                                        <!-- Aktif -->
-                                            <div id="Aktif<?= $row['id_members']; ?>" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <!-- End Non-Aktif -->
+                                            <!-- Aktif -->
+                                            <div id="Aktif<?= $row['id_employee']; ?>" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                 <div class="modal-dialog modal-lg" role="document">
                                                     <div class="modal-content">
-                                                        <div class="modal-header" style="background: linear-gradient(45deg, #1f3d40, #1f3d40);">
-                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Aktif [Manajemen Users] - ID <?= $row['id_members']; ?></h2>
+                                                        <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
+                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Aktif [Manajemen Users] - ID <?= $row['id_employee']; ?></h2>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
-                                                        <form method="POST" action="<?= base_url('users/aktif')?>" enctype="multipart/form-data">
+                                                        <form method="POST" action="<?= base_url('users/aktif') ?>" enctype="multipart/form-data">
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="form-group col-md-12">
                                                                         <h5>Apa kamu yakin ingin Aktif Users?</h5>
                                                                         <hr>
                                                                         <div style="text-align:center">
-                                                                            <label class="form-label">ID.<?= $row['id_members']; ?> - <?= $row['username']; ?></label><br>
+                                                                            <label class="form-label">ID.<?= $row['id_employee']; ?> - <?= $row['username']; ?></label><br>
                                                                             <label class="form-label"><?= $row['full_name']; ?></label><br>
                                                                         </div>
                                                                         <input type="hidden" name="username" class="form-control" value="<?= $row['username']; ?>">
@@ -461,23 +465,23 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        <!-- End Aktif -->
-                                        <!-- Delete  -->
-                                            <div id="Delete<?= $row['id_members']; ?>" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="background: linear-gradient(45deg, #f44336a1, #f44336a1);">
+                                            <!-- End Aktif -->
+                                            <!-- Delete  -->
+                                            <div id="Delete<?= $row['id_employee']; ?>" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="background: linear-gradient(45deg, #f44336a1, #f44336a1);">
                                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                                     <div class="modal-content">
-                                                        <div class="modal-header" style="background: linear-gradient(45deg, #1f3d40, #1f3d40);">
-                                                            <h6 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Hapus Data [Manajemen Users] - ID <?= $row['id_members']; ?></h6>
+                                                        <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
+                                                            <h6 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Hapus Data [Manajemen Users] - ID <?= $row['id_employee']; ?></h6>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
-                                                        <form method="POST" action="<?= base_url('users/delete')?>" enctype="multipart/form-data">
+                                                        <form method="POST" action="<?= base_url('users/delete') ?>" enctype="multipart/form-data">
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="form-group col-md-12">
                                                                         <h5>Apa kamu yakin ingin menghapus ini?</h5>
                                                                         <hr>
                                                                         <div style="text-align:center">
-                                                                            <label class="form-label">ID.<?= $row['id_members']; ?> - <?= $row['username']; ?></label><br>
+                                                                            <label class="form-label">ID.<?= $row['id_employee']; ?> - <?= $row['username']; ?></label><br>
                                                                             <label class="form-label"><?= $row['full_name']; ?></label><br>
                                                                         </div>
                                                                         <input type="hidden" name="username" class="form-control" value="<?= $row['username']; ?>">
@@ -493,9 +497,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        <!-- End Delete -->
-                                    <?php endforeach ?>
-                                    <?php else: ?>
+                                            <!-- End Delete -->
+                                        <?php endforeach ?>
+                                    <?php else : ?>
                                         <tr>
                                             <td colspan="8">
                                                 <center>
@@ -518,13 +522,13 @@
 <!-- [ Main Content ] end -->
 <!-- Script Show Hidden Password -->
 <script>
-function myFunction() {
-    var x = document.getElementById("myInput");
-    if (x.type === "password") {
-        x.type = "text";
-    } else {
-        x.type = "password";
+    function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
     }
-}
 </script>
 <!-- End Script Show Hidden Password -->

@@ -1111,8 +1111,12 @@ a:focus {
 
 .carousel .carousel-caption .btn:hover {
   color: #fff;
-  background: #150757;
+  background: linear-gradient(127deg, #aeb0ff 50%, #150757 50%);
   border-color: #150757;
+  box-shadow: 3px 3px 0px rgb(5 140 205);
+  transition: .3s;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
 }
 
 @media (max-width: 767.98px) {

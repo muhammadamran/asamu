@@ -1,26 +1,28 @@
 <?php
-class Home_model extends CI_Model {
+class Home_model extends CI_Model
+{
     public function get_cashflow_deposit()
     {
-        return $this->db->query("SELECT SUM(nominal_cashflow) AS total FROM tbl_cashflow WHERE tipe_cashflow='Deposit'")->result();
+        // return $this->db->query("SELECT SUM(nominal_cashflow) AS total FROM tbl_cashflow WHERE tipe_cashflow='Deposit'")->result();
     }
 
     public function get_cashflow_pembayaran()
     {
-        return $this->db->query("SELECT SUM(nominal_cashflow) AS total FROM tbl_cashflow WHERE tipe_cashflow='Pembayaran' OR tipe_cashflow='Penarikan'")->result();
+        // return $this->db->query("SELECT SUM(nominal_cashflow) AS total FROM tbl_cashflow WHERE tipe_cashflow='Pembayaran' OR tipe_cashflow='Penarikan'")->result();
     }
 
     public function get_cashflow()
     {
-        return $this->db->query("SELECT * FROM tbl_cashflow ORDER BY id_cashflow DESC")->result();
+        // return $this->db->query("SELECT * FROM tbl_cashflow ORDER BY id_cashflow DESC")->result();
     }
 
-    public function cek_login($table,$data){      
-        $query = $this->db->get_where($table,$data);
+    public function cek_login($table, $data)
+    {
+        $query = $this->db->get_where($table, $data);
 
         if ($query->num_rows() == 1) {
             return $query->row();
-        }else{
+        } else {
             return false;
         }
     }
@@ -50,7 +52,8 @@ class Home_model extends CI_Model {
         return $result;
     }
 
-    public function detail_pujian($prodi, $angkatan){
+    public function detail_pujian($prodi, $angkatan)
+    {
         return $this->db->query("SELECT a.ProdiID, b.nama, a.Nama as Mahasiswa, a.MhswID, a.ipk
         FROM simak_mst_mahasiswa as a
         JOIN simak_mst_prodi as b ON a.ProdiID=b.ProdiID
@@ -58,7 +61,8 @@ class Home_model extends CI_Model {
         ORDER BY a.ipk DESC")->result();
     }
 
-    public function detail_sm($prodi, $angkatan){
+    public function detail_sm($prodi, $angkatan)
+    {
         return $this->db->query("SELECT a.ProdiID, b.nama, a.Nama as Mahasiswa, a.MhswID, a.ipk
         FROM simak_mst_mahasiswa as a
         JOIN simak_mst_prodi as b ON a.ProdiID=b.ProdiID
@@ -66,7 +70,8 @@ class Home_model extends CI_Model {
         ORDER BY a.ipk DESC")->result();
     }
 
-    public function detail_m($prodi, $angkatan){
+    public function detail_m($prodi, $angkatan)
+    {
         return $this->db->query("SELECT a.ProdiID, b.nama, a.Nama as Mahasiswa, a.MhswID, a.ipk
         FROM simak_mst_mahasiswa as a
         JOIN simak_mst_prodi as b ON a.ProdiID=b.ProdiID
@@ -74,7 +79,8 @@ class Home_model extends CI_Model {
         ORDER BY a.ipk DESC")->result();
     }
 
-    public function detail_tt($prodi, $angkatan){
+    public function detail_tt($prodi, $angkatan)
+    {
         return $this->db->query("SELECT a.ProdiID,  b.nama, a.Nama as Mahasiswa, a.MhswID, a.ipk
         FROM simak_mst_mahasiswa as a
         JOIN simak_mst_prodi as b ON a.ProdiID=b.ProdiID
@@ -82,7 +88,8 @@ class Home_model extends CI_Model {
         ORDER BY a.ipk DESC")->result();
     }
 
-    public function detail_total($prodi, $angkatan){
+    public function detail_total($prodi, $angkatan)
+    {
         return $this->db->query("SELECT a.ProdiID,  b.nama, a.Nama as Mahasiswa, a.MhswID, a.ipk
         FROM simak_mst_mahasiswa as a
         JOIN simak_mst_prodi as b ON a.ProdiID=b.ProdiID
@@ -223,6 +230,4 @@ class Home_model extends CI_Model {
         ) a
         ")->result();
     }
-
 }
-?>
