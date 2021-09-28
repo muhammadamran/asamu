@@ -8,11 +8,11 @@
                 <div class="row align-items-center">
                     <div class="col-md-12">
                         <div class="page-header-title">
-                            <h5 class="m-b-10">Page Manajemen Users</h5>
+                            <h5 class="m-b-10">Page Manage Users</h5>
                         </div>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#!">Administration Tools</a></li>
-                            <li class="breadcrumb-item">Manajemen Users</li>
+                            <li class="breadcrumb-item">Manage Users</li>
                         </ul>
                     </div>
                 </div>
@@ -47,9 +47,9 @@
             </style>
             <div class="row alert">
                 <div class="col-lg-12 alert-danger">
-                    <h4 style="color: #000;"><i class="fa fa-info-circle"></i> Informasi!</h4>
+                    <h4 style="color: #000;"><i class="fa fa-info-circle"></i> Information!</h4>
                     <hr>
-                    <p style="color: #000;">Data Manajemen Users sudah <b>aktif</b> di sistem, pastikan status tidak ada yang <b>aktif</b>!</p>
+                    <p style="color: #000;">User Management Data is <b>active</b> in the system, make sure none of the status is <b>active</b>!</p>
                 </div>
             </div>
         <?php endif; ?>
@@ -59,32 +59,32 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                        <h4 style="color: #fff;">[Tables] Data Manajemen Users </h4>
+                        <h4 style="color: #fff;">[Tables] Data Manage Users </h4>
                         <span class="d-block m-t-5"><small style="color: #fff;">Last update - </small><code><?= tanggal_indo(date('d-m-Y'), true) ?></code> </span>
                     </div>
                     <div class="card-body table-border-style">
-                        <!-- Add Data Manajemen Users -->
-                        <button type="button" class="btn btn-sm btn-icon btn-success" data-toggle="modal" data-target="#exampleModalCenter"><i data-feather="check-circle"></i> Tambah Data</button>
+                        <!-- Add Data Manage Users -->
+                        <button type="button" class="btn btn-sm btn-icon btn-success" data-toggle="modal" data-target="#exampleModalCenter"><i data-feather="check-circle"></i> Add Data</button>
                         <div id="exampleModalCenter" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="background: linear-gradient(45deg, rgb(174 176 255 / 0%), rgb(174, 176, 255));">
                             <div class="modal-dialog modal-lg" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                                        <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Add Data [Manajemen Users]</h2>
+                                        <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Add Data [Manage Users]</h2>
                                         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <form method="POST" action="<?= base_url('users/registration') ?>" enctype="multipart/form-data">
                                         <div class="modal-body">
                                             <div class="row">
                                                 <div class="form-group col-md-6">
-                                                    <label class="form-label" for="Nama Lengkap">Nama Lengkap</label>
-                                                    <input type="text" name="full_name" class="form-control" id="Nama Lengkap" placeholder="Nama Lengkap" required>
+                                                    <label class="form-label" for="Full Name">Full Name</label>
+                                                    <input type="text" name="full_name" class="form-control" id="Full Name" placeholder="Full Name" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
-                                                    <label class="form-label" for="Hak Akses">Hak Akses</label>
-                                                    <select name="role" class="form-control" id="Hak Akses" required>
-                                                        <option value="">-- Pilih Hak Akses Users --</option>
+                                                    <label class="form-label" for="Role">Role</label>
+                                                    <select name="role" class="form-control" id="Role" required>
+                                                        <option value="">-- Select Role Users --</option>
                                                         <option value="admin">admin</option>
-                                                        <option value="petugas">petugas</option>
+                                                        <!-- <option value="petugas">petugas</option> -->
                                                         <!-- <option value="masyarakat">masyarakat</option> -->
                                                     </select>
                                                 </div>
@@ -97,8 +97,8 @@
                                                     <input type="text" name="password" class="form-control" id="Password" value="changeme" readonly>
                                                 </div>
                                                 <div class="form-group col-md-6">
-                                                    <label class="form-label" for="Alamat Email">Alamat Email</label>
-                                                    <input type="email" name="email" class="form-control" id="Alamat Email" placeholder="Alamat Email" required>
+                                                    <label class="form-label" for="Email Address">Email Address</label>
+                                                    <input type="email" name="email" class="form-control" id="Email Address" placeholder="Email Address" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label class="form-label" for="No. Handphone">No. Handphone</label>
@@ -109,8 +109,8 @@
                                             </div>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Tutup</button>
-                                            <button type="submit" class="btn btn-sm btn-success">Save</button>
+                                            <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-save"></i> Save</button>
                                         </div>
                                     </form>
                                 </div>
@@ -125,12 +125,12 @@
                                         <th>#</th>
                                         <th style="text-align: center;">Profile</th>
                                         <th>Username</th>
-                                        <th>Nama Lengkap</th>
+                                        <th>Full Name</th>
                                         <th style="text-align: center;">No. Handphone</th>
                                         <th>Email</th>
                                         <th style="text-align: center;">Status</th>
-                                        <th style="text-align: center;">Hak Akses</th>
-                                        <th>Aksi</th>
+                                        <th style="text-align: center;">Role</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -153,23 +153,23 @@
                                                 <td><?= $row['email']; ?></td>
                                                 <!-- STATUS -->
                                                 <?php if ($row['status'] == '1') { ?>
-                                                    <td style="text-align: center;"><i class="fa fa-check" aria-hidden="true"></i> Aktif</td>
+                                                    <td style="text-align: center;"><i class="fa fa-check" aria-hidden="true"></i> Active</td>
                                                 <?php } else if ($row['status'] == '2') { ?>
-                                                    <td style="color:red;text-align: center;"><i class="fa fa-ban" aria-hidden="true"></i> <i>Non-Aktif</i></td>
+                                                    <td style="color:red;text-align: center;"><i class="fa fa-ban" aria-hidden="true"></i> <i>Non-Active</i></td>
                                                 <?php } ?>
                                                 <td style="text-align: center;"><?= $row['role']; ?></td>
                                                 <td>
-                                                    <button class="btn btn-sm btn-warning dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aksi</button>
+                                                    <button class="btn btn-sm btn-warning dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
                                                     <div class="dropdown-menu">
                                                         <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#Detail<?= $row['id_employee']; ?>"><i class="fa fa-eye"></i> Detail</a>
-                                                        <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#ERole<?= $row['id_employee']; ?>"><i class="fa fa-edit"></i> Ganti Role</a>
-                                                        <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#ChangePass<?= $row['id_employee']; ?>"><i class="fa fa-lock"></i> Ganti Password</a>
+                                                        <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#ERole<?= $row['id_employee']; ?>"><i class="fa fa-edit"></i> Change Role</a>
+                                                        <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#ChangePass<?= $row['id_employee']; ?>"><i class="fa fa-lock"></i> Change Password</a>
                                                         <?php if ($row['status'] == '1') { ?>
-                                                            <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#Non-Aktif<?= $row['id_employee']; ?>"><i class="fa fa-ban" aria-hidden="true"></i> Non-Aktif</a>
+                                                            <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#Non-Active<?= $row['id_employee']; ?>"><i class="fa fa-ban" aria-hidden="true"></i> Non-Active</a>
                                                         <?php } else if ($row['status'] == '2') { ?>
-                                                            <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#Aktif<?= $row['id_employee']; ?>"><i class="fa fa-check" aria-hidden="true"></i> Aktif</a>
+                                                            <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#Active<?= $row['id_employee']; ?>"><i class="fa fa-check" aria-hidden="true"></i> Active</a>
                                                         <?php } ?>
-                                                        <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#Delete<?= $row['id_employee']; ?>"><i class="fa fa-trash"></i> Hapus</a>
+                                                        <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#Delete<?= $row['id_employee']; ?>"><i class="fa fa-trash"></i> Delete</a>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -178,7 +178,7 @@
                                                 <div class="modal-dialog modal-lg" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Detail [Manajemen Users] - ID <?= $row['id_employee']; ?></h2>
+                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Detail [Manage Users] - ID <?= $row['id_employee']; ?></h2>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <form method="POST" action="<?= base_url('users/changepass') ?>" enctype="multipart/form-data">
@@ -194,14 +194,14 @@
                                                                         </center>
                                                                     </div>
                                                                     <div class="form-group col-md-6">
-                                                                        <label class="form-label" for="Nama Lengkap">Nama Lengkap</label>
-                                                                        <input type="text" name="full_name" class="form-control" id="Nama Lengkap" value="<?= $row['full_name']; ?>" placeholder="Nama Lengkap" readonly>
-                                                                        <label class="form-label" for="Hak Akses">Hak Akses</label>
-                                                                        <select name="role" class="form-control" id="Hak Akses" readonly>
+                                                                        <label class="form-label" for="Full Name">Full Name</label>
+                                                                        <input type="text" name="full_name" class="form-control" id="Full Name" value="<?= $row['full_name']; ?>" placeholder="Full Name" readonly>
+                                                                        <label class="form-label" for="Role">Role</label>
+                                                                        <select name="role" class="form-control" id="Role" readonly>
                                                                             <option value="<?= $row['role']; ?>"><?= $row['role']; ?></option>
-                                                                            <option value="">-- Pilih Hak Akses Users --</option>
+                                                                            <option value="">-- Select Role Users --</option>
                                                                             <option value="admin">admin</option>
-                                                                            <option value="petugas">petugas</option>
+                                                                            <!-- <option value="petugas">petugas</option> -->
                                                                         </select>
                                                                     </div>
                                                                     <div class="form-group col-md-6">
@@ -213,41 +213,41 @@
                                                                         <input type="password" name="password" class="form-control" id="Password" value="<?= $row['password']; ?>" placeholder="Input New Password" readonly>
                                                                     </div>
                                                                     <div class="form-group col-md-4">
-                                                                        <label class="form-label" for="Tempat Lahir">Tempat Lahir</label>
-                                                                        <input type="text" name="placebrithday" class="form-control" id="Tempat Lahir" value="<?= $row['placebrithday']; ?>" placeholder="Tempat Lahir" readonly>
+                                                                        <label class="form-label" for="Place Birthday">Place Birthday</label>
+                                                                        <input type="text" name="placebirthday" class="form-control" id="Place Birthday" value="<?= $row['placebirthday']; ?>" placeholder="Place Birthday" readonly>
                                                                     </div>
                                                                     <div class="form-group col-md-4">
-                                                                        <label class="form-label" for="Tanggal Lahir">Tanggal Lahir</label>
-                                                                        <input type="date" name="brithday" class="form-control" id="Tanggal Lahir" value="<?= $row['brithday']; ?>" placeholder="Tanggal Lahir" readonly>
+                                                                        <label class="form-label" for="Date Birthday">Date Birthday</label>
+                                                                        <input type="date" name="birthday" class="form-control" id="Date Birthday" value="<?= $row['birthday']; ?>" placeholder="Date Birthday" readonly>
                                                                     </div>
                                                                     <div class="form-group col-md-4">
                                                                         <label class="form-label" for="Usia">Usia</label>
                                                                         <input type="text" name="age" class="form-control" id="Usia" value="<?= $row['age']; ?>" placeholder="Usia" readonly>
                                                                     </div>
                                                                     <div class="form-group col-md-6">
-                                                                        <label class="form-label" for="Jenis Kelamin">Jenis Kelamin</label>
-                                                                        <select name="gender" class="form-control" id="Jenis Kelamin" readonly>
+                                                                        <label class="form-label" for="Gender">Gender</label>
+                                                                        <select name="gender" class="form-control" id="Gender" readonly>
                                                                             <option value="<?= $row['gender']; ?>"><?= $row['gender']; ?></option>
-                                                                            <option value="">-- Pilih Jenis Kelamin --</option>
-                                                                            <option value="Pria">Pria</option>
-                                                                            <option value="Wanita">Wanita</option>
+                                                                            <option value="">-- Select Gender --</option>
+                                                                            <option value="Male">Male</option>
+                                                                            <option value="Female">Female</option>
                                                                         </select>
                                                                     </div>
                                                                     <div class="form-group col-md-6">
-                                                                        <label class="form-label" for="Agama">Agama</label>
-                                                                        <select name="religion" class="form-control" id="Agama" readonly>
+                                                                        <label class="form-label" for="Religion">Religion</label>
+                                                                        <select name="religion" class="form-control" id="Religion" readonly>
                                                                             <option value="<?= $row['religion']; ?>"><?= $row['religion']; ?></option>
-                                                                            <option value="">-- Pilih Agama --</option>
+                                                                            <option value="">-- Select Religion --</option>
                                                                             <option value="Islam">Islam</option>
-                                                                            <option value="Protestan">Protestan</option>
-                                                                            <option value="Katolik">Katolik</option>
+                                                                            <option value="Protestant">Protestant</option>
+                                                                            <option value="Catholic">Catholic</option>
                                                                             <option value="Hindu">Hindu</option>
                                                                             <option value="Buddha">Buddha</option>
                                                                         </select>
                                                                     </div>
                                                                     <div class="form-group col-md-6">
-                                                                        <label class="form-label" for="Alamat Email">Alamat Email</label>
-                                                                        <input type="email" name="email" class="form-control" id="Alamat Email" value="<?= $row['email']; ?>" placeholder="Alamat Email" readonly>
+                                                                        <label class="form-label" for="Email Address">Email Address</label>
+                                                                        <input type="email" name="email" class="form-control" id="Email Address" value="<?= $row['email']; ?>" placeholder="Email Address" readonly>
                                                                     </div>
                                                                     <div class="form-group col-md-6">
                                                                         <label class="form-label" for="No. Handphone">No. Handphone</label>
@@ -258,8 +258,8 @@
                                                                         <textarea name="address" class="form-control" id="Alamat Saat Ini" placeholder="Alamat Saat Ini" readonly><?= $row['address']; ?></textarea>
                                                                     </div>
                                                                     <div class="form-group col-md-6">
-                                                                        <label class="form-label" for="Kota">Kota</label>
-                                                                        <input type="text" name="city" class="form-control" id="Kota" value="<?= $row['city']; ?>" placeholder="Kota" readonly>
+                                                                        <label class="form-label" for="City">City</label>
+                                                                        <input type="text" name="city" class="form-control" id="City" value="<?= $row['city']; ?>" placeholder="City" readonly>
                                                                     </div>
                                                                     <div class="form-group col-md-6">
                                                                         <label class="form-label" for="Status Users">Status Users</label>
@@ -270,14 +270,14 @@
                                                                         <?php } ?>
                                                                     </div>
                                                                     <div class="form-group col-md-6">
-                                                                        <label class="form-label" for="Tanggal Registrasi">Tanggal Registrasi</label>
-                                                                        <input type="text" name="created_date" class="form-control" id="Tanggal Registrasi" value="<?= $row['created_date']; ?>" placeholder="Tanggal Registrasi" readonly>
+                                                                        <label class="form-label" for="Registration Date">Registration Date</label>
+                                                                        <input type="text" name="created_date" class="form-control" id="Registration Date" value="<?= $row['created_date']; ?>" placeholder="Registration Date" readonly>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <hr>
                                                             <div class="modal-footer">
-                                                                <button type="button" class="btn btn-sm btn-warning" data-dismiss="modal">Tutup</button>
+                                                                <button type="button" class="btn btn-sm btn-warning" data-dismiss="modal">Close</button>
                                                             </div>
                                                         </form>
                                                     </div>
@@ -289,23 +289,23 @@
                                                 <div class="modal-dialog modal-lg" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Ganti Role [Manajemen Users] - ID <?= $row['id_employee']; ?></h2>
+                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Change Role [Manage Users] - ID <?= $row['id_employee']; ?></h2>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <form method="POST" action="<?= base_url('users/changerole') ?>" enctype="multipart/form-data">
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="form-group col-md-6">
-                                                                        <label class="form-label" for="Nama Lengkap">Nama Lengkap</label>
-                                                                        <input type="text" name="full_name" class="form-control" id="Nama Lengkap" value="<?= $row['full_name']; ?>" placeholder="Nama Lengkap" readonly>
+                                                                        <label class="form-label" for="Full Name">Full Name</label>
+                                                                        <input type="text" name="full_name" class="form-control" id="Full Name" value="<?= $row['full_name']; ?>" placeholder="Full Name" readonly>
                                                                     </div>
                                                                     <div class="form-group col-md-6">
-                                                                        <label class="form-label" for="Hak Akses">Hak Akses</label>
-                                                                        <select name="role" class="form-control" id="Hak Akses" required>
+                                                                        <label class="form-label" for="Role">Role</label>
+                                                                        <select name="role" class="form-control" id="Role" required>
                                                                             <option value="<?= $row['role']; ?>"><?= $row['role']; ?></option>
-                                                                            <option value="">-- Pilih Hak Akses Users --</option>
+                                                                            <option value="">-- Select Role Users --</option>
                                                                             <option value="admin">admin</option>
-                                                                            <option value="petugas">petugas</option>
+                                                                            <!-- <option value="petugas">petugas</option> -->
                                                                             <!-- <option value="masyarakat">masyarakat</option> -->
                                                                         </select>
                                                                     </div>
@@ -318,8 +318,8 @@
                                                                         <input type="password" name="password" class="form-control" id="Password" value="<?= $row['password']; ?>" placeholder="Input New Password" readonly>
                                                                     </div>
                                                                     <div class="form-group col-md-6">
-                                                                        <label class="form-label" for="Alamat Email">Alamat Email</label>
-                                                                        <input type="email" name="email" class="form-control" id="Alamat Email" value="<?= $row['email']; ?>" placeholder="Alamat Email" readonly>
+                                                                        <label class="form-label" for="Email Address">Email Address</label>
+                                                                        <input type="email" name="email" class="form-control" id="Email Address" value="<?= $row['email']; ?>" placeholder="Email Address" readonly>
                                                                     </div>
                                                                     <div class="form-group col-md-6">
                                                                         <label class="form-label" for="No. Handphone">No. Handphone</label>
@@ -331,8 +331,8 @@
                                                             </div>
                                                             <hr>
                                                             <div class="modal-footer">
-                                                                <button type="button" class="btn btn-sm btn-warning" data-dismiss="modal">Tutup</button>
-                                                                <button type="submit" class="btn btn-sm btn-info">Update</button>
+                                                                <button type="button" class="btn btn-sm btn-warning" data-dismiss="modal">Close</button>
+                                                                <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-save"></i> Update</button>
                                                             </div>
                                                         </form>
                                                     </div>
@@ -344,23 +344,23 @@
                                                 <div class="modal-dialog modal-lg" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Ganti Password [Manajemen Users] - ID <?= $row['id_employee']; ?></h2>
+                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Change Password [Manage Users] - ID <?= $row['id_employee']; ?></h2>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <form method="POST" action="<?= base_url('users/changepass') ?>" enctype="multipart/form-data">
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="form-group col-md-6">
-                                                                        <label class="form-label" for="Nama Lengkap">Nama Lengkap</label>
-                                                                        <input type="text" name="full_name" class="form-control" id="Nama Lengkap" value="<?= $row['full_name']; ?>" placeholder="Nama Lengkap" readonly>
+                                                                        <label class="form-label" for="Full Name">Full Name</label>
+                                                                        <input type="text" name="full_name" class="form-control" id="Full Name" value="<?= $row['full_name']; ?>" placeholder="Full Name" readonly>
                                                                     </div>
                                                                     <div class="form-group col-md-6">
-                                                                        <label class="form-label" for="Hak Akses">Hak Akses</label>
-                                                                        <select name="role" class="form-control" id="Hak Akses" readonly>
+                                                                        <label class="form-label" for="Role">Role</label>
+                                                                        <select name="role" class="form-control" id="Role" readonly>
                                                                             <option value="<?= $row['role']; ?>"><?= $row['role']; ?></option>
-                                                                            <option value="">-- Pilih Hak Akses Users --</option>
+                                                                            <option value="">-- Select Role Users --</option>
                                                                             <option value="admin">admin</option>
-                                                                            <option value="petugas">petugas</option>
+                                                                            <!-- <option value="petugas">petugas</option> -->
                                                                             <!-- <option value="masyarakat">masyarakat</option> -->
                                                                         </select>
                                                                     </div>
@@ -379,8 +379,8 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-group col-md-6">
-                                                                        <label class="form-label" for="Alamat Email">Alamat Email</label>
-                                                                        <input type="email" name="email" class="form-control" id="Alamat Email" value="<?= $row['email']; ?>" placeholder="Alamat Email" readonly>
+                                                                        <label class="form-label" for="Email Address">Email Address</label>
+                                                                        <input type="email" name="email" class="form-control" id="Email Address" value="<?= $row['email']; ?>" placeholder="Email Address" readonly>
                                                                     </div>
                                                                     <div class="form-group col-md-6">
                                                                         <label class="form-label" for="No. Handphone">No. Handphone</label>
@@ -392,27 +392,27 @@
                                                             </div>
                                                             <hr>
                                                             <div class="modal-footer">
-                                                                <button type="button" class="btn btn-sm btn-warning" data-dismiss="modal">Tutup</button>
-                                                                <button type="submit" class="btn btn-sm btn-info">Update</button>
+                                                                <button type="button" class="btn btn-sm btn-warning" data-dismiss="modal">Close</button>
+                                                                <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-save"></i> Update</button>
                                                             </div>
                                                         </form>
                                                     </div>
                                                 </div>
                                             </div>
                                             <!-- End ChangePass -->
-                                            <!-- Non-Aktif -->
-                                            <div id="Non-Aktif<?= $row['id_employee']; ?>" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <!-- Non-Active -->
+                                            <div id="Non-Active<?= $row['id_employee']; ?>" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                 <div class="modal-dialog modal-lg" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Non-Aktif [Manajemen Users] - ID <?= $row['id_employee']; ?></h2>
+                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Non-Active [Manajemen Users] - ID <?= $row['id_employee']; ?></h2>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
-                                                        <form method="POST" action="<?= base_url('users/nonaktif') ?>" enctype="multipart/form-data">
+                                                        <form method="POST" action="<?= base_url('users/nonactive') ?>" enctype="multipart/form-data">
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="form-group col-md-12">
-                                                                        <h5>Apa kamu yakin ingin Non-Aktif Users?</h5>
+                                                                        <h5>Are you sure you do Non-Active Users?</h5>
                                                                         <hr>
                                                                         <div style="text-align:center">
                                                                             <label class="form-label">ID.<?= $row['id_employee']; ?> - <?= $row['username']; ?></label><br>
@@ -425,27 +425,27 @@
                                                             </div>
                                                             <hr>
                                                             <div class="modal-footer">
-                                                                <button type="button" class="btn btn-sm btn-warning" data-dismiss="modal">Tutup</button>
-                                                                <button type="submit" class="btn btn-sm btn-info">Non-Aktif</button>
+                                                                <button type="button" class="btn btn-sm btn-warning" data-dismiss="modal">Close</button>
+                                                                <button type="submit" class="btn btn-sm btn-primary">Non-Active</button>
                                                             </div>
                                                         </form>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- End Non-Aktif -->
-                                            <!-- Aktif -->
-                                            <div id="Aktif<?= $row['id_employee']; ?>" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <!-- End Non-Active -->
+                                            <!-- Active -->
+                                            <div id="Active<?= $row['id_employee']; ?>" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                 <div class="modal-dialog modal-lg" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Aktif [Manajemen Users] - ID <?= $row['id_employee']; ?></h2>
+                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Active [Manage Users] - ID <?= $row['id_employee']; ?></h2>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
-                                                        <form method="POST" action="<?= base_url('users/aktif') ?>" enctype="multipart/form-data">
+                                                        <form method="POST" action="<?= base_url('users/active') ?>" enctype="multipart/form-data">
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="form-group col-md-12">
-                                                                        <h5>Apa kamu yakin ingin Aktif Users?</h5>
+                                                                        <h5>Are you sure you are Active Users?</h5>
                                                                         <hr>
                                                                         <div style="text-align:center">
                                                                             <label class="form-label">ID.<?= $row['id_employee']; ?> - <?= $row['username']; ?></label><br>
@@ -458,27 +458,27 @@
                                                             </div>
                                                             <hr>
                                                             <div class="modal-footer">
-                                                                <button type="button" class="btn btn-sm btn-warning" data-dismiss="modal">Tutup</button>
-                                                                <button type="submit" class="btn btn-sm btn-info">Aktif</button>
+                                                                <button type="button" class="btn btn-sm btn-warning" data-dismiss="modal">Close</button>
+                                                                <button type="submit" class="btn btn-sm btn-primary">Active</button>
                                                             </div>
                                                         </form>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- End Aktif -->
+                                            <!-- End Active -->
                                             <!-- Delete  -->
                                             <div id="Delete<?= $row['id_employee']; ?>" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="background: linear-gradient(45deg, #f44336a1, #f44336a1);">
                                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                                                            <h6 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Hapus Data [Manajemen Users] - ID <?= $row['id_employee']; ?></h6>
+                                                            <h6 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Delete Data [Manage Users] - ID <?= $row['id_employee']; ?></h6>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <form method="POST" action="<?= base_url('users/delete') ?>" enctype="multipart/form-data">
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="form-group col-md-12">
-                                                                        <h5>Apa kamu yakin ingin menghapus ini?</h5>
+                                                                        <h5>Apa are you sure you want to delete this Users?</h5>
                                                                         <hr>
                                                                         <div style="text-align:center">
                                                                             <label class="form-label">ID.<?= $row['id_employee']; ?> - <?= $row['username']; ?></label><br>
@@ -490,8 +490,8 @@
                                                             </div>
                                                             <hr>
                                                             <div class="modal-footer">
-                                                                <button type="button" class="btn btn-sm btn-warning" data-dismiss="modal">Tidak</button>
-                                                                <button type="submit" class="btn btn-sm btn-danger">Ya</button>
+                                                                <button type="button" class="btn btn-sm btn-warning" data-dismiss="modal">No</button>
+                                                                <button type="submit" class="btn btn-sm btn-danger">Yes</button>
                                                             </div>
                                                         </form>
                                                     </div>

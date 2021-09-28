@@ -8,11 +8,11 @@
                 <div class="row align-items-center">
                     <div class="col-md-12">
                         <div class="page-header-title">
-                            <h5 class="m-b-10">Page Subscribe</h5>
+                            <h5 class="m-b-10">Page Customers</h5>
                         </div>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#!">Administration Tools</a></li>
-                            <li class="breadcrumb-item">Subscribe</li>
+                            <li class="breadcrumb-item"><a href="#!">Register Customers</a></li>
+                            <li class="breadcrumb-item">Customers</li>
                         </ul>
                     </div>
                 </div>
@@ -25,7 +25,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                        <h4 style="color: #fff;">[Tables] Data Subscribe </h4>
+                        <h4 style="color: #fff;">[Tables] Data Customers </h4>
                         <span class="d-block m-t-5"><small style="color: #fff;">Last update - </small><code><?= tanggal_indo(date('d-m-Y'), true) ?></code> </span>
                     </div>
                     <div class="card-body table-border-style">
@@ -34,16 +34,26 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Email</th>
-                                        <th>Date Subscribe</th>
+                                        <th>Full Name</th>
+                                        <th>Company Name</th>
+                                        <th>Phone Number</th>
+                                        <th>Country</th>
+                                        <th>Industry Type</th>
+                                        <th>Sales Person</th>
+                                        <th>Created Date</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php if ($data_subscribe) : $no = 0;
-                                        foreach ($data_subscribe as $row) : $no++; ?>
+                                    <?php if ($data_customers) : $no = 0;
+                                        foreach ($data_customers as $row) : $no++; ?>
                                             <tr>
                                                 <td><?= $no ?></td>
-                                                <td><?= $row['email']; ?></td>
+                                                <td><?= $row['full_name']; ?></td>
+                                                <td><?= $row['company_name']; ?></td>
+                                                <td><?= $row['code_phone']; ?><?= $row['phone']; ?></td>
+                                                <td><?= $row['country']; ?></td>
+                                                <td><?= $row['industry_type']; ?></td>
+                                                <td><?= $row['sales_person']; ?></td>
                                                 <td><?= $row['created_date']; ?></td>
                                             </tr>
                                         <?php endforeach ?>

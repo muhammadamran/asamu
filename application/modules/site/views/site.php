@@ -82,24 +82,24 @@
                                     </div>
                                     <div class="form-group col-md-12" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
                                         <hr>
-                                        <h5 style="color: #fff;"><i class="fa fa-building"></i> Informasi Perusahaan</h5>
+                                        <h5 style="color: #fff;"><i class="fa fa-building"></i> Information Company</h5>
                                         <hr>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="Nama Perusahaan">Nama Perusahaan</label>
-                                        <input type="text" name="name" class="form-control" id="Nama Perusahaan" placeholder="Nama Perusahaan" required>
+                                        <label class="form-label" for="Company Name">Company Name</label>
+                                        <input type="text" name="name" class="form-control" id="Company Name" placeholder="Company Name" required>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="Alamat Perusahaan">Alamat Perusahaan</label>
-                                        <textarea name="address" class="form-control" id="Alamat Perusahaan" placeholder="Alamat Perusahaan"></textarea>
+                                        <label class="form-label" for="Company Address">Company Address</label>
+                                        <textarea name="address" class="form-control" id="Company Address" placeholder="Company Address"></textarea>
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label class="form-label" for="Email">Email</label>
                                         <input type="email" name="email" class="form-control" id="Email" placeholder="Email" required>
                                     </div>
                                     <div class="form-group col-md-4">
-                                        <label class="form-label" for="Telepon">Telepon</label>
-                                        <input type="text" name="telp" class="form-control" id="Telepon" placeholder="Telepon" required>
+                                        <label class="form-label" for="Telephone">Telephone</label>
+                                        <input type="text" name="telp" class="form-control" id="Telephone" placeholder="Telephone" required>
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label class="form-label" for="Fax">Fax</label>
@@ -170,21 +170,56 @@
                 <div class="col-sm-4">
                     <div class="card">
                         <div class="card-header" style="background: linear-gradient(298deg, #150757, #150757, #150757)">
-                            <h5 style="color: #fff;"><i class="fa fa-images"></i> Icon & Company Logo</h5>
+                            <h5 style="color: #fff;"><i class="fa fa-images"></i> Icon | Company Logo | Loader</h5>
                         </div>
                         <div class="card-body">
-                            <div class="form-group">
-                                <label class="form-label"><u>Icon</u> </label>
-                                <div class="input-group">
-                                    <img src="<?= base_url('modes/images/asamu/logo.png'); ?>" alt="" srcset="">
+                            <!-- Icon -->
+                            <form method="POST" action="<?= base_url('site/iconsave') ?>" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label class="form-label"><u>Icon</u> </label>
+                                    <div class="input-group">
+                                        <img src="https://media.istockphoto.com/vectors/image-preview-icon-picture-placeholder-for-website-or-uiux-design-vector-id1222357475?k=20&m=1222357475&s=170667a&w=0&h=YGycIDbBRAWkZaSvdyUFvotdGfnKhkutJhMOZtIoUKY=" style="width: 120px;height: auto;margin-bottom: 8px;" alt="" srcset="">
+                                        <input type="file" name="icon" required>
+                                        <hr>
+                                        <button class="btn btn-primary"><i class="fa fa-save"></i> Save Icon</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label"><u>Company Logo</u> </label>
-                                <div class="input-group">
-                                    <img src="<?= base_url('modes/images/asamu/asamu-logo.png'); ?>" alt="" srcset="">
+                            </form>
+                            <!-- End Icon -->
+                            <hr>
+                            <!-- Company Logo -->
+                            <form method="POST" action="<?= base_url('site/logosave') ?>" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label class="form-label"><u>Company Logo</u> </label>
+                                    <div class="input-group">
+                                        <img src="https://media.istockphoto.com/vectors/image-preview-icon-picture-placeholder-for-website-or-uiux-design-vector-id1222357475?k=20&m=1222357475&s=170667a&w=0&h=YGycIDbBRAWkZaSvdyUFvotdGfnKhkutJhMOZtIoUKY=" style="width: 120px;height: auto;margin-bottom: 8px;" alt="" srcset="">
+                                        <input type="file" name="logo" required>
+                                        <hr>
+                                        <button class="btn btn-primary"><i class="fa fa-save"></i> Save Logo</button>
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
+                            <!-- End Company Logo -->
+                            <hr>
+                            <!-- Loader -->
+                            <form method="POST" action="<?= base_url('site/loadersave') ?>" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label class="form-label"><u>Loader Logo</u> </label>
+                                    <div class="input-group">
+                                        <img src="https://media.istockphoto.com/vectors/image-preview-icon-picture-placeholder-for-website-or-uiux-design-vector-id1222357475?k=20&m=1222357475&s=170667a&w=0&h=YGycIDbBRAWkZaSvdyUFvotdGfnKhkutJhMOZtIoUKY=" style="width: 120px;height: auto;margin-bottom: 8px;" alt="" srcset="">
+                                        <input type="file" name="loader" required>
+                                        <hr>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input type="text" name="tloader" class="form-control" id="Text Loader" placeholder="Text Loader" required>
+                                            </div>
+                                            <br>
+                                            <button class="btn btn-primary"><i class="fa fa-save"></i> Save Loader</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- End Loader -->
                         </div>
                     </div>
                 </div>
@@ -215,24 +250,24 @@
                                     </div>
                                     <div class="form-group col-md-12" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
                                         <hr>
-                                        <h5 style="color: #fff;"><i class="fa fa-building"></i> Informasi Perusahaan</h5>
+                                        <h5 style="color: #fff;"><i class="fa fa-building"></i> Information Company</h5>
                                         <hr>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="Nama Perusahaan">Nama Perusahaan</label>
-                                        <input type="text" name="name" class="form-control" id="Nama Perusahaan" value="<?= $name ?>" placeholder="Nama Perusahaan" required>
+                                        <label class="form-label" for="Company Name">Company Name</label>
+                                        <input type="text" name="name" class="form-control" id="Company Name" value="<?= $name ?>" placeholder="Company Name" required>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="Alamat Perusahaan">Alamat Perusahaan</label>
-                                        <textarea name="address" class="form-control" id="Alamat Perusahaan" placeholder="Alamat Perusahaan"><?= $address; ?></textarea>
+                                        <label class="form-label" for="Company Address">Company Address</label>
+                                        <textarea name="address" class="form-control" id="Company Address" placeholder="Company Address"><?= $address; ?></textarea>
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label class="form-label" for="Email">Email</label>
                                         <input type="email" name="email" class="form-control" id="Email" value="<?= $email ?>" placeholder="Email" required>
                                     </div>
                                     <div class="form-group col-md-4">
-                                        <label class="form-label" for="Telepon">Telepon</label>
-                                        <input type="text" name="telp" class="form-control" id="Telepon" value="<?= $telp ?>" placeholder="Telepon" required>
+                                        <label class="form-label" for="Telephone">Telephone</label>
+                                        <input type="text" name="telp" class="form-control" id="Telephone" value="<?= $telp ?>" placeholder="Telephone" required>
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label class="form-label" for="Fax">Fax</label>
@@ -295,7 +330,7 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-info mr-2"><i class="fa fa-save"></i> Update</button>
+                                <button type="submit" class="btn btn-primary mr-2"><i class="fa fa-save"></i> Update</button>
                                 <a href="<?= base_url('site'); ?>" class="btn btn-warning"><i class="fas fa-sync"></i> Reset</a>
                             </div>
                         </form>
@@ -304,21 +339,71 @@
                 <div class="col-sm-4">
                     <div class="card">
                         <div class="card-header" style="background: linear-gradient(298deg, #150757, #150757, #150757)">
-                            <h5 style="color: #fff;"><i class="fa fa-images"></i> Icon & Company Logo</h5>
+                            <h5 style="color: #fff;"><i class="fa fa-images"></i> Icon | Company Logo | Loader</h5>
                         </div>
                         <div class="card-body">
-                            <div class="form-group">
-                                <label class="form-label"><u>Icon</u> </label>
-                                <div class="input-group">
-                                    <img src="<?= base_url('modes/images/asamu/logo.png'); ?>" alt="" srcset="">
+                            <!-- Icon -->
+                            <form method="POST" action="<?= base_url('site/iconupdate') ?>" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label class="form-label"><u>Icon</u> </label>
+                                    <div class="input-group">
+                                        <?php if ($icon == NULL) { ?>
+                                            <img src="https://media.istockphoto.com/vectors/image-preview-icon-picture-placeholder-for-website-or-uiux-design-vector-id1222357475?k=20&m=1222357475&s=170667a&w=0&h=YGycIDbBRAWkZaSvdyUFvotdGfnKhkutJhMOZtIoUKY=" style="width: 120px;height: auto;margin-bottom: 8px;" alt="" srcset="">
+                                        <?php } else { ?>
+                                            <img src="<?= base_url('modes/images/asamu/icon/' . $icon); ?>" alt="" srcset="">
+                                        <?php } ?>
+                                        <input type="file" name="icon" required>
+                                        <input type="hidden" name="id_site" value="<?= $id_site ?>">
+                                        <hr>
+                                        <button class="btn btn-primary"><i class="fa fa-save"></i> Update Icon</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label"><u>Company Logo</u> </label>
-                                <div class="input-group">
-                                    <img src="<?= base_url('modes/images/asamu/asamu-logo.png'); ?>" alt="" srcset="">
+                            </form>
+                            <!-- End Icon -->
+                            <hr>
+                            <!-- Company Logo -->
+                            <form method="POST" action="<?= base_url('site/logoupdate') ?>" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label class="form-label"><u>Company Logo</u> </label>
+                                    <div class="input-group">
+                                        <?php if ($logo == NULL) { ?>
+                                            <img src="https://media.istockphoto.com/vectors/image-preview-icon-picture-placeholder-for-website-or-uiux-design-vector-id1222357475?k=20&m=1222357475&s=170667a&w=0&h=YGycIDbBRAWkZaSvdyUFvotdGfnKhkutJhMOZtIoUKY=" style="width: 120px;height: auto;margin-bottom: 8px;" alt="" srcset="">
+                                        <?php } else { ?>
+                                            <img src="<?= base_url('modes/images/asamu/logo/' . $logo); ?>" alt="" srcset="">
+                                        <?php } ?>
+                                        <input type="file" name="logo" required>
+                                        <input type="hidden" name="id_site" value="<?= $id_site ?>">
+                                        <hr>
+                                        <button class="btn btn-primary"><i class="fa fa-save"></i> Update Logo</button>
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
+                            <!-- End Company Logo -->
+                            <hr>
+                            <!-- Loader -->
+                            <form method="POST" action="<?= base_url('site/loaderupdate') ?>" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label class="form-label"><u>Loader Logo</u> </label>
+                                    <div class="input-group">
+                                        <?php if ($loader == NULL) { ?>
+                                            <img src="https://media.istockphoto.com/vectors/image-preview-icon-picture-placeholder-for-website-or-uiux-design-vector-id1222357475?k=20&m=1222357475&s=170667a&w=0&h=YGycIDbBRAWkZaSvdyUFvotdGfnKhkutJhMOZtIoUKY=" style="width: 120px;height: auto;margin-bottom: 8px;" alt="" srcset="">
+                                        <?php } else { ?>
+                                            <img src="<?= base_url('modes/images/asamu/loader/' . $loader); ?>" alt="" srcset="">
+                                        <?php } ?>
+                                        <input type="file" name="loader" required>
+                                        <input type="hidden" name="id_site" value="<?= $id_site ?>">
+                                        <hr>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input type="text" name="tloader" class="form-control" id="Text Loader" value="<?= $tloader ?>" placeholder="Text Loader" required>
+                                            </div>
+                                            <br>
+                                            <button class="btn btn-primary"><i class="fa fa-save"></i> Update Loader</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- End Loader -->
                         </div>
                     </div>
                 </div>

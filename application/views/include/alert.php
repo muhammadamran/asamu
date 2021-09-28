@@ -106,13 +106,13 @@
 	<button type="button" id="clickButtongagal" class="btn btn-sm btn-danger" onclick="gagal()" style="display:none">gagal</button>
 <?php endif; ?>
 
-<?php if ($this->session->flashdata('hapus')) : ?>
+<?php if ($this->session->flashdata('deletes')) : ?>
 	<script type="text/javascript">
 		window.onload = function() {
-			document.getElementById('clickButtonhapus').click();
+			document.getElementById('clickButtondeletes').click();
 		}
 
-		function hapus() {
+		function deletes() {
 			toastr.warning("Data deleted successfully!", "Information", {
 				'closeButton': true,
 				'newestOnTop': false,
@@ -121,7 +121,7 @@
 			})
 		}
 	</script>
-	<button type="button" id="clickButtonhapus" class="btn btn-sm btn-danger" onclick="hapus()" style="display:none">hapus</button>
+	<button type="button" id="clickButtondeletes" class="btn btn-sm btn-danger" onclick="deletes()" style="display:none">deletes</button>
 <?php endif; ?>
 
 <?php if ($this->session->flashdata('changepass')) : ?>
@@ -142,13 +142,13 @@
 	<button type="button" id="clickButtonchangepass" class="btn btn-sm btn-danger" onclick="changepass()" style="display:none">changepass</button>
 <?php endif; ?>
 
-<?php if ($this->session->flashdata('nonaktif')) : ?>
+<?php if ($this->session->flashdata('nonactive')) : ?>
 	<script type="text/javascript">
 		window.onload = function() {
-			document.getElementById('clickButtonnonaktif').click();
+			document.getElementById('clickButtonnonactive').click();
 		}
 
-		function nonaktif() {
+		function nonactive() {
 			toastr.info("Status successfully disabled!", "Information", {
 				'closeButton': true,
 				'newestOnTop': false,
@@ -157,16 +157,16 @@
 			})
 		}
 	</script>
-	<button type="button" id="clickButtonnonaktif" class="btn btn-sm btn-danger" onclick="nonaktif()" style="display:none">nonaktif</button>
+	<button type="button" id="clickButtonnonactive" class="btn btn-sm btn-danger" onclick="nonactive()" style="display:none">nonactive</button>
 <?php endif; ?>
 
-<?php if ($this->session->flashdata('aktif')) : ?>
+<?php if ($this->session->flashdata('active')) : ?>
 	<script type="text/javascript">
 		window.onload = function() {
-			document.getElementById('clickButtonaktif').click();
+			document.getElementById('clickButtonactive').click();
 		}
 
-		function aktif() {
+		function active() {
 			toastr.info("Status activated successfully!", "Information", {
 				'closeButton': true,
 				'newestOnTop': false,
@@ -175,7 +175,7 @@
 			})
 		}
 	</script>
-	<button type="button" id="clickButtonaktif" class="btn btn-sm btn-danger" onclick="aktif()" style="display:none">aktif</button>
+	<button type="button" id="clickButtonactive" class="btn btn-sm btn-danger" onclick="active()" style="display:none">active</button>
 <?php endif; ?>
 
 <?php if ($this->session->flashdata('changerole')) : ?>

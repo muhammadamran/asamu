@@ -360,7 +360,8 @@
          <div class="col-lg-7 col-md-6 px-0">
             <div class="map_container">
                <div class="map">
-                  <div id="googleMap"></div>
+                  <!-- <div id="googleMap"></div> -->
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d495.72377043043747!2d106.803621!3d-6.291287!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1e6f0a64c15%3A0x623a0f8bf591c886!2sTalavera%20Office%20Park!5e0!3m2!1sen!2sid!4v1632832899417!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                </div>
             </div>
          </div>

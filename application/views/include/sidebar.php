@@ -36,34 +36,47 @@
 					<label>Modules</label>
 					<span>Form Modules</span>
 				</li>
+				<!-- All Content -->
+				<li class="pc-item pc-hasmenu <?= $this->uri->segment(1) == "company" && $this->uri->segment(1) == "galeri" && $this->uri->segment(1) == "slider" ? "active pc-trigger" : ""; ?>">
+					<a href="#!" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">list_alt</i></span><span class="pc-mtext">Conctent All in One</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+					<ul class="pc-submenu">
+						<li class="pc-item <?= $this->uri->segment(1) == "sliders" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('sliders') ?>">Sliders</a></li>
+						<li class="pc-item <?= $this->uri->segment(1) == "company" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('company') ?>">About Us</a></li>
+						<li class="pc-item <?= $this->uri->segment(1) == "company" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('company') ?>">Clients</a></li>
+						<li class="pc-item <?= $this->uri->segment(1) == "company" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('company') ?>">Counters</a></li>
+						<li class="pc-item <?= $this->uri->segment(1) == "company" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('company') ?>">Background</a></li>
+					</ul>
+				</li>
 				<!-- Company -->
 				<li class="pc-item pc-hasmenu <?= $this->uri->segment(1) == "company" && $this->uri->segment(1) == "galeri" && $this->uri->segment(1) == "slider" ? "active pc-trigger" : ""; ?>">
 					<a href="#!" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">list_alt</i></span><span class="pc-mtext">Company</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
 					<ul class="pc-submenu">
 						<li class="pc-item <?= $this->uri->segment(1) == "company" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('company') ?>">About Asamu Solusi Mandiri</a></li>
+						<li class="pc-item <?= $this->uri->segment(1) == "company" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('company') ?>">Vision & Mission</a></li>
 					</ul>
 				</li>
 				<!-- Services -->
 				<li class="pc-item pc-hasmenu <?= $this->uri->segment(1) == "edukasi" && $this->uri->segment(1) == "galeri" && $this->uri->segment(1) == "slider" ? "active pc-trigger" : ""; ?>">
 					<a href="#!" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">list_alt</i></span><span class="pc-mtext">Services</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
 					<ul class="pc-submenu">
-						<li class="pc-item <?= $this->uri->segment(1) == "edukasi" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('edukasi') ?>">Oil & Gas Production</a></li>
-						<li class="pc-item <?= $this->uri->segment(1) == "slider" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('slider') ?>">Mecganical Engineering</a></li>
-						<li class="pc-item <?= $this->uri->segment(1) == "slider" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('slider') ?>">Chemical Research</a></li>
-						<li class="pc-item <?= $this->uri->segment(1) == "slider" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('slider') ?>">Power & Energy</a></li>
-						<li class="pc-item <?= $this->uri->segment(1) == "slider" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('slider') ?>">Civil Engineering</a></li>
+						<li class="pc-item <?= $this->uri->segment(1) == "edukasi" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('edukasi') ?>">List Services</a></li>
+						<li class="pc-item <?= $this->uri->segment(1) == "slider" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('slider') ?>">Content Services</a></li>
 					</ul>
+				</li>
+				<li class="pc-item pc-caption">
+					<label>Register Customers</label>
+				</li>
+				<li class="pc-item <?= $this->uri->segment(1) == "customers" ? "active" : ""; ?>">
+					<a href="<?= base_url('customers') ?>" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">groups</i></span><span class="pc-mtext">Customers</span></a>
 				</li>
 				<li class="pc-item pc-caption">
 					<label>Administrator Tools</label>
 				</li>
-				<li class="pc-item <?php // $this->uri->segment(1) == "subscribe" ? "active" : ""; 
-									?>">
-					<a href="<?php // base_url('subscribe')
-								?>" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">bubble_chart</i></span><span class="pc-mtext">Subscribe</span></a>
+				<li class="pc-item <?= $this->uri->segment(1) == "subscribe" ? "active" : ""; ?>">
+					<a href="<?= base_url('subscribe') ?>" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">bubble_chart</i></span><span class="pc-mtext">Subscribe</span></a>
 				</li>
 				<li class="pc-item <?= $this->uri->segment(1) == "users" ? "active" : ""; ?>">
-					<a href="<?= base_url('users') ?>" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">group</i></span><span class="pc-mtext">Manajemen Users</span></a>
+					<a href="<?= base_url('users') ?>" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">group</i></span><span class="pc-mtext">Manage Users</span></a>
 				</li>
 				<li class="pc-item <?= $this->uri->segment(1) == "site" ? "active" : ""; ?>">
 					<a href="<?= base_url('site') ?>" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">build</i></span><span class="pc-mtext">Setting Site</span></a>

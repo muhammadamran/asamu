@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Users extends CI_Controller {
+class Users extends CI_Controller
+{
 
     public function __construct()
     {
@@ -13,18 +14,18 @@ class Users extends CI_Controller {
     public function index()
     {
         $user = $this->session->userdata('username');
-        if ($user == NULL ) {
+        if ($user == NULL) {
             $this->session->set_flashdata('n_session', "The identity does not match our data!");
             redirect('login');
         } else {
-        // DATA USERS
+            // DATA USERS
             $get_data = $this->Users_model->get_data_users();
-            $value['data_users'] = $get_data; 
-            
+            $value['data_users'] = $get_data;
+
             $this->load->view('include/head');
             $this->load->view('include/top-header');
             $this->load->view('include/alert');
-            $this->load->view('users',$value);
+            $this->load->view('users', $value);
             $this->load->view('include/sidebar');
             $this->load->view('include/footer');
         }
@@ -33,42 +34,41 @@ class Users extends CI_Controller {
 
     // REGISTRATION USERS
     public function registration()
-	{	
-		$Cek_email = $this->input->post('email');
-		$Cek_username = $this->input->post('username');
+    {
+        $Cek_email = $this->input->post('email');
+        $Cek_username = $this->input->post('username');
 
-		$CekEmail = $this->Users_model->get_email($Cek_email);
-		$CekUsername = $this->Users_model->get_username($Cek_username);
+        $CekEmail = $this->Users_model->get_email($Cek_email);
+        $CekUsername = $this->Users_model->get_username($Cek_username);
 
-		$InputUsers = array(
-			'username' => $this->input->post('username'),
-			'password' => md5(md5($this->input->post('password'))),
-			'created_date' => date('Y-m-d h:m:i'),
-			'role' => $this->input->post('role'),
-			'status' => '1'
-		);
-		
-		$InputMembers = array(
-			'kode' => 'LTE'.'-'.$this->input->post('username'),
-			'full_name' => $this->input->post('full_name'),
-			'phone' => $this->input->post('phone'),
-			'email' => $this->input->post('email'),
-			'login' => $this->input->post('username'),
-			'created_date' => date('Y-m-d h:m:i'),
-			'status' => '1'
-		);
+        $InputUsers = array(
+            'username' => $this->input->post('username'),
+            'password' => md5(md5($this->input->post('password'))),
+            'created_date' => date('Y-m-d h:m:i'),
+            'role' => $this->input->post('role'),
+            'status' => '1'
+        );
+
+        $InputMembers = array(
+            'kode' => 'LTE' . '-' . $this->input->post('username'),
+            'full_name' => $this->input->post('full_name'),
+            'phone' => $this->input->post('phone'),
+            'email' => $this->input->post('email'),
+            'login' => $this->input->post('username'),
+            'created_date' => date('Y-m-d h:m:i'),
+            'status' => '1'
+        );
 
         if ($CekEmail == NULL && $CekUsername == NULL) {
-            $this->db->insert('tbl_users',$InputUsers);
-            $this->db->insert('tbl_members',$InputMembers);
-            $this->session->set_flashdata('success','Empty');
+            $this->db->insert('tbl_users', $InputUsers);
+            $this->db->insert('tbl_employee', $InputMembers);
+            $this->session->set_flashdata('success', 'Empty');
             redirect('users');
-        }else{
-            $this->session->set_flashdata('gagal','Empty');
+        } else {
+            $this->session->set_flashdata('gagal', 'Empty');
             redirect('users');
         }
-
-	}
+    }
 
     // UPDATING USERS
     public function changepass()
@@ -79,7 +79,7 @@ class Users extends CI_Controller {
             'password' => md5(md5($this->input->post('password')))
         );
 
-        $this->Users_model->update_password('tbl_users', $input_data,$where);
+        $this->Users_model->update_password('tbl_users', $input_data, $where);
         $this->session->set_flashdata('changepass', "Empty!");
         redirect('users');
     }
@@ -93,13 +93,13 @@ class Users extends CI_Controller {
             'role' => $this->input->post('role')
         );
 
-        $this->Users_model->update_password('tbl_users', $input_data,$where);
+        $this->Users_model->update_password('tbl_users', $input_data, $where);
         $this->session->set_flashdata('changerole', "Empty!");
         redirect('users');
     }
 
-    // NON-AKTIF USERS
-    public function nonaktif()
+    // NON-ACTIVE USERS
+    public function nonactive()
     {
         $where = $this->input->post('username');
 
@@ -107,14 +107,14 @@ class Users extends CI_Controller {
             'status' => $this->input->post('status')
         );
 
-        $this->Users_model->update_status_u('tbl_users', $input_data,$where);
-        $this->Users_model->update_status_m('tbl_members', $input_data,$where);
-        $this->session->set_flashdata('nonaktif', "Empty!");
+        $this->Users_model->update_status_u('tbl_users', $input_data, $where);
+        $this->Users_model->update_status_m('tbl_employee', $input_data, $where);
+        $this->session->set_flashdata('nonactive', "Empty!");
         redirect('users');
     }
 
-    // AKTIF USERS
-    public function aktif()
+    // ACTIVE USERS
+    public function active()
     {
         $where = $this->input->post('username');
 
@@ -122,12 +122,12 @@ class Users extends CI_Controller {
             'status' => $this->input->post('status')
         );
 
-        $this->Users_model->update_status_u('tbl_users', $input_data,$where);
-        $this->Users_model->update_status_m('tbl_members', $input_data,$where);
-        $this->session->set_flashdata('aktif', "Empty!");
+        $this->Users_model->update_status_u('tbl_users', $input_data, $where);
+        $this->Users_model->update_status_m('tbl_employee', $input_data, $where);
+        $this->session->set_flashdata('active', "Empty!");
         redirect('users');
     }
-    
+
     // ADDING USERS
     public function adding()
     {
@@ -168,7 +168,7 @@ class Users extends CI_Controller {
     // UPDATING USERS
     public function updating()
     {
-        $ID = $this->input->post('id_Users');
+        $ID = $this->input->post('id_users');
 
         $dataUsers = array(
             'title' => $this->input->post('title'),
@@ -191,19 +191,18 @@ class Users extends CI_Controller {
             'status' => $this->input->post('status')
         );
 
-        $this->Users_model->update_Users('tbl_users', $dataUsers,$ID);
+        $this->Users_model->update_Users('tbl_users', $dataUsers, $ID);
         $this->session->set_flashdata('success', "Data saved successfully!");
         redirect('users');
     }
 
     public function delete()
-	{
-		$where = $this->input->post('username');
+    {
+        $where = $this->input->post('username');
 
-		$this->Users_model->delete_tbl_users($where);
-		$this->Users_model->delete_tbl_members($where);
-        $this->session->set_flashdata('hapus', "Empty");
+        $this->Users_model->delete_tbl_users($where);
+        $this->Users_model->delete_tbl_employee($where);
+        $this->session->set_flashdata('deletes', "Empty");
         redirect('users');
-	}
-
+    }
 }

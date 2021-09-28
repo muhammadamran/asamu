@@ -23,6 +23,10 @@ class Site extends CI_Controller
 			$Cek_get_data = $value['data_site'] = $get_data;
 
 			if ($Cek_get_data  == NULL) {
+				$value['icon'] = '';
+				$value['logo'] = '';
+				$value['loader'] = '';
+				$value['tloader'] = '';
 				$value['title'] = '';
 				$value['slogan'] = '';
 				$value['motto'] = '';
@@ -44,6 +48,10 @@ class Site extends CI_Controller
 			} else {
 				$post_data = $this->Site_model->post_data_site();
 				$value['id_site'] = $post_data[0]->id_site;
+				$value['icon'] = $post_data[0]->icon;
+				$value['logo'] = $post_data[0]->logo;
+				$value['loader'] = $post_data[0]->loader;
+				$value['tloader'] = $post_data[0]->tloader;
 				$value['title'] = $post_data[0]->title;
 				$value['slogan'] = $post_data[0]->slogan;
 				$value['motto'] = $post_data[0]->motto;
@@ -139,6 +147,152 @@ class Site extends CI_Controller
 			'footer' => $this->input->post('footer'),
 			'created_date' => $this->input->post('created_date'),
 			'status' => $this->input->post('status')
+		);
+
+		$this->Site_model->update_site('tbl_site', $dataSite, $ID);
+		$this->session->set_flashdata('success', "Data saved successfully!");
+		redirect('site');
+	}
+
+	// FUNCTION UPLOAD ICON
+	public function uploadicon()
+	{
+		foreach ($_FILES as $name => $fileInfo) {
+			$filename = $_FILES[$name]['name'];
+			$tmpname = $_FILES[$name]['tmp_name'];
+			$exp = explode('.', $filename);
+			$ext = end($exp);
+			$newname = 'icon_' . time() . "." . $ext;
+			$config['upload_path'] = './modes/images/asamu/icon/';
+			$config['upload_url'] =  base_url() . 'modes/images/asamu/icon/';
+			$config['allowed_types'] = "jpg|jpeg|png";
+			$config['max_size'] = '2000000';
+			$config['file_name'] = $newname;
+			$this->load->library('upload', $config);
+			move_uploaded_file($tmpname, "modes/images/asamu/icon/" . $newname);
+			return $newname;
+		}
+	}
+
+	// FUNCTION UPLOAD LOGO
+	public function uploadlogo()
+	{
+		foreach ($_FILES as $name => $fileInfo) {
+			$filename = $_FILES[$name]['name'];
+			$tmpname = $_FILES[$name]['tmp_name'];
+			$exp = explode('.', $filename);
+			$ext = end($exp);
+			$newname = 'logo_' . time() . "." . $ext;
+			$config['upload_path'] = './modes/images/asamu/logo/';
+			$config['upload_url'] =  base_url() . 'modes/images/asamu/logo/';
+			$config['allowed_types'] = "jpg|jpeg|png";
+			$config['max_size'] = '2000000';
+			$config['file_name'] = $newname;
+			$this->load->library('upload', $config);
+			move_uploaded_file($tmpname, "modes/images/asamu/logo/" . $newname);
+			return $newname;
+		}
+	}
+
+	// FUNCTION UPLOAD LOGO
+	public function uploadloader()
+	{
+		foreach ($_FILES as $name => $fileInfo) {
+			$filename = $_FILES[$name]['name'];
+			$tmpname = $_FILES[$name]['tmp_name'];
+			$exp = explode('.', $filename);
+			$ext = end($exp);
+			$newname = 'loader_' . time() . "." . $ext;
+			$config['upload_path'] = './modes/images/asamu/loader/';
+			$config['upload_url'] =  base_url() . 'modes/images/asamu/loader/';
+			$config['allowed_types'] = "jpg|jpeg|png";
+			$config['max_size'] = '2000000';
+			$config['file_name'] = $newname;
+			$this->load->library('upload', $config);
+			move_uploaded_file($tmpname, "modes/images/asamu/loader/" . $newname);
+			return $newname;
+		}
+	}
+
+	// ADD ICON
+
+	// ADD LOGO
+
+	// ADD LOADER
+
+	// UPDATE ICON
+
+	public function iconupdate()
+	{
+		$pic = '';
+
+		foreach ($_FILES as $name => $fileInfo) {
+			if (!empty($_FILES[$name]['name'])) {
+				$newname = $this->uploadicon();
+				$data[$name] = $newname;
+				$pic = $newname;
+			}
+		}
+
+		$upload = $input_data['icon'] = $pic;
+
+		$ID = $this->input->post('id_site');
+
+		$dataSite = array(
+			'icon' => $upload
+		);
+
+		$this->Site_model->update_site('tbl_site', $dataSite, $ID);
+		$this->session->set_flashdata('success', "Data saved successfully!");
+		redirect('site');
+	}
+
+	// UPDATE LOGO
+	public function logoupdate()
+	{
+		$pic = '';
+
+		foreach ($_FILES as $name => $fileInfo) {
+			if (!empty($_FILES[$name]['name'])) {
+				$newname = $this->uploadlogo();
+				$data[$name] = $newname;
+				$pic = $newname;
+			}
+		}
+
+		$upload = $input_data['logo'] = $pic;
+
+		$ID = $this->input->post('id_site');
+
+		$dataSite = array(
+			'logo' => $upload
+		);
+
+		$this->Site_model->update_site('tbl_site', $dataSite, $ID);
+		$this->session->set_flashdata('success', "Data saved successfully!");
+		redirect('site');
+	}
+
+	// UPDATE LOADER
+	public function loaderupdate()
+	{
+		$pic = '';
+
+		foreach ($_FILES as $name => $fileInfo) {
+			if (!empty($_FILES[$name]['name'])) {
+				$newname = $this->uploadloader();
+				$data[$name] = $newname;
+				$pic = $newname;
+			}
+		}
+
+		$upload = $input_data['loader'] = $pic;
+
+		$ID = $this->input->post('id_site');
+
+		$dataSite = array(
+			'loader' => $upload,
+			'tloader' => $this->input->post('tloader'),
 		);
 
 		$this->Site_model->update_site('tbl_site', $dataSite, $ID);
