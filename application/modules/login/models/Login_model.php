@@ -13,7 +13,7 @@ class Login_model extends CI_Model {
     }
 
     public function get_employees($username){
-        return $this->db->query("SELECT * FROM tbl_members
+        return $this->db->query("SELECT * FROM tbl_employee
             WHERE login='$username' 
             AND status='1'")->result();
     }
@@ -41,4 +41,3 @@ class Login_model extends CI_Model {
            ORDER BY id_site DESC")->result();
     }
 }
-?>

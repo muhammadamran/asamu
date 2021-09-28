@@ -14,6 +14,9 @@ class Whome extends CI_Controller
 	public function index()
 	{
 		// DATA SLIDER
+		$t_slider = $this->Whome_model->get_count_slider();
+		$value['total_slider'] = $t_slider;
+
 		$slider = $this->Whome_model->get_slider();
 		$value['data_slider'] = $slider;
 		// END DATA SLIDER

@@ -61,7 +61,7 @@
                </div>
             </div>
          </div>
-         <div class="col-md-6 col-lg-2 mx-auto info_col">
+         <div class="col-md-6 col-lg-3 info_col">
             <div class="info_link_box">
                <h4>
                   Company

@@ -1,8 +1,7 @@
 <!-- Slider -->
 <div id="carousel" class="carousel slide" data-ride="carousel">
    <ol class="carousel-indicators">
-      <li data-target="#carousel" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel" data-slide-to="1" class=""></li>
+      <li data-target="#carousel" data-slide-to="1" class="active"></li>
       <li data-target="#carousel" data-slide-to="2" class=""></li>
       <li data-target="#carousel" data-slide-to="3" class=""></li>
    </ol>
@@ -31,14 +30,6 @@
             <a class="btn animated fadeInUp" href="https://htmlcodex.com/construction-company-website-template">Get Started</a>
          </div>
       </div>
-      <div class="carousel-item">
-         <img src="<?= base_url('modes/images/asamu/banner/banner1.jpg'); ?>" alt="Carousel Image">
-         <div class="carousel-caption">
-            <p class="animated fadeInRight">04</p>
-            <h1 class="animated fadeInLeft">Isi 04</h1>
-            <a class="btn animated fadeInUp" href="https://htmlcodex.com/construction-company-website-template">Get Started</a>
-         </div>
-      </div>
    </div>
    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -50,7 +41,39 @@
    </a>
 </div>
 <!-- End Slider -->
-<section class="service_section layout_padding">
+<!-- About Company -->
+<section class="about_section layout_padding-bottom">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-5 ">
+            <div class="img-box aos-animate" data-aos="zoom-out" data-aos-delay="300">
+               <img src="<?= base_url('modes/images/about-img.jpg'); ?>" alt="" style="max-height: 435px;">
+            </div>
+         </div>
+         <div class="col-md-7">
+            <div class="detail-box">
+               <div class="heading_container">
+                  <h2>
+                     About <span>Us</span>
+                  </h2>
+               </div>
+               <p>
+                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                  in some form, by injected humour, or randomised words which don't look even slightly believable. If you
+                  are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
+                  the middle of text. All
+               </p>
+               <a href="">
+                  Read More
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- End About Company -->
+<!-- Services -->
+<section class="service_section layout_padding" style="background-image: url(<?= base_url('modes/images/asamu/bg-2.png'); ?>);">
    <div class="service_container">
       <div class="container ">
          <div class="heading_container heading_center">
@@ -192,38 +215,53 @@
       </div>
    </div>
 </section>
-<section class="about_section layout_padding-bottom">
+<!-- End Services -->
+<!-- Our Clients -->
+<section id="clients" class="section-bg">
    <div class="container">
-      <div class="row">
-         <div class="col-md-5 ">
-            <div class="img-box aos-animate" data-aos="zoom-out" data-aos-delay="300">
-               <img src="<?= base_url('modes/images/about-img.jpg'); ?>" alt="" style="max-height: 435px;">
-            </div>
+      <div class="heading_container heading_center">
+         <h2>
+            Our <span>Services</span>
+         </h2>
+         <p>
+            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+         </p>
+      </div>
+      <br>
+      <div class="row no-gutters clients-wrap clearfix wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+         <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460149/abof.png" class="img-fluid" alt=""> </div>
          </div>
-         <div class="col-md-7">
-            <div class="detail-box">
-               <div class="heading_container">
-                  <h2>
-                     About <span>Us</span>
-                  </h2>
-               </div>
-               <p>
-                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                  in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-                  are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-                  the middle of text. All
-               </p>
-               <a href="">
-                  Read More
-               </a>
-            </div>
+         <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460224/cropped-cropped-20170720-lucuLogo-squ2-e1500543540803.png" class="img-fluid" alt=""> </div>
+         </div>
+         <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460269/104840a62d46c05d285762857fecb61a.png" class="img-fluid" alt=""> </div>
+         </div>
+         <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460358/client-4.png" class="img-fluid" alt=""> </div>
+         </div>
+         <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460379/client-5.png" class="img-fluid" alt=""> </div>
+         </div>
+         <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460398/client-6.png" class="img-fluid" alt=""> </div>
+         </div>
+         <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460418/client-7.png" class="img-fluid" alt=""> </div>
+         </div>
+         <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460418/client-7.png" class="img-fluid" alt=""> </div>
          </div>
       </div>
    </div>
 </section>
+<!-- End Our Clients -->
+
+<!-- Cont -->
 <section class="why_us_section layout_padding">
    <div class="why_bg_box">
-      <img src="<?= base_url('modes/images/why-bg.jpg'); ?>" alt="">
+      <img src="<?= base_url('modes/images/asamu/bg-1.png'); ?>" alt="">
    </div>
    <div class="why_us_container">
       <div class="container">
@@ -282,45 +320,8 @@
       </div>
    </div>
 </section>
-<section id="clients" class="section-bg">
-   <div class="container">
-      <div class="heading_container heading_center">
-         <h2>
-            Our <span>Services</span>
-         </h2>
-         <p>
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-         </p>
-      </div>
-      <br>
-      <div class="row no-gutters clients-wrap clearfix wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-         <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460149/abof.png" class="img-fluid" alt=""> </div>
-         </div>
-         <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460224/cropped-cropped-20170720-lucuLogo-squ2-e1500543540803.png" class="img-fluid" alt=""> </div>
-         </div>
-         <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460269/104840a62d46c05d285762857fecb61a.png" class="img-fluid" alt=""> </div>
-         </div>
-         <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460358/client-4.png" class="img-fluid" alt=""> </div>
-         </div>
-         <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460379/client-5.png" class="img-fluid" alt=""> </div>
-         </div>
-         <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460398/client-6.png" class="img-fluid" alt=""> </div>
-         </div>
-         <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460418/client-7.png" class="img-fluid" alt=""> </div>
-         </div>
-         <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460418/client-7.png" class="img-fluid" alt=""> </div>
-         </div>
-      </div>
-   </div>
-</section>
+<!-- End Cont -->
+<!-- Contact us -->
 <section class="contact_section">
    <div class="container-fluid">
       <div class="row">
@@ -366,3 +367,4 @@
       </div>
    </div>
 </section>
+<!-- End Contact us -->

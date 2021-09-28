@@ -80,11 +80,13 @@
       </div>
       <nav id="navbar" class="navbar">
          <ul>
-            <li><a class="nav-link scrollto active" href="<?= base_url(''); ?>">Home</a></li>
-            <li class="dropdown"><a href="#"><span>Company</span> <i class="bi bi-chevron-down"></i></a>
+            <li>
+               <a class="nav-link scrollto <?= $this->uri->segment(1) == "whome" || $this->uri->segment(1) == "" ? "active" : ""; ?>" href="<?= base_url(''); ?>">Home</a>
+            </li>
+            <li class="dropdown"><a class="nav-link scrollto <?= $this->uri->segment(1) == "wabout" || $this->uri->segment(1) == "wvisionmission" ? "active" : ""; ?>" href="<?= base_url(''); ?>" href="#"><span>Company</span> <i class="bi bi-chevron-down"></i></a>
                <ul>
-                  <li><a href="<?= base_url('wabout'); ?>">About Asamu Solusi Mandiri</a></li>
-                  <li><a href="<?= base_url('wvisionmission'); ?>">Vision & Mission</a></li>
+                  <li><a class="<?= $this->uri->segment(1) == "wabout" ? "active" : ""; ?>" href="<?= base_url('wabout'); ?>">About Asamu Solusi Mandiri</a></li>
+                  <li><a class="<?= $this->uri->segment(1) == "wvisionmission" ? "active" : ""; ?>" href="<?= base_url('wvisionmission'); ?>">Vision & Mission</a></li>
                </ul>
             </li>
             <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
@@ -101,7 +103,7 @@
                   <li><a href="#">Team of Expert</a></li>
                </ul>
             </li>
-            <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+            <li><a class="nav-link scrollto <?= $this->uri->segment(1) == "wcontactus" ? "active" : ""; ?>" href="<?= base_url('wcontactus'); ?>">Contact Us</a></li>
             <li class="dropdown">
                <a href="#">
                   <span><i class="fa fa-globe" style="font-size: 16px;"></i> &nbsp; <img src="https://lipis.github.io/flag-icon-css/flags/4x3/gb.svg" style="width: 20px;margin-bottom: 4px;" alt="" srcset=""></span>
@@ -137,7 +139,7 @@
                   border-color: #058ccd;
                }
             </style>
-            <li><a class="nav-link scrollto" href="#contact"><button class="get-login"><i class="fa fa-user" style="font-size: 16px;"></i> Login</button></a></li>
+            <li><a class="nav-link scrollto <?= $this->uri->segment(1) == "company" && $this->uri->segment(1) == "galeri" && $this->uri->segment(1) == "slider" ? "active" : ""; ?>" href="#contact"><button class="get-login"><i class="fa fa-user" style="font-size: 16px;"></i> Login</button></a></li>
             <style>
                .get-started {
                   color: #ffffff;
@@ -161,7 +163,7 @@
                   border-color: #150757;
                }
             </style>
-            <li><a class="nav-link scrollto" href="#contact"><button class="get-started">Get Started</button></a></li>
+            <li><a class="nav-link scrollto <?= $this->uri->segment(1) == "company" && $this->uri->segment(1) == "galeri" && $this->uri->segment(1) == "slider" ? "active" : ""; ?>" href="#contact"><button class="get-started">Get Started</button></a></li>
          </ul>
          <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
