@@ -68,15 +68,15 @@
 </style>
 <!-- Top Header -->
 <div class="navbar-custom">
-   <a href="#" class="active"><i>Digital Logistic Partner</i></a>
-   <a href="#" class="right"><i class="fa fa-envelope"></i> Email Address</a>
-   <a href="#" class="right"><i class="fa fa-phone"></i> Phone Number</a>
+   <a href="#" class="active"><i><?= $motto; ?></i></a>
+   <a href="mailto:<?= $email; ?>" rel="noopener" class="right"><i class="fa fa-envelope"></i> <?= $email; ?></a>
+   <a href="tel:<?= $telp; ?>" rel="noopener" class="right"><i class="fa fa-phone"></i> <?= $telp; ?></a>
 </div>
 <!-- End Top Header -->
 <header id="header" class="d-flex align-items-center">
    <div class="container d-flex justify-content-between">
       <div id="logo">
-         <a href="<?= base_url(''); ?>"><img src="<?= base_url('modes/images/asamu/asamu-logo2.png'); ?>" alt=""></a>
+         <a href="<?= base_url(''); ?>"><img src="<?= base_url('modes/images/asamu/logo/' . $logo); ?>" alt=""></a>
       </div>
       <nav id="navbar" class="navbar">
          <ul>

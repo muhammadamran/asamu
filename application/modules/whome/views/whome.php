@@ -328,8 +328,9 @@
          <div class="col-lg-4 col-md-5 offset-md-1">
             <div class="heading_container">
                <h2>
-                  Contact <span>Us</span>
+                  Send us an <span>email</span>
                </h2>
+               <p>Let's Get In Touch! - <small style="font-size: 10px;font-weight:700;">I’d be happy to help and provide a solution for you</small></p>
             </div>
          </div>
       </div>

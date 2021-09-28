@@ -8,8 +8,8 @@
    <meta name="keywords" content="Logistics, Perusahaan, Jasa, Freigth,Freigth Forwading, Company, Branch, Pelabuhan, Bandara" />
    <meta name="description" content="" />
    <meta name="author" content="Hellos-ID" />
-   <link rel="shortcut icon" href="<?= base_url('modes/images/asamu/logo.png'); ?>" type="">
-   <title>Asamu Solusi | Strong Business Partner, Highly Focused with Your Target</title>
+   <link rel="shortcut icon" href="<?= base_url('modes/images/asamu/icon/' . $icon); ?>" type="">
+   <title><?= $title; ?></title>
    <!-- <title>PT. Asamu Solusi Mandiri - Strong Business Partner, Highly Focused with Your Target</title> -->
    <link rel="stylesheet" type="text/css" href="<?= base_url('modes/css/bootstrap.css'); ?>" />
    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -159,10 +159,10 @@ function Rupiah($angka)
    <div class="preloader">
       <div class="loading">
          <div class="heading_container heading_center">
-            <img src="<?= base_url('modes/images/asamu/asamu-logo.png') ?>" width="200">
+            <img src="<?= base_url('modes/images/asamu/loader/' . $loader); ?>" width="200">
             <br>
             <!-- <label style="font-weight:700"></label> -->
-            <p class="line-1 anim-typewriter load">On Progress...</p>
+            <p class="line-1 anim-typewriter load"><?= $tloader; ?></p>
          </div>
       </div>
    </div>

@@ -40,23 +40,30 @@
                   }
                </style>
                <h4 class="footer-asamu-logo">
-                  <img src="<?= base_url('modes/images/asamu/asamu-logo.png'); ?>" style="width: 100%;height: auto;">
+                  <img src="<?= base_url('modes/images/asamu/logo/' . $logo); ?>" style="width: 100%;height: auto;">
                </h4>
-               <p align="justify">
-                  Consectetur nobis minima harum beatae repudiandae ad adipisci recusandae unde, quaerat, voluptatibus voluptatum aut eveniet est assumenda iusto quos. Nam soluta, error illum
+               <p align="justify" style="margin-bottom: 5px">
+                  <?= $address; ?>
                </p>
+               <b style="font-size: 10px;"><i>" <?= $slogan; ?>"</i></b>
                <div class="info_social">
-                  <a href="">
+                  <a href="<?= $facebook; ?>" target="_blank">
                      <i class="fa fa-facebook" aria-hidden="true"></i>
                   </a>
-                  <a href="">
+                  <a href="<?= $twitter; ?>" target="_blank">
                      <i class="fa fa-twitter" aria-hidden="true"></i>
                   </a>
-                  <a href="">
+                  <a href="<?= $linked; ?>" target="_blank">
                      <i class="fa fa-linkedin" aria-hidden="true"></i>
                   </a>
-                  <a href="">
+                  <a href="<?= $instagram; ?>" target="_blank">
                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                  <a href="<?= $youtube; ?>" target="_blank">
+                     <i class="fa fa-youtube" aria-hidden="true"></i>
+                  </a>
+                  <a href="<?= $google; ?>" target="_blank">
+                     <i class="fa fa-google" aria-hidden="true"></i>
                   </a>
                </div>
             </div>
@@ -109,7 +116,7 @@
 <footer id="footer">
    <div class="container">
       <div class="copyright">
-         &copy; Copyright 2021 - <?= date('Y'); ?> <strong>PT. Asamu Solusi Mandiri</strong>. All Rights Reserved
+         &copy; Copyright 2021 - <?= date('Y'); ?> <strong><?= $name; ?></strong>. All Rights Reserved
       </div>
       <div class="credits">
          Designed by
