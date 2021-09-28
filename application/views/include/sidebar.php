@@ -37,30 +37,29 @@
 					<span>Form Modules</span>
 				</li>
 				<!-- All Content -->
-				<li class="pc-item pc-hasmenu <?= $this->uri->segment(1) == "company" && $this->uri->segment(1) == "galeri" && $this->uri->segment(1) == "slider" ? "active pc-trigger" : ""; ?>">
+				<li class="pc-item pc-hasmenu">
 					<a href="#!" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">list_alt</i></span><span class="pc-mtext">Conctent All in One</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
 					<ul class="pc-submenu">
 						<li class="pc-item <?= $this->uri->segment(1) == "sliders" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('sliders') ?>">Sliders</a></li>
-						<li class="pc-item <?= $this->uri->segment(1) == "company" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('company') ?>">About Us</a></li>
-						<li class="pc-item <?= $this->uri->segment(1) == "company" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('company') ?>">Clients</a></li>
-						<li class="pc-item <?= $this->uri->segment(1) == "company" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('company') ?>">Counters</a></li>
-						<li class="pc-item <?= $this->uri->segment(1) == "company" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('company') ?>">Background</a></li>
+						<li class="pc-item <?= $this->uri->segment(1) == "clients" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('clients') ?>">Clients</a></li>
+						<li class="pc-item <?= $this->uri->segment(1) == "counters" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('counters') ?>">Counters</a></li>
+						<li class="pc-item <?= $this->uri->segment(1) == "background" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('background') ?>">Background</a></li>
 					</ul>
 				</li>
 				<!-- Company -->
-				<li class="pc-item pc-hasmenu <?= $this->uri->segment(1) == "company" && $this->uri->segment(1) == "galeri" && $this->uri->segment(1) == "slider" ? "active pc-trigger" : ""; ?>">
+				<li class="pc-item pc-hasmenu">
 					<a href="#!" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">list_alt</i></span><span class="pc-mtext">Company</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
 					<ul class="pc-submenu">
-						<li class="pc-item <?= $this->uri->segment(1) == "company" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('company') ?>">About Asamu Solusi Mandiri</a></li>
-						<li class="pc-item <?= $this->uri->segment(1) == "company" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('company') ?>">Vision & Mission</a></li>
+						<li class="pc-item <?= $this->uri->segment(1) == "aboutus" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('aboutus') ?>">About Asamu Solusi Mandiri</a></li>
+						<li class="pc-item <?= $this->uri->segment(1) == "visionmission" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('visionmission') ?>">Vision & Mission</a></li>
 					</ul>
 				</li>
 				<!-- Services -->
-				<li class="pc-item pc-hasmenu <?= $this->uri->segment(1) == "edukasi" && $this->uri->segment(1) == "galeri" && $this->uri->segment(1) == "slider" ? "active pc-trigger" : ""; ?>">
+				<li class="pc-item pc-hasmenu">
 					<a href="#!" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">list_alt</i></span><span class="pc-mtext">Services</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
 					<ul class="pc-submenu">
-						<li class="pc-item <?= $this->uri->segment(1) == "edukasi" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('edukasi') ?>">List Services</a></li>
-						<li class="pc-item <?= $this->uri->segment(1) == "slider" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('slider') ?>">Content Services</a></li>
+						<li class="pc-item <?= $this->uri->segment(2) == "services_list" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('services/services_list') ?>">List Services</a></li>
+						<li class="pc-item <?= $this->uri->segment(2) == "services_content" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('services/services_content') ?>">Content Services</a></li>
 					</ul>
 				</li>
 				<li class="pc-item pc-caption">
