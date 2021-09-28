@@ -51,7 +51,8 @@ body {
 }
 
 .heading_container h2 span {
-  color: #40a798;
+  color: #36258b;
+  text-transform: uppercase;
 }
 
 .heading_container p {
