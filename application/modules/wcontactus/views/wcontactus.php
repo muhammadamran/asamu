@@ -18,7 +18,7 @@
    </div>
 </div>
 <!-- END HEADER -->
-<!-- Contact us -->
+<!-- CONTACT US -->
 <section class="contact_section" style="margin-bottom: -75px">
    <div class="container-fluid">
       <div class="row">
@@ -65,4 +65,4 @@
       </div>
    </div>
 </section>
-<!-- End Contact us -->
+<!-- End CONTACT US -->

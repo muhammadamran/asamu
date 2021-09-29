@@ -1,35 +1,53 @@
 <!-- Slider -->
 <div id="carousel" class="carousel slide" data-ride="carousel">
    <ol class="carousel-indicators">
-      <li data-target="#carousel" data-slide-to="1" class="active"></li>
-      <li data-target="#carousel" data-slide-to="2" class=""></li>
-      <li data-target="#carousel" data-slide-to="3" class=""></li>
+      <?php if ($sliders) : $no = 0;
+         foreach ($sliders as $row) : $no++; ?>
+            <?php if ($no == 1) { ?>
+               <li data-target="#carousel" data-slide-to="<?= $no; ?>" class="active"></li>
+            <?php } else { ?>
+               <li data-target="#carousel" data-slide-to="<?= $no; ?>" class=""></li>
+            <?php } ?>
+         <?php endforeach ?>
+      <?php else : ?>
+         <li data-target="#carousel" data-slide-to="0" class="active"></li>
+      <?php endif ?>
    </ol>
    <div class="carousel-inner">
-      <div class="carousel-item active">
-         <img src="<?= base_url('modes/images/asamu/banner/banner3.jpg'); ?>" alt="Carousel Image">
-         <div class="carousel-caption">
-            <p class="animated fadeInRight">01</p>
-            <h1 class="animated fadeInLeft">Isi 01</h1>
-            <a class="btn animated fadeInUp" href="https://htmlcodex.com/construction-company-website-template">Get Started</a>
+      <?php if ($sliders) : $no = 0;
+         foreach ($sliders as $row) : $no++; ?>
+            <?php if ($no == 1) { ?>
+               <div class="carousel-item active">
+                  <img src="<?= base_url('modes/images/sliders/' . $row['photo']); ?>" alt="Carousel Image">
+                  <div class="carousel-caption">
+                     <p class="animated fadeInRight"><?= $row['slogan_one']; ?></p>
+                     <h1 class="animated fadeInLeft"><?= $row['slogan_two']; ?></h1>
+                     <a class="btn animated fadeInUp" href="#!">Get Started</a>
+                  </div>
+               </div>
+            <?php } else { ?>
+               <div class="carousel-item">
+                  <img src="<?= base_url('modes/images/sliders/' . $row['photo']); ?>" alt="Carousel Image">
+                  <div class="carousel-caption">
+                     <p class="animated fadeInRight"><?= $row['slogan_one']; ?></p>
+                     <h1 class="animated fadeInLeft"><?= $row['slogan_two']; ?></h1>
+                     <a class="btn animated fadeInUp" href="#!">Get Started</a>
+                  </div>
+               </div>
+            <?php } ?>
+         <?php endforeach ?>
+      <?php else : ?>
+         <div class="carousel-item active">
+            <img src="https://karangsari-sukodono.lumajangkab.go.id/assets-front/images/image-not-found.jpg" alt="Carousel Image">
+            <div class="carousel-caption">
+               <p class="animated fadeInRight">-</p>
+               <h1 class="animated fadeInLeft">-</h1>
+               <a class="btn animated fadeInUp" href="#!">Get Started</a>
+            </div>
          </div>
-      </div>
-      <div class="carousel-item">
-         <img src="<?= base_url('modes/images/asamu/banner/banner6.jpg'); ?>" alt="Carousel Image">
-         <div class="carousel-caption">
-            <p class="animated fadeInRight">02</p>
-            <h1 class="animated fadeInLeft">Isi 02</h1>
-            <a class="btn animated fadeInUp" href="https://htmlcodex.com/construction-company-website-template">Get Started</a>
-         </div>
-      </div>
-      <div class="carousel-item">
-         <img src="<?= base_url('modes/images/asamu/banner/banner7.jpg'); ?>" alt="Carousel Image">
-         <div class="carousel-caption">
-            <p class="animated fadeInRight">03</p>
-            <h1 class="animated fadeInLeft">Isi 03</h1>
-            <a class="btn animated fadeInUp" href="https://htmlcodex.com/construction-company-website-template">Get Started</a>
-         </div>
-      </div>
+      <?php endif ?>
+
+
    </div>
    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -12,8 +12,9 @@ class Whome_model extends CI_Model
         return $this->db->query("SELECT * FROM tbl_sliders WHERE status='1' ORDER BY id_sliders ASC LIMIT 1")->result();
     }
 
-    public function get_slider()
+    public function get_sliders()
     {
-        return $this->db->query("SELECT * FROM tbl_sliders WHERE status='1' ORDER BY id_sliders ASC")->result_array();
+        return $this->db->query("SELECT *
+           FROM tbl_sliders WHERE status='1' ORDER BY id_sliders ASC")->result_array();
     }
 }

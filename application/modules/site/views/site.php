@@ -60,9 +60,6 @@
                 <div class="col-sm-8">
                     <div class="card">
                         <div class="card-header" style="background: linear-gradient(298deg, #150757, #150757, #150757)">
-                            <h5 style="color: #fff;">Simpan Setting Site</h5>
-                        </div>
-                        <div class="card-header" style="background: linear-gradient(298deg, #150757, #150757, #150757)">
                             <h5 style="color: #fff;"><i class="fa fa-home"></i> Update Setting Site</h5>
                         </div>
                         <form method="POST" action="<?= base_url('site/adding') ?>" enctype="multipart/form-data">
