@@ -81,7 +81,6 @@ class Site extends CI_Controller
 			$this->load->view('include/sidebar', $value);
 			$this->load->view('include/footer', $value);
 		}
-		// END DATA SITE
 	}
 
 	// ADDING SITE

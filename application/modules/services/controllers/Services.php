@@ -12,6 +12,8 @@ class Services extends CI_Controller
         $this->load->model('Master_model');
     }
 
+    // FUNCTION LIST SERVICES IN HERE
+    // LIST SERVICES
     public function services_list()
     {
         $user = $this->session->userdata('username');
@@ -75,8 +77,8 @@ class Services extends CI_Controller
             // END MASTER MODEL
 
             // DATA SERVICES LIST
-            $get_data = $this->Services_model->get_data_sliders();
-            $value['data_sliders'] = $get_data;
+            $get_list_services = $this->Services_model->get_list_services();
+            $value['list_services'] = $get_list_services;
             // END DATA SERVICES LIST
 
             $this->load->view('include/head', $value);
@@ -89,6 +91,47 @@ class Services extends CI_Controller
         // END DATA SLIDER
     }
 
+    // ADDING LIST SERVICES
+    public function addinglservices()
+    {
+        $dataLServices = array(
+            'name_services' => $this->input->post('name_services'),
+            'slogan' => $this->input->post('slogan')
+        );
+
+        $this->db->insert('tbl_services', $dataLServices);
+        $this->session->set_flashdata('success', "Data saved successfully!");
+        redirect('services/services_list');
+    }
+
+    // UPDATING LIST SERVICES
+    public function updatinglservices()
+    {
+        $ID = $this->input->post('id_services');
+
+        $dataLServices = array(
+            'name_services' => $this->input->post('name_services'),
+            'slogan' => $this->input->post('slogan')
+        );
+
+        $this->Services_model->update_list_services('tbl_services', $dataLServices, $ID);
+        $this->session->set_flashdata('success', "Data saved successfully!");
+        redirect('services/services_list');
+    }
+
+    // DELETE LIST SERVICES
+    public function deletelservices()
+    {
+        $where = $this->input->post('id_services');
+
+        $this->Services_model->delete_list_services($where);
+        $this->session->set_flashdata('deletes', "Empty");
+        redirect('services/services_list');
+    }
+    // END FUNCTION LIST SERVICES IN HERE
+
+    // FUNCTION CONTENT SERVICES IN HERE
+    // CONTENT SERVICES
     public function services_content()
     {
         $user = $this->session->userdata('username');
@@ -151,9 +194,13 @@ class Services extends CI_Controller
             }
             // END MASTER MODEL
 
+            // DATA SERVICES LIST
+            $value['list_services'] = $this->Services_model->get_ls_services();
+            // END DATA SERVICES LIST
+
             // DATA SERVICES CONTENT
-            $get_data = $this->Services_model->get_data_sliders();
-            $value['data_sliders'] = $get_data;
+            $get_content_services = $this->Services_model->get_content_services();
+            $value['content_services'] = $get_content_services;
             // END DATA SERVICES CONTENT
 
             $this->load->view('include/head', $value);
@@ -165,133 +212,93 @@ class Services extends CI_Controller
         }
     }
 
-    // FUNCTION UPLOAD
-    public function upload()
+    // FUNCTION UPLOAD PHOTO
+    public function uploadphoto()
     {
         foreach ($_FILES as $name => $fileInfo) {
             $filename = $_FILES[$name]['name'];
             $tmpname = $_FILES[$name]['tmp_name'];
             $exp = explode('.', $filename);
             $ext = end($exp);
-            $newname = 'sliders_' . time() . "." . $ext;
-            $config['upload_path'] = './modes/images/sliders/';
-            $config['upload_url'] =  base_url() . 'modes/images/sliders/';
+            $newnamephoto = 'photo_' . time() . "." . $ext;
+            $config['upload_path'] = './modes/images/services/photo/';
+            $config['upload_url'] =  base_url() . 'modes/images/services/photo/';
             $config['allowed_types'] = "jpg|jpeg|png";
             $config['max_size'] = '2000000';
-            $config['file_name'] = $newname;
+            $config['file_name'] = $newnamephoto;
             $this->load->library('upload', $config);
-            move_uploaded_file($tmpname, "modes/images/sliders/" . $newname);
-            return $newname;
+            move_uploaded_file($tmpname, "modes/images/services/photo/" . $newnamephoto);
+            return $newnamephoto;
         }
     }
 
-    // UPLOAD SLIDERS
-    public function adding()
+    // FUNCTION UPLOAD ICON
+    public function uploadicon()
     {
-        $pic = '';
+        foreach ($_FILES as $name => $fileInfo) {
+            $filename = $_FILES[$name]['name'];
+            $tmpname = $_FILES[$name]['tmp_name'];
+            $exp = explode('.', $filename);
+            $ext = end($exp);
+            $newnameicon = 'icon_' . time() . "." . $ext;
+            $config['upload_path'] = './modes/images/services/icon/';
+            $config['upload_url'] =  base_url() . 'modes/images/services/icon/';
+            $config['allowed_types'] = "jpg|jpeg|png";
+            $config['max_size'] = '2000000';
+            $config['file_name'] = $newnameicon;
+            $this->load->library('upload', $config);
+            move_uploaded_file($tmpname, "modes/images/services/icon/" . $newnameicon);
+            return $newnameicon;
+        }
+    }
+
+    // ADDING CONTENT SERVICES
+    public function addingcservices()
+    {
+        $picphoto = '';
+        $picicon = '';
 
         foreach ($_FILES as $name => $fileInfo) {
             if (!empty($_FILES[$name]['name'])) {
-                $newname = $this->upload();
-                $data[$name] = $newname;
-                $pic = $newname;
+                $newnamephoto = $this->uploadphoto();
+                $data[$name] = $newnamephoto;
+                $picphoto = $newnamephoto;
             }
         }
-
-        $upload = $input_data['photo'] = $pic;
-
-        $dataSlider = array(
-            'photo' => $upload,
-            'slogan_one' => $this->input->post('slogan_one'),
-            'slogan_two' => $this->input->post('slogan_two'),
-            'status' => $this->input->post('status'),
-            'remaks' => $this->input->post('remaks'),
-            'created_date' => $this->input->post('created_date')
-        );
-
-        $this->db->insert('tbl_sliders', $dataSlider);
-        $this->session->set_flashdata('success', "Data saved successfully!");
-        redirect('sliders');
-    }
-
-    // UPDATING SLIDERS
-    public function updating()
-    {
-        $ID = $this->input->post('id_sliders');
-
-        $dataSlider = array(
-            'slogan_one' => $this->input->post('slogan_one'),
-            'slogan_two' => $this->input->post('slogan_two'),
-            'remaks' => $this->input->post('remaks'),
-            'created_date' => $this->input->post('created_date')
-        );
-
-        $this->Services_model->update_sliders('tbl_sliders', $dataSlider, $ID);
-        $this->session->set_flashdata('success', "Data saved successfully!");
-        redirect('sliders');
-    }
-
-    // UPDATE PHOTO SLIDERS
-    public function changephoto()
-    {
-        $pic = '';
 
         foreach ($_FILES as $name => $fileInfo) {
             if (!empty($_FILES[$name]['name'])) {
-                $newname = $this->upload();
-                $data[$name] = $newname;
-                $pic = $newname;
+                $newnameicon = $this->uploadicon();
+                $data[$name] = $newnameicon;
+                $picicon = $newnameicon;
             }
         }
 
-        $upload = $input_data['photo'] = $pic;
+        $uploadphoto = $input_photo['photo'] = $picphoto;
+        $uploadicon = $input_icon['icon'] = $picicon;
 
-        $ID = $this->input->post('id_sliders');
+        $in_id = $this->input->post('id_services');
+        $get_id_list = $this->Services_model->checking_id($in_id);
 
-        $dataSlider = array(
-            'photo' => $upload
-        );
+        if ($get_id_list == NULL) {
+            $dataCServices = array(
+                'photo' => $uploadphoto,
+                // 'icon' => $uploadicon,
+                'id_services' => $this->input->post('id_services'),
+                'detail' => $this->input->post('detail'),
+                'created_date' => $this->input->post('created_date'),
+                'created_by' => $this->input->post('created_by'),
+                'status' => '1'
+            );
 
-        $this->Services_model->update_sliders('tbl_sliders', $dataSlider, $ID);
-        $this->session->set_flashdata('success', "Data saved successfully!");
-        redirect('sliders');
+            $this->db->insert('tbl_services_dtl', $dataCServices);
+            $this->session->set_flashdata('success', "Data saved successfully!");
+            redirect('services/services_content');
+        } else {
+            $this->session->set_flashdata('any_data', "Data saved successfully!");
+            redirect('services/services_content');
+        }
     }
+    // END FUNCTION CONTENT SERVICES IN HERE
 
-    // DELETE DATA
-    public function delete()
-    {
-        $where = $this->input->post('id_sliders');
-
-        $this->Services_model->delete_sliders($where);
-        $this->session->set_flashdata('deletes', "Empty");
-        redirect('sliders');
-    }
-
-    // NON-ACTIVE SLIDERS
-    public function nonactive()
-    {
-        $ID = $this->input->post('id_sliders');
-
-        $input_data = array(
-            'status' => $this->input->post('status')
-        );
-
-        $this->Services_model->update_sliders('tbl_sliders', $input_data, $ID);
-        $this->session->set_flashdata('nonactive', "Empty!");
-        redirect('sliders');
-    }
-
-    // ACTIVE SLIDERS
-    public function active()
-    {
-        $ID = $this->input->post('id_sliders');
-
-        $input_data = array(
-            'status' => $this->input->post('status')
-        );
-
-        $this->Services_model->update_sliders('tbl_sliders', $input_data, $ID);
-        $this->session->set_flashdata('active', "Empty!");
-        redirect('sliders');
-    }
 }

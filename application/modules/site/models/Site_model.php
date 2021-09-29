@@ -1,5 +1,6 @@
 <?php
-class Site_model extends CI_Model {
+class Site_model extends CI_Model
+{
 
     public function get_data_site()
     {
@@ -25,12 +26,11 @@ class Site_model extends CI_Model {
            ORDER BY id_site DESC")->result();
     }
 
-    public function update_site($table,$dataSite,$ID)
+    public function update_site($table, $dataSite, $ID)
     {
 
         $this->db->where('id_site', $ID);
         $this->db->where('status', '1');
-        $this->db->update($table,$dataSite); 
+        $this->db->update($table, $dataSite);
     }
-
 }

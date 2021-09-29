@@ -144,14 +144,7 @@
                                         <label class="form-label" for="Google+">Google+</label>
                                         <input type="text" name="google" class="form-control" id="Google+" placeholder="Google+" required>
                                     </div>
-                                    <!-- <div class="form-group col-md-12" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                                        <hr>
-                                        <h5 style="color: #fff;"><b style="font-size: 20px;font-weight:800">#</b> Informasi Footer</h5>
-                                        <hr>
-                                    </div> -->
                                     <div class="form-group col-md-12">
-                                        <!-- <label class="form-label" for="Footer">Footer</label> -->
-                                        <!-- <textarea name="footer" class="form-control" id="Footer" placeholder="Footer"></textarea> -->
                                         <input type="hidden" name="created_date" value="<?= date('Y-m-d h:m:i') ?>">
                                         <input type="hidden" name="status" value="1">
                                     </div>
@@ -303,14 +296,7 @@
                                         <label class="form-label" for="Google+">Google+</label>
                                         <input type="text" name="google" class="form-control" id="Google+" value="<?= $google ?>" placeholder="Google+" required>
                                     </div>
-                                    <!-- <div class="form-group col-md-12" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                                        <hr>
-                                        <h5 style="color: #fff;"><b style="font-size: 20px;font-weight:800">#</b> Informasi Footer</h5>
-                                        <hr>
-                                    </div> -->
                                     <div class="form-group col-md-12">
-                                        <!-- <label class="form-label" for="Footer">Footer</label> -->
-                                        <!-- <textarea name="footer" class="form-control" id="Footer" placeholder="Footer"><?= $footer; ?></textarea> -->
                                         <input type="hidden" name="created_date" value="<?= date('Y-m-d h:m:i') ?>">
                                         <input type="hidden" name="id_site" value="<?= $id_site ?>">
                                         <input type="hidden" name="status" value="1">
@@ -402,11 +388,3 @@
     </div>
 </section>
 <!-- [ Main Content ] end -->
-<script type="text/javascript">
-    function DeleteData(id_site) {
-        var r = confirm("Are you sure you want to delete this?");
-        if (r == true) {
-            location.href = "notes/delete/" + id_site;
-        }
-    }
-</script>
