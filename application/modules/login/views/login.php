@@ -8,8 +8,8 @@
 	<meta name="description" content="DashboardKit is made using Bootstrap 5 design framework. Download the free admin template & use it for your project.">
 	<meta name="keywords" content="DashboardKit, Dashboard Kit, Dashboard UI Kit, Bootstrap 5, Admin Template, Admin Dashboard, CRM, CMS, Free Bootstrap Admin Template">
 	<meta name="author" content="DashboardKit ">
-	<link rel="shortcut icon" href="<?= base_url('modes/images/asamu/logo.png'); ?>" type="">
-	<title>Login Admin | Asamu Solusi Mandiri</title>
+	<link rel="shortcut icon" href="<?= base_url('modes/images/asamu/icon/' . $icon); ?>" type="">
+	<title>CMS | <?= $title; ?></title>
 	<link rel="stylesheet" href="<?= base_url('assets/fonts/feather.css') ?>">
 	<link rel="stylesheet" href="<?= base_url('assets/fonts/fontawesome.css') ?>">
 	<link rel="stylesheet" href="<?= base_url('assets/fonts/material.css') ?>">
@@ -345,10 +345,10 @@
 					<form action="<?= base_url('login/aksi_login'); ?>" method="POST">
 						<div class="col-md-12">
 							<div class="card-body">
-								<img src="<?= base_url('modes/images/asamu/asamu-logo2.png') ?>" alt="" class="img-fluid mb-2">
-								<br>
-								<small class="mb-1"><i>Start your session</i></small>
+								<img src="<?= base_url('modes/images/asamu/logo/' . $logo); ?>" alt="" class="img-fluid mb-2">
 								<hr>
+								<small class="mb-1"><i>Start your session</i></small>
+								<br><br>
 								<div class="input-group mb-3">
 									<span class="input-group-text"><i data-feather="user"></i></span>
 									<input type="text" class="form-control" name="username" placeholder="Username" required>

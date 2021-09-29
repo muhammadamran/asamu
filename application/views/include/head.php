@@ -9,8 +9,8 @@
 	<meta name="keywords" content="DashboardKit, Dashboard Kit, Dashboard UI Kit, Bootstrap 5, Admin Template, Admin Dashboard, CRM, CMS, Free Bootstrap Admin Template">
 	<meta name="author" content="DashboardKit ">
 	<!-- Favicon icon -->
-	<link rel="shortcut icon" href="<?= base_url('modes/images/asamu/logo.png'); ?>" type="">
-	<title>Asamu Solusi | Strong Business Partner, Highly Focused with Your Target</title>
+	<link rel="shortcut icon" href="<?= base_url('modes/images/asamu/icon/' . $icon); ?>" type="">
+	<title>CMS | <?= $title; ?></title>
 	<!-- font css -->
 	<link rel="stylesheet" href="<?= base_url('assets/fonts/feather.css') ?>">
 	<link rel="stylesheet" href="<?= base_url('assets/fonts/fontawesome.css') ?>">
@@ -29,7 +29,73 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css">
 	<!-- END DATATABLES -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
+<style>
+	.preloader {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 9999;
+		background-color: #fff;
+	}
+
+	.preloader .loading {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		font: 14px arial;
+	}
+
+	.line-1 {
+		position: relative;
+		top: 50%;
+		width: 24em;
+		margin: 0 auto;
+		border-right: 2px solid rgba(255, 255, 255, .75);
+		font-size: 180%;
+		text-align: center;
+		white-space: nowrap;
+		overflow: hidden;
+		transform: translateY(-50%);
+	}
+
+	/* Animation */
+	.anim-typewriter {
+		animation: typewriter 4s steps(44) 1s 1 normal both,
+			blinkTextCursor 500ms steps(44) infinite normal;
+	}
+
+	@keyframes typewriter {
+		from {
+			width: 0;
+		}
+
+		to {
+			width: 24em;
+		}
+	}
+
+	@keyframes blinkTextCursor {
+		from {
+			border-right-color: rgba(255, 255, 255, .75);
+		}
+
+		to {
+			border-right-color: transparent;
+		}
+	}
+
+	.load {
+		font-weight: 700;
+		font-family: "Poppins", sans-serif;
+		font-size: 16px;
+		text-transform: uppercase;
+	}
+</style>
 <?php
 date_default_timezone_set("Asia/Jakarta");
 ?>
@@ -77,12 +143,23 @@ function Rupiah($angka)
 	return $hasil;
 }
 ?>
+<script>
+	$(document).ready(function() {
+		$(".preloader").delay(2000).fadeOut();
+	})
+</script>
 
 <body class="">
 	<!-- [ Pre-loader ] start -->
-	<div class="loader-bg">
-		<div class="loader-track">
-			<div class="loader-fill"></div>
+	<div class="preloader">
+		<div class="loading">
+			<div class="heading_container heading_center">
+				<img src="<?= base_url('modes/images/asamu/loader/' . $loader); ?>" width="200">
+				<br>
+				<!-- <label style="font-weight:700"></label> -->
+				<br>
+				<p class="line-1 anim-typewriter load">CMS | <?= $tloader; ?></p>
+			</div>
 		</div>
 	</div>
 	<!-- [ Pre-loader ] End -->

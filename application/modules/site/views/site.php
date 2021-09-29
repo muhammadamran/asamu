@@ -176,9 +176,6 @@
                                     <label class="form-label"><u>Icon</u> </label>
                                     <div class="input-group">
                                         <img src="https://media.istockphoto.com/vectors/image-preview-icon-picture-placeholder-for-website-or-uiux-design-vector-id1222357475?k=20&m=1222357475&s=170667a&w=0&h=YGycIDbBRAWkZaSvdyUFvotdGfnKhkutJhMOZtIoUKY=" style="width: 120px;height: auto;margin-bottom: 8px;" alt="" srcset="">
-                                        <input type="file" name="icon" required>
-                                        <hr>
-                                        <button class="btn btn-primary"><i class="fa fa-save"></i> Save Icon</button>
                                     </div>
                                 </div>
                             </form>
@@ -190,9 +187,6 @@
                                     <label class="form-label"><u>Company Logo</u> </label>
                                     <div class="input-group">
                                         <img src="https://media.istockphoto.com/vectors/image-preview-icon-picture-placeholder-for-website-or-uiux-design-vector-id1222357475?k=20&m=1222357475&s=170667a&w=0&h=YGycIDbBRAWkZaSvdyUFvotdGfnKhkutJhMOZtIoUKY=" style="width: 120px;height: auto;margin-bottom: 8px;" alt="" srcset="">
-                                        <input type="file" name="logo" required>
-                                        <hr>
-                                        <button class="btn btn-primary"><i class="fa fa-save"></i> Save Logo</button>
                                     </div>
                                 </div>
                             </form>
@@ -204,14 +198,11 @@
                                     <label class="form-label"><u>Loader Logo</u> </label>
                                     <div class="input-group">
                                         <img src="https://media.istockphoto.com/vectors/image-preview-icon-picture-placeholder-for-website-or-uiux-design-vector-id1222357475?k=20&m=1222357475&s=170667a&w=0&h=YGycIDbBRAWkZaSvdyUFvotdGfnKhkutJhMOZtIoUKY=" style="width: 120px;height: auto;margin-bottom: 8px;" alt="" srcset="">
-                                        <input type="file" name="loader" required>
                                         <hr>
                                         <div class="form-group">
                                             <div class="input-group">
                                                 <input type="text" name="tloader" class="form-control" id="Text Loader" placeholder="Text Loader" required>
                                             </div>
-                                            <br>
-                                            <button class="btn btn-primary"><i class="fa fa-save"></i> Save Loader</button>
                                         </div>
                                     </div>
                                 </div>

@@ -9,6 +9,7 @@ class Site extends CI_Controller
 		parent::__construct();
 		//LOAD MODELS
 		$this->load->model('Site_model');
+		$this->load->model('Master_model');
 	}
 
 	public function index()
@@ -18,35 +19,35 @@ class Site extends CI_Controller
 			$this->session->set_flashdata('n_session', "The identity does not match our data!");
 			redirect('login');
 		} else {
-			// DATA SITE
-			$get_data = $this->Site_model->get_data_site();
+			// MASTER MODEL
+			$get_data = $this->Master_model->get_data_site();
 			$Cek_get_data = $value['data_site'] = $get_data;
 
 			if ($Cek_get_data  == NULL) {
-				$value['icon'] = '';
-				$value['logo'] = '';
-				$value['loader'] = '';
-				$value['tloader'] = '';
-				$value['title'] = '';
-				$value['slogan'] = '';
-				$value['motto'] = '';
-				$value['name'] = '';
-				$value['vision'] = '';
-				$value['mission'] = '';
-				$value['address'] = '';
-				$value['email'] = '';
-				$value['telp'] = '';
-				$value['fax'] = '';
-				$value['maps'] = '';
-				$value['facebook'] = '';
-				$value['instagram'] = '';
-				$value['youtube'] = '';
-				$value['twitter'] = '';
-				$value['linked'] = '';
-				$value['google'] = '';
-				$value['footer'] = '';
+				$value['icon'] = 'null.png';
+				$value['logo'] = 'null.png';
+				$value['loader'] = 'null.png';
+				$value['tloader'] = 'Text Loader';
+				$value['title'] = 'Title';
+				$value['slogan'] = 'Slogan';
+				$value['motto'] = 'Motto';
+				$value['name'] = 'Company Name';
+				$value['vision'] = 'Vision';
+				$value['mission'] = 'Mission';
+				$value['address'] = 'Address';
+				$value['email'] = 'info@hellos-id.com';
+				$value['telp'] = 'Telephone';
+				$value['fax'] = 'Fax';
+				$value['maps'] = '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15865.367451552442!2d106.8017969!3d-6.2185701!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2e74f2341fff266d!2sGelora%20Bung%20Karno%20Main%20Stadium!5e0!3m2!1sen!2sid!4v1632932662096!5m2!1sen!2sid" width="90%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>';
+				$value['facebook'] = '#!';
+				$value['instagram'] = '#!';
+				$value['youtube'] = '#!';
+				$value['twitter'] = '#!';
+				$value['linked'] = '#!';
+				$value['google'] = '#!';
+				$value['footer'] = 'Footer';
 			} else {
-				$post_data = $this->Site_model->post_data_site();
+				$post_data = $this->Master_model->post_data_site();
 				$value['id_site'] = $post_data[0]->id_site;
 				$value['icon'] = $post_data[0]->icon;
 				$value['logo'] = $post_data[0]->logo;
@@ -71,13 +72,14 @@ class Site extends CI_Controller
 				$value['google'] = $post_data[0]->google;
 				$value['footer'] = $post_data[0]->footer;
 			}
+			// END MASTER MODEL
 
-			$this->load->view('include/head');
-			$this->load->view('include/top-header');
+			$this->load->view('include/head', $value);
+			$this->load->view('include/top-header', $value);
 			$this->load->view('include/alert');
 			$this->load->view('site', $value);
-			$this->load->view('include/sidebar');
-			$this->load->view('include/footer');
+			$this->load->view('include/sidebar', $value);
+			$this->load->view('include/footer', $value);
 		}
 		// END DATA SITE
 	}
@@ -214,14 +216,7 @@ class Site extends CI_Controller
 		}
 	}
 
-	// ADD ICON
-
-	// ADD LOGO
-
-	// ADD LOADER
-
 	// UPDATE ICON
-
 	public function iconupdate()
 	{
 		$pic = '';

@@ -156,6 +156,7 @@ function Rupiah($angka)
 </script>
 
 <body>
+   <!-- [ Pre-loader ] start -->
    <div class="preloader">
       <div class="loading">
          <div class="heading_container heading_center">
@@ -166,3 +167,4 @@ function Rupiah($angka)
          </div>
       </div>
    </div>
+   <!-- [ Pre-loader ] End -->

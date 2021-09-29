@@ -4,8 +4,8 @@
 		<div class="m-header">
 			<a href="<?= base_url('home') ?>" class="b-brand">
 				<!-- ========   change your logo hear   ============ -->
-				<img src="<?= base_url('modes/images/asamu/asamu-logo2.png') ?>" alt="" class="logo logo-lg" style="width: 190px;">
-				<img src="<?= base_url('modes/images/asamu/asamu-logo2.png') ?>" alt="" class="logo logo-sm">
+				<img src="<?= base_url('modes/images/asamu/logo/' . $logo); ?>" alt="" class="logo logo-lg" style="width: 190px;">
+				<img src="<?= base_url('modes/images/asamu/logo/' . $logo); ?>" alt="" class="logo logo-sm">
 			</a>
 		</div>
 		<div class="navbar-content">

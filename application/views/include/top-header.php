@@ -1,7 +1,7 @@
 <!-- [ Mobile header ] start -->
 <div class="pc-mob-header pc-header">
 	<div class="pcm-logo">
-		<img src="<?= base_url('modes/images/asamu/asamu-logo2.png') ?>" alt="" class="logo logo-lg">
+		<img src="<?= base_url('modes/images/asamu/logo/' . $logo); ?>" alt="" class="logo logo-lg">
 	</div>
 	<div class="pcm-toolbar">
 		<a href="#!" class="pc-head-link" id="mobile-collapse">
