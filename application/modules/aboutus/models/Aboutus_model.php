@@ -2,22 +2,28 @@
 class Aboutus_model extends CI_Model
 {
 
-    public function get_data_galeri()
+    public function get_data_about()
     {
         return $this->db->query("SELECT *
-           FROM tbl_gallery ORDER BY id_gallery DESC")->result_array();
+           FROM tbl_about ORDER BY id_about DESC")->result_array();
     }
 
-    public function update_galeri($table, $dataGaleri, $ID)
+    public function checking_status()
     {
-
-        $this->db->where('id_gallery', $ID);
-        $this->db->update($table, $dataGaleri);
+        return $this->db->query("SELECT COUNT(*) AS t_status
+           FROM tbl_about WHERE status='1'")->result();
     }
 
-    public function delete_galeri($where)
+    public function update_about($table, $dataAbout, $ID)
     {
-        $this->db->where_in('id_gallery', $where);
-        $this->db->delete('tbl_gallery');
+
+        $this->db->where('id_about', $ID);
+        $this->db->update($table, $dataAbout);
+    }
+
+    public function delete_about($where)
+    {
+        $this->db->where_in('id_about', $where);
+        $this->db->delete('tbl_about');
     }
 }

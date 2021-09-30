@@ -75,8 +75,8 @@ class Aboutus extends CI_Controller
             // END MASTER MODEL
 
             // DATA ABOUT US
-            $get_data = $this->Aboutus_model->get_data_galeri();
-            $value['data_galeri'] = $get_data;
+            $get_data = $this->Aboutus_model->get_data_about();
+            $value['data_about'] = $get_data;
             // END DATA ABOUT US
 
             $this->load->view('include/head', $value);
@@ -96,19 +96,19 @@ class Aboutus extends CI_Controller
             $tmpname = $_FILES[$name]['tmp_name'];
             $exp = explode('.', $filename);
             $ext = end($exp);
-            $newname = 'galeri_' . time() . "." . $ext;
-            $config['upload_path'] = './upload/galeri/';
-            $config['upload_url'] =  base_url() . 'upload/galeri/';
+            $newname = 'about_' . time() . "." . $ext;
+            $config['upload_path'] = './modes/images/about/photo/';
+            $config['upload_url'] =  base_url() . 'modes/images/about/photo/';
             $config['allowed_types'] = "jpg|jpeg|png";
             $config['max_size'] = '2000000';
             $config['file_name'] = $newname;
             $this->load->library('upload', $config);
-            move_uploaded_file($tmpname, "upload/galeri/" . $newname);
+            move_uploaded_file($tmpname, "modes/images/about/photo/" . $newname);
             return $newname;
         }
     }
 
-    // UPLOAD GALERI
+    // ADD ABOUT US
     public function adding()
     {
         $pic = '';
@@ -121,37 +121,48 @@ class Aboutus extends CI_Controller
             }
         }
 
-        $upload = $input_data['foto'] = $pic;
+        $upload = $input_data['photo'] = $pic;
 
-        $dataGaleri = array(
-            'foto' => $upload,
-            'status' => $this->input->post('status'),
-            'remaks' => $this->input->post('remaks'),
-            'created_date' => $this->input->post('created_date')
-        );
+        $get_status = $this->Aboutus_model->checking_status();
+        $check_status = $value['t_status'] = $get_status[0]->t_status;
 
-        $this->db->insert('tbl_gallery', $dataGaleri);
-        $this->session->set_flashdata('success', "Data saved successfully!");
-        redirect('galeri');
+        if ($check_status == '0') {
+            $dataAbout = array(
+                'photo' => $upload,
+                'title' => $this->input->post('title'),
+                'detail' => $this->input->post('detail'),
+                'created_date' => $this->input->post('created_date'),
+                'created_by' => $this->input->post('created_by'),
+                'status' => '1'
+            );
+
+            $this->db->insert('tbl_about', $dataAbout);
+            $this->session->set_flashdata('success', "Data saved successfully!");
+            redirect('aboutus');
+        } else {
+            $this->session->set_flashdata('any_data', "Data saved successfully!");
+            redirect('aboutus');
+        }
     }
 
-    // UPDATING GALERI
+    // UPDATING ABOUT US
     public function updating()
     {
-        $ID = $this->input->post('id_gallery');
+        $ID = $this->input->post('id_about');
 
-        $dataGaleri = array(
-            'remaks' => $this->input->post('remaks'),
+        $dataAbout = array(
+            'title' => $this->input->post('title'),
+            'detail' => $this->input->post('detail'),
             'created_date' => $this->input->post('created_date')
         );
 
-        $this->Aboutus_model->update_galeri('tbl_gallery', $dataGaleri, $ID);
+        $this->Aboutus_model->update_about('tbl_about', $dataAbout, $ID);
         $this->session->set_flashdata('success', "Data saved successfully!");
-        redirect('galeri');
+        redirect('aboutus');
     }
 
-    // UPDATE FOTO GALERI
-    public function changefoto()
+    // UPDATE PHOTO ABOUT US
+    public function changephoto()
     {
         $pic = '';
 
@@ -163,54 +174,61 @@ class Aboutus extends CI_Controller
             }
         }
 
-        $upload = $input_data['foto'] = $pic;
+        $upload = $input_data['photo'] = $pic;
 
-        $ID = $this->input->post('id_gallery');
+        $ID = $this->input->post('id_about');
 
-        $dataGaleri = array(
-            'foto' => $upload
+        $dataAbout = array(
+            'photo' => $upload
         );
 
-        $this->Aboutus_model->update_galeri('tbl_gallery', $dataGaleri, $ID);
+        $this->Aboutus_model->update_about('tbl_about', $dataAbout, $ID);
         $this->session->set_flashdata('success', "Data saved successfully!");
-        redirect('galeri');
+        redirect('aboutus');
     }
 
     // DELETE DATA
     public function delete()
     {
-        $where = $this->input->post('id_gallery');
+        $where = $this->input->post('id_about');
 
-        $this->Aboutus_model->delete_galeri($where);
-        $this->session->set_flashdata('hapus', "Empty");
-        redirect('galeri');
+        $this->Aboutus_model->delete_about($where);
+        $this->session->set_flashdata('deletes', "Empty");
+        redirect('aboutus');
     }
 
-    // NON-AKTIF GALERI
-    public function nonaktif()
+    // NON-ACTIVE ABOUT US
+    public function nonactive()
     {
-        $ID = $this->input->post('id_gallery');
+        $ID = $this->input->post('id_about');
 
         $input_data = array(
             'status' => $this->input->post('status')
         );
 
-        $this->Aboutus_model->update_galeri('tbl_gallery', $input_data, $ID);
-        $this->session->set_flashdata('nonaktif', "Empty!");
-        redirect('galeri');
+        $this->Aboutus_model->update_about('tbl_about', $input_data, $ID);
+        $this->session->set_flashdata('nonactive', "Empty!");
+        redirect('aboutus');
     }
 
-    // AKTIF GALERI
-    public function aktif()
+    // ACTIVE ABOUT US
+    public function active()
     {
-        $ID = $this->input->post('id_gallery');
+        $ID = $this->input->post('id_about');
+        $get_status = $this->Aboutus_model->checking_status();
+        $check_status = $value['t_status'] = $get_status[0]->t_status;
 
-        $input_data = array(
-            'status' => $this->input->post('status')
-        );
+        if ($check_status == '0') {
+            $input_data = array(
+                'status' => $this->input->post('status')
+            );
 
-        $this->Aboutus_model->update_galeri('tbl_gallery', $input_data, $ID);
-        $this->session->set_flashdata('aktif', "Empty!");
-        redirect('galeri');
+            $this->Aboutus_model->update_about('tbl_about', $input_data, $ID);
+            $this->session->set_flashdata('active', "Empty!");
+            redirect('aboutus');
+        } else {
+            $this->session->set_flashdata('any_data', "Data saved successfully!");
+            redirect('aboutus');
+        }
     }
 }

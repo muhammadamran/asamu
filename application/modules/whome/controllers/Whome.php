@@ -74,6 +74,13 @@ class Whome extends CI_Controller
 		$value['sliders'] = $get_sliders;
 		// END SLIDERS
 
+		// ABOUT US
+		$get_about = $this->Master_model->get_data_about();
+		$value['a_photo'] = $get_about[0]->photo;
+		$value['a_title'] = $get_about[0]->title;
+		$value['a_detail'] = $get_about[0]->detail;
+		// END ABOUT US
+
 		$this->load->view('modes/head', $value);
 		$this->load->view('modes/top-header', $value);
 		$this->load->view('modes/alert');
