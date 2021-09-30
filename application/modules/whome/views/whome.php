@@ -90,48 +90,69 @@
    <div class="container text-white text-primary">
       <div class="heading_container heading_center">
          <h2>
-            OUR <span>Product</span>
+            <?= $p_title_one; ?> <span><?= $p_title_two; ?></span>
          </h2>
          <p>
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+            <?= $p_detail; ?>
          </p>
       </div>
       <hr>
       <div class="row" style="margin-top: 50px">
          <!-- IF 1 = 12; IF 2 = 6; IF 3 = 4; IF 5 = 3; IF 6 = 4-->
-         <div class="col-lg-4 text-center">
-            <div class="icon-box text-center effect mb-0">
-               <img src="https://andalin.com/public/andalinff_assets/img/image/client/logo-testi-01.png" alt="">
-               <h2 class="product-home">50 % Email Reduced</h2>
-               <p class="lead-home">Andalin helps Fuji Seal Indonesia
-                  reduce administrative matters during the delivery
-                  process thereby increasing their productivity.
-                  With Andalin, Fuji Seal Indonesia can increase productivity
-                  due to a 50% reduction in email usage during the shipping process.</p>
+         <style>
+            .lp-back {
+               width: 100px;
+               height: 100px;
+               background: #eee;
+               border-radius: 100%;
+               z-index: -9999;
+            }
+         </style>
+         <?php if ($lp_product) : $no = 0;
+            foreach ($lp_product as $row_lproduct) : $no++; ?>
+               <?php if ($t_lproduct == '1') { ?>
+                  <div class="col-lg-12 text-center">
+                     <div class="icon-box text-center effect mb-0">
+                        <img src="<?= base_url('modes/images/product/photo/' . $row_lproduct['photo']); ?>" alt="" class="lp-back">
+                        <h2 class="product-home"><?= $row_lproduct['title']; ?></h2>
+                        <p class="lead-home"><?= $row_lproduct['detail']; ?></p>
+                     </div>
+                  </div>
+               <?php } else if ($t_lproduct == '2') { ?>
+                  <div class="col-lg-6 text-center">
+                     <div class="icon-box text-center effect mb-0">
+                        <img src="<?= base_url('modes/images/product/photo/' . $row_lproduct['photo']); ?>" alt="" class="lp-back">
+                        <h2 class="product-home"><?= $row_lproduct['title']; ?></h2>
+                        <p class="lead-home"><?= $row_lproduct['detail']; ?></p>
+                     </div>
+                  </div>
+               <?php } else if ($t_lproduct == '3') { ?>
+                  <div class="col-lg-4 text-center">
+                     <div class="icon-box text-center effect mb-0">
+                        <img src="<?= base_url('modes/images/product/photo/' . $row_lproduct['photo']); ?>" alt="" class="lp-back">
+                        <h2 class="product-home"><?= $row_lproduct['title']; ?></h2>
+                        <p class="lead-home"><?= $row_lproduct['detail']; ?></p>
+                     </div>
+                  </div>
+               <?php } else { ?>
+                  <div class="col-lg-4 text-center">
+                     <div class="icon-box text-center effect mb-0">
+                        <img src="<?= base_url('modes/images/product/photo/' . $row_lproduct['photo']); ?>" alt="" class="lp-back">
+                        <h2 class="product-home"><?= $row_lproduct['title']; ?></h2>
+                        <p class="lead-home"><?= $row_lproduct['detail']; ?></p>
+                     </div>
+                  </div>
+               <?php }  ?>
+            <?php endforeach ?>
+         <?php else : ?>
+            <div class="col-lg-12 text-center">
+               <div class="icon-box text-center effect mb-0">
+                  <img src="https://karangsari-sukodono.lumajangkab.go.id/assets-front/images/image-not-found.jpg" alt="">
+                  <h2 class="product-home">-</h2>
+                  <p class="lead-home">-</p>
+               </div>
             </div>
-         </div>
-         <div class="col-lg-4 text-center">
-            <div class="icon-box text-center effect mb-0">
-               <img src="https://andalin.com/public/andalinff_assets/img/image/client/logo-testi-01.png" alt="">
-               <h2 class="product-home">50 % Email Reduced</h2>
-               <p class="lead-home">Andalin helps Fuji Seal Indonesia
-                  reduce administrative matters during the delivery
-                  process thereby increasing their productivity.
-                  With Andalin, Fuji Seal Indonesia can increase productivity
-                  due to a 50% reduction in email usage during the shipping process.</p>
-            </div>
-         </div>
-         <div class="col-lg-4 text-center">
-            <div class="icon-box text-center effect mb-0">
-               <img src="https://andalin.com/public/andalinff_assets/img/image/client/logo-testi-01.png" alt="">
-               <h2 class="product-home">50 % Email Reduced</h2>
-               <p class="lead-home">Andalin helps Fuji Seal Indonesia
-                  reduce administrative matters during the delivery
-                  process thereby increasing their productivity.
-                  With Andalin, Fuji Seal Indonesia can increase productivity
-                  due to a 50% reduction in email usage during the shipping process.</p>
-            </div>
-         </div>
+         <?php endif ?>
       </div>
    </div>
 </section>

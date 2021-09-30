@@ -100,7 +100,7 @@
                         <span class="d-block m-t-5"><small style="color: #fff;">Last update - </small><code><?= tanggal_indo(date('d-m-Y'), true) ?></code> </span>
                     </div>
                     <div class="card-body table-border-style">
-                        <!-- Add Data sliders -->
+                        <!-- Add Data Ppoduct -->
                         <button type="button" class="btn btn-sm btn-icon btn-success" data-toggle="modal" data-target="#exampleModalCenter"><i data-feather="check-circle"></i> Add Data</button>
                         <div id="exampleModalCenter" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="background: linear-gradient(45deg, rgb(174 176 255 / 0%), rgb(174, 176, 255));">
                             <div class="modal-dialog modal-lg" role="document">
@@ -191,27 +191,22 @@
                                                 <div class="modal-dialog modal-lg" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Detail [About Asamu Solusi Mandiri] - ID <?= $row['id_product']; ?></h2>
+                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Detail [Product] - ID <?= $row['id_product']; ?></h2>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <div class="modal-body">
                                                             <div class="row">
-                                                                <div class="form-group col-md-12">
-                                                                    <center>
-                                                                        <?php if ($row['photo'] == NULL) { ?>
-                                                                            <img src="https://karangsari-sukodono.lumajangkab.go.id/assets-front/images/image-not-found.jpg" style="width: 144px;height: 144px;">
-                                                                        <?php } else { ?>
-                                                                            <img src="<?= base_url('modes/images/about/photo/' . $row['photo']); ?>" style="width: 30%;height: auto;">
-                                                                        <?php } ?>
-                                                                    </center>
+                                                                <div class="form-group col-md-6">
+                                                                    <label class="form-label" for="Title One">Title One</label>
+                                                                    <input type="text" name="title_one" class="form-control" id="Title One" placeholder="Title One" value="<?= $row['title_one']; ?>" readonly>
                                                                 </div>
-                                                                <div class="form-group col-md-12">
-                                                                    <label class="form-label" for="Title">Title</label>
-                                                                    <input type="text" name="title" class="form-control" id="Title" placeholder="Title" value="<?= $row['title']; ?>" readonly>
+                                                                <div class="form-group col-md-6">
+                                                                    <label class="form-label" for="Title Two">Title Two</label>
+                                                                    <input type="text" name="title_two" class="form-control" id="Title Two" placeholder="Title Two" value="<?= $row['title_two']; ?>" readonly>
                                                                 </div>
                                                                 <div class="form-group col-md-12">
                                                                     <label class="form-label" for="Detail">Detail</label>
-                                                                    <textarea type="text" name="detail" class="texteditor" id="Detail" placeholder="Detail" readonly><?= $row['detail']; ?></textarea>
+                                                                    <textarea type="text" name="detail" class="form-control" id="Detail" placeholder="Detail" readonly><?= $row['detail']; ?></textarea>
                                                                     <input type="hidden" name="created_date" value="<?= date('Y-m-d h:m:i') ?>">
                                                                     <input type="hidden" name="created_by" value="<?= $this->session->userdata('username'); ?>">
                                                                 </div>
@@ -229,31 +224,26 @@
                                                 <div class="modal-dialog modal-lg" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Edit [About Asamu Solusi Mandiri] - ID <?= $row['id_product']; ?></h2>
+                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Edit [Product] - ID <?= $row['id_product']; ?></h2>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
-                                                        <form method="POST" action="<?= base_url('aboutus/updating') ?>" enctype="multipart/form-data">
+                                                        <form method="POST" action="<?= base_url('product/updating') ?>" enctype="multipart/form-data">
                                                             <div class="modal-body">
                                                                 <div class="row">
-                                                                    <div class="form-group col-md-12">
-                                                                        <center>
-                                                                            <?php if ($row['photo'] == NULL) { ?>
-                                                                                <img src="https://karangsari-sukodono.lumajangkab.go.id/assets-front/images/image-not-found.jpg" style="width: 144px;height: 144px;">
-                                                                            <?php } else { ?>
-                                                                                <img src="<?= base_url('modes/images/about/photo/' . $row['photo']); ?>" style="width: 30%;height: auto;">
-                                                                            <?php } ?>
-                                                                        </center>
+                                                                    <div class="form-group col-md-6">
+                                                                        <label class="form-label" for="Title One">Title One</label>
+                                                                        <input type="text" name="title_one" class="form-control" id="Title One" placeholder="Title One" value="<?= $row['title_one']; ?>">
                                                                     </div>
-                                                                    <div class="form-group col-md-12">
-                                                                        <label class="form-label" for="Title">Title</label>
-                                                                        <input type="text" name="title" class="form-control" id="Title" placeholder="Title" value="<?= $row['title']; ?>">
+                                                                    <div class="form-group col-md-6">
+                                                                        <label class="form-label" for="Title Two">Title Two</label>
+                                                                        <input type="text" name="title_two" class="form-control" id="Title Two" placeholder="Title Two" value="<?= $row['title_two']; ?>">
                                                                     </div>
                                                                     <div class="form-group col-md-12">
                                                                         <label class="form-label" for="Detail">Detail</label>
-                                                                        <textarea type="text" name="detail" class="texteditor" id="Detail" placeholder="Detail"><?= $row['detail']; ?></textarea>
+                                                                        <textarea type="text" name="detail" class="form-control" id="Detail" placeholder="Detail"><?= $row['detail']; ?></textarea>
                                                                         <input type="hidden" name="created_date" value="<?= date('Y-m-d h:m:i') ?>">
                                                                         <input type="hidden" name="created_by" value="<?= $this->session->userdata('username'); ?>">
-                                                                        <input type="hidden" name="id_product" value="<?= $row['id_product']; ?>">
+                                                                        <input type="hidden" name="id_product" class="form-control" value="<?= $row['id_product']; ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -271,24 +261,14 @@
                                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                                                            <h6 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Non-Active [About Asamu Solusi Mandiri] - ID <?= $row['id_product']; ?></h6>
+                                                            <h6 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Non-Active [Product] - ID <?= $row['id_product']; ?></h6>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
-                                                        <form method="POST" action="<?= base_url('aboutus/nonactive') ?>" enctype="multipart/form-data">
+                                                        <form method="POST" action="<?= base_url('product/nonactive') ?>" enctype="multipart/form-data">
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="form-group col-md-12">
                                                                         <h5>Are you sure you want to deactivate the data?</h5>
-                                                                        <hr>
-                                                                        <div class="form-group col-md-12">
-                                                                            <center>
-                                                                                <?php if ($row['photo'] == NULL) { ?>
-                                                                                    <img src="https://karangsari-sukodono.lumajangkab.go.id/assets-front/images/image-not-found.jpg" style="width: 144px;height: 144px;">
-                                                                                <?php } else { ?>
-                                                                                    <img src="<?= base_url('modes/images/about/photo/' . $row['photo']); ?>" style="width: 30%;height: auto;">
-                                                                                <?php } ?>
-                                                                            </center>
-                                                                        </div>
                                                                         <input type="hidden" name="status" class="form-control" value="2">
                                                                         <input type="hidden" name="id_product" class="form-control" value="<?= $row['id_product']; ?>">
                                                                     </div>
@@ -308,24 +288,14 @@
                                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                                                            <h6 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Active [About Asamu Solusi Mandiri] - ID <?= $row['id_product']; ?></h6>
+                                                            <h6 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Active [Product] - ID <?= $row['id_product']; ?></h6>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
-                                                        <form method="POST" action="<?= base_url('aboutus/active') ?>" enctype="multipart/form-data">
+                                                        <form method="POST" action="<?= base_url('product/active') ?>" enctype="multipart/form-data">
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="form-group col-md-12">
                                                                         <h5>Are you sure you want to Activate the data?</h5>
-                                                                        <hr>
-                                                                        <div class="form-group col-md-12">
-                                                                            <center>
-                                                                                <?php if ($row['photo'] == NULL) { ?>
-                                                                                    <img src="https://karangsari-sukodono.lumajangkab.go.id/assets-front/images/image-not-found.jpg" style="width: 144px;height: 144px;">
-                                                                                <?php } else { ?>
-                                                                                    <img src="<?= base_url('modes/images/about/photo/' . $row['photo']); ?>" style="width: 30%;height: auto;">
-                                                                                <?php } ?>
-                                                                            </center>
-                                                                        </div>
                                                                         <input type="hidden" name="status" class="form-control" value="1">
                                                                         <input type="hidden" name="id_product" class="form-control" value="<?= $row['id_product']; ?>">
                                                                     </div>
@@ -339,30 +309,20 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- End Aktif -->
+                                            <!-- End Active -->
                                             <!-- Delete  -->
                                             <div id="Delete<?= $row['id_product']; ?>" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="background: linear-gradient(45deg, #f44336a1, #f44336a1);">
                                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                                                            <h6 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Delete Data [About Asamu Solusi Mandiri] - ID <?= $row['id_product']; ?></h6>
+                                                            <h6 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Delete Data [Product] - ID <?= $row['id_product']; ?></h6>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
-                                                        <form method="POST" action="<?= base_url('sliders/delete') ?>" enctype="multipart/form-data">
+                                                        <form method="POST" action="<?= base_url('product/delete') ?>" enctype="multipart/form-data">
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="form-group col-md-12">
                                                                         <h5>Are you sure you want to delete this?</h5>
-                                                                        <hr>
-                                                                        <div class="form-group col-md-12">
-                                                                            <center>
-                                                                                <?php if ($row['photo'] == NULL) { ?>
-                                                                                    <img src="https://karangsari-sukodono.lumajangkab.go.id/assets-front/images/image-not-found.jpg" style="width: 144px;height: 144px;">
-                                                                                <?php } else { ?>
-                                                                                    <img src="<?= base_url('modes/images/about/photo/' . $row['photo']); ?>" style="width: 30%;height: auto;">
-                                                                                <?php } ?>
-                                                                            </center>
-                                                                        </div>
                                                                         <input type="hidden" name="id_product" class="form-control" value="<?= $row['id_product']; ?>">
                                                                     </div>
                                                                 </div>
@@ -401,20 +361,20 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                        <h4 style="color: #fff;">[Tables] Data About Asamu Solusi Mandiri </h4>
+                        <h4 style="color: #fff;">[Tables] Data List Product </h4>
                         <span class="d-block m-t-5"><small style="color: #fff;">Last update - </small><code><?= tanggal_indo(date('d-m-Y'), true) ?></code> </span>
                     </div>
                     <div class="card-body table-border-style">
-                        <!-- Add Data sliders -->
-                        <button type="button" class="btn btn-sm btn-icon btn-success" data-toggle="modal" data-target="#exampleModalCenter"><i data-feather="check-circle"></i> Add Data</button>
-                        <div id="exampleModalCenter" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="background: linear-gradient(45deg, rgb(174 176 255 / 0%), rgb(174, 176, 255));">
+                        <!-- Add Data Product List -->
+                        <button type="button" class="btn btn-sm btn-icon btn-success" data-toggle="modal" data-target="#exampleModalCenterList"><i data-feather="check-circle"></i> Add Data</button>
+                        <div id="exampleModalCenterList" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="background: linear-gradient(45deg, rgb(174 176 255 / 0%), rgb(174, 176, 255));">
                             <div class="modal-dialog modal-lg" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                                        <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Add Data [About Asamu Solusi Mandiri]</h2>
+                                        <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Add Data [List Product]</h2>
                                         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                     </div>
-                                    <form method="POST" action="<?= base_url('aboutus/adding') ?>" enctype="multipart/form-data">
+                                    <form method="POST" action="<?= base_url('product/addinglistP') ?>" enctype="multipart/form-data">
                                         <div class="modal-body">
                                             <div class="row">
                                                 <div class="form-group col-md-12">
@@ -460,8 +420,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php if ($data_product) : $no = 0;
-                                        foreach ($data_product as $row) : $no++; ?>
+                                    <?php if ($data_product_list) : $no = 0;
+                                        foreach ($data_product_list as $row) : $no++; ?>
                                             <tr>
                                                 <td><?= $no ?></td>
                                                 <?php if ($row['photo'] == NULL) { ?>
@@ -470,7 +430,7 @@
                                                     </td>
                                                 <?php } else { ?>
                                                     <td style="display:block;text-align:center;">
-                                                        <img src="<?= base_url('modes/images/about/photo/' . $row['photo']); ?>" style="width: 35px;height: 35px;border-radius: 50%;">
+                                                        <img src="<?= base_url('modes/images/product/photo/' . $row['photo']); ?>" style="width: 35px;height: 35px;border-radius: 50%;background: #eee">
                                                     </td>
                                                 <?php } ?>
                                                 <?php if ($row['title'] == NULL) { ?>
@@ -478,16 +438,6 @@
                                                 <?php } else { ?>
                                                     <td><?= $row['title']; ?></td>
                                                 <?php } ?>
-                                                <!-- <?php if ($row['detail'] == NULL) { ?>
-                                                    <td><i style="color: red;">NULL</i></td>
-                                                <?php } else { ?>
-                                                    <?php
-                                                            $num_char = 20;
-                                                            $text = $row['detail'];
-                                                            $show = substr($text, 0, $num_char) . '...';
-                                                    ?>
-                                                    <td><?= $show; ?></td>
-                                                <?php } ?> -->
                                                 <td><?= $row['created_date']; ?></td>
                                                 <!-- STATUS -->
                                                 <?php if ($row['status'] == '1') { ?>
@@ -498,24 +448,24 @@
                                                 <td>
                                                     <button class="btn btn-sm btn-warning dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#Detail<?= $row['id_product']; ?>"><i class="fa fa-eye"></i> Detail</a>
-                                                        <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#Edit<?= $row['id_product']; ?>"><i class="fa fa-edit"></i> Edit</a>
-                                                        <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#ChangePhoto<?= $row['id_product']; ?>"><i class="fa fa-image"></i> Change Photo</a>
+                                                        <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#DetailLP<?= $row['id_product_list']; ?>"><i class="fa fa-eye"></i> Detail</a>
+                                                        <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#EditLP<?= $row['id_product_list']; ?>"><i class="fa fa-edit"></i> Edit</a>
+                                                        <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#ChangePhoto<?= $row['id_product_list']; ?>"><i class="fa fa-image"></i> Change Photo</a>
                                                         <?php if ($row['status'] == '1') { ?>
-                                                            <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#Non-Active<?= $row['id_product']; ?>"><i class="fa fa-ban" aria-hidden="true"></i> Non-Active</a>
+                                                            <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#Non-ActiveLP<?= $row['id_product_list']; ?>"><i class="fa fa-ban" aria-hidden="true"></i> Non-Active</a>
                                                         <?php } else if ($row['status'] == '2') { ?>
-                                                            <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#Active<?= $row['id_product']; ?>"><i class="fa fa-check" aria-hidden="true"></i> Active</a>
+                                                            <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#ActiveLP<?= $row['id_product_list']; ?>"><i class="fa fa-check" aria-hidden="true"></i> Active</a>
                                                         <?php } ?>
-                                                        <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#Delete<?= $row['id_product']; ?>"><i class="fa fa-trash"></i> Delete</a>
+                                                        <a class="dropdown-item" href="#!" data-toggle="modal" data-target="#DeleteLP<?= $row['id_product_list']; ?>"><i class="fa fa-trash"></i> Delete</a>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <!-- Detail -->
-                                            <div id="Detail<?= $row['id_product']; ?>" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <div id="DetailLP<?= $row['id_product_list']; ?>" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                 <div class="modal-dialog modal-lg" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Detail [About Asamu Solusi Mandiri] - ID <?= $row['id_product']; ?></h2>
+                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Detail [List Product] - ID <?= $row['id_product_list']; ?></h2>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <div class="modal-body">
@@ -525,7 +475,7 @@
                                                                         <?php if ($row['photo'] == NULL) { ?>
                                                                             <img src="https://karangsari-sukodono.lumajangkab.go.id/assets-front/images/image-not-found.jpg" style="width: 144px;height: 144px;">
                                                                         <?php } else { ?>
-                                                                            <img src="<?= base_url('modes/images/about/photo/' . $row['photo']); ?>" style="width: 30%;height: auto;">
+                                                                            <img src="<?= base_url('modes/images/product/photo/' . $row['photo']); ?>" style="width: 30%;height: auto;">
                                                                         <?php } ?>
                                                                     </center>
                                                                 </div>
@@ -549,14 +499,14 @@
                                             </div>
                                             <!-- End Detail -->
                                             <!-- Edit -->
-                                            <div id="Edit<?= $row['id_product']; ?>" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <div id="EditLP<?= $row['id_product_list']; ?>" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                 <div class="modal-dialog modal-lg" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Edit [About Asamu Solusi Mandiri] - ID <?= $row['id_product']; ?></h2>
+                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Edit [List Product] - ID <?= $row['id_product_list']; ?></h2>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
-                                                        <form method="POST" action="<?= base_url('aboutus/updating') ?>" enctype="multipart/form-data">
+                                                        <form method="POST" action="<?= base_url('product/updatinglistP') ?>" enctype="multipart/form-data">
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="form-group col-md-12">
@@ -564,7 +514,7 @@
                                                                             <?php if ($row['photo'] == NULL) { ?>
                                                                                 <img src="https://karangsari-sukodono.lumajangkab.go.id/assets-front/images/image-not-found.jpg" style="width: 144px;height: 144px;">
                                                                             <?php } else { ?>
-                                                                                <img src="<?= base_url('modes/images/about/photo/' . $row['photo']); ?>" style="width: 30%;height: auto;">
+                                                                                <img src="<?= base_url('modes/images/product/photo/' . $row['photo']); ?>" style="width: 30%;height: auto;">
                                                                             <?php } ?>
                                                                         </center>
                                                                     </div>
@@ -577,7 +527,7 @@
                                                                         <textarea type="text" name="detail" class="texteditor" id="Detail" placeholder="Detail"><?= $row['detail']; ?></textarea>
                                                                         <input type="hidden" name="created_date" value="<?= date('Y-m-d h:m:i') ?>">
                                                                         <input type="hidden" name="created_by" value="<?= $this->session->userdata('username'); ?>">
-                                                                        <input type="hidden" name="id_product" value="<?= $row['id_product']; ?>">
+                                                                        <input type="hidden" name="id_product_list" value="<?= $row['id_product_list']; ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -591,14 +541,14 @@
                                             </div>
                                             <!-- End Edit -->
                                             <!-- Change Photo -->
-                                            <div id="ChangePhoto<?= $row['id_product']; ?>" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <div id="ChangePhoto<?= $row['id_product_list']; ?>" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                 <div class="modal-dialog modal-lg" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Change Photo [About Asamu Solusi Mandiri] - ID <?= $row['id_product']; ?></h2>
+                                                            <h2 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Change Photo [List Product] - ID <?= $row['id_product_list']; ?></h2>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
-                                                        <form method="POST" action="<?= base_url('aboutus/changephoto') ?>" enctype="multipart/form-data">
+                                                        <form method="POST" action="<?= base_url('product/changephoto') ?>" enctype="multipart/form-data">
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="form-group col-md-12">
@@ -606,7 +556,7 @@
                                                                             <?php if ($row['photo'] == NULL) { ?>
                                                                                 <img src="https://karangsari-sukodono.lumajangkab.go.id/assets-front/images/image-not-found.jpg" style="width: 144px;height: 144px;">
                                                                             <?php } else { ?>
-                                                                                <img src="<?= base_url('modes/images/about/photo/' . $row['photo']); ?>" style="width: 30%;height: auto;">
+                                                                                <img src="<?= base_url('modes/images/product/photo/' . $row['photo']); ?>" style="width: 30%;height: auto;">
                                                                             <?php } ?>
                                                                         </center>
                                                                     </div>
@@ -626,7 +576,7 @@
                                                                         <textarea type="text" name="detail" class="texteditor" id="Detail" placeholder="Detail" readonly><?= $row['detail']; ?></textarea>
                                                                         <input type="hidden" name="created_date" value="<?= date('Y-m-d h:m:i') ?>">
                                                                         <input type="hidden" name="created_by" value="<?= $this->session->userdata('username'); ?>">
-                                                                        <input type="hidden" name="id_product" value="<?= $row['id_product']; ?>">
+                                                                        <input type="hidden" name="id_product_list" value="<?= $row['id_product_list']; ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -640,14 +590,14 @@
                                             </div>
                                             <!-- End Change Photo -->
                                             <!-- Non-Active -->
-                                            <div id="Non-Active<?= $row['id_product']; ?>" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="background: linear-gradient(45deg, #f44336a1, #f44336a1);">
+                                            <div id="Non-ActiveLP<?= $row['id_product_list']; ?>" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="background: linear-gradient(45deg, #f44336a1, #f44336a1);">
                                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                                                            <h6 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Non-Active [About Asamu Solusi Mandiri] - ID <?= $row['id_product']; ?></h6>
+                                                            <h6 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Non-Active [List Product] - ID <?= $row['id_product_list']; ?></h6>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
-                                                        <form method="POST" action="<?= base_url('aboutus/nonactive') ?>" enctype="multipart/form-data">
+                                                        <form method="POST" action="<?= base_url('product/nonactivelistP') ?>" enctype="multipart/form-data">
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="form-group col-md-12">
@@ -658,12 +608,12 @@
                                                                                 <?php if ($row['photo'] == NULL) { ?>
                                                                                     <img src="https://karangsari-sukodono.lumajangkab.go.id/assets-front/images/image-not-found.jpg" style="width: 144px;height: 144px;">
                                                                                 <?php } else { ?>
-                                                                                    <img src="<?= base_url('modes/images/about/photo/' . $row['photo']); ?>" style="width: 30%;height: auto;">
+                                                                                    <img src="<?= base_url('modes/images/product/photo/' . $row['photo']); ?>" style="width: 30%;height: auto;">
                                                                                 <?php } ?>
                                                                             </center>
                                                                         </div>
                                                                         <input type="hidden" name="status" class="form-control" value="2">
-                                                                        <input type="hidden" name="id_product" class="form-control" value="<?= $row['id_product']; ?>">
+                                                                        <input type="hidden" name="id_product_list" class="form-control" value="<?= $row['id_product_list']; ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -677,14 +627,14 @@
                                             </div>
                                             <!-- End Non-Active -->
                                             <!-- Active -->
-                                            <div id="Active<?= $row['id_product']; ?>" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="background: linear-gradient(45deg, #f44336a1, #f44336a1);">
+                                            <div id="ActiveLP<?= $row['id_product_list']; ?>" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="background: linear-gradient(45deg, #f44336a1, #f44336a1);">
                                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                                                            <h6 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Active [About Asamu Solusi Mandiri] - ID <?= $row['id_product']; ?></h6>
+                                                            <h6 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Active [List Product] - ID <?= $row['id_product_list']; ?></h6>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
-                                                        <form method="POST" action="<?= base_url('aboutus/active') ?>" enctype="multipart/form-data">
+                                                        <form method="POST" action="<?= base_url('product/activelistP') ?>" enctype="multipart/form-data">
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="form-group col-md-12">
@@ -695,12 +645,12 @@
                                                                                 <?php if ($row['photo'] == NULL) { ?>
                                                                                     <img src="https://karangsari-sukodono.lumajangkab.go.id/assets-front/images/image-not-found.jpg" style="width: 144px;height: 144px;">
                                                                                 <?php } else { ?>
-                                                                                    <img src="<?= base_url('modes/images/about/photo/' . $row['photo']); ?>" style="width: 30%;height: auto;">
+                                                                                    <img src="<?= base_url('modes/images/product/photo/' . $row['photo']); ?>" style="width: 30%;height: auto;">
                                                                                 <?php } ?>
                                                                             </center>
                                                                         </div>
                                                                         <input type="hidden" name="status" class="form-control" value="1">
-                                                                        <input type="hidden" name="id_product" class="form-control" value="<?= $row['id_product']; ?>">
+                                                                        <input type="hidden" name="id_product_list" class="form-control" value="<?= $row['id_product_list']; ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -712,16 +662,16 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- End Aktif -->
+                                            <!-- End Active -->
                                             <!-- Delete  -->
-                                            <div id="Delete<?= $row['id_product']; ?>" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="background: linear-gradient(45deg, #f44336a1, #f44336a1);">
+                                            <div id="DeleteLP<?= $row['id_product_list']; ?>" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="background: linear-gradient(45deg, #f44336a1, #f44336a1);">
                                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header" style="background: linear-gradient(298deg, #150757, #150757, #150757);">
-                                                            <h6 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Delete Data [About Asamu Solusi Mandiri] - ID <?= $row['id_product']; ?></h6>
+                                                            <h6 class="modal-title" id="exampleModalCenterTitle" style="color:#fff">Delete Data [List Product] - ID <?= $row['id_product_list']; ?></h6>
                                                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
-                                                        <form method="POST" action="<?= base_url('sliders/delete') ?>" enctype="multipart/form-data">
+                                                        <form method="POST" action="<?= base_url('product/deletelistP') ?>" enctype="multipart/form-data">
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="form-group col-md-12">
@@ -732,11 +682,11 @@
                                                                                 <?php if ($row['photo'] == NULL) { ?>
                                                                                     <img src="https://karangsari-sukodono.lumajangkab.go.id/assets-front/images/image-not-found.jpg" style="width: 144px;height: 144px;">
                                                                                 <?php } else { ?>
-                                                                                    <img src="<?= base_url('modes/images/about/photo/' . $row['photo']); ?>" style="width: 30%;height: auto;">
+                                                                                    <img src="<?= base_url('modes/images/product/photo/' . $row['photo']); ?>" style="width: 30%;height: auto;">
                                                                                 <?php } ?>
                                                                             </center>
                                                                         </div>
-                                                                        <input type="hidden" name="id_product" class="form-control" value="<?= $row['id_product']; ?>">
+                                                                        <input type="hidden" name="id_product_list" class="form-control" value="<?= $row['id_product_list']; ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -752,7 +702,7 @@
                                         <?php endforeach ?>
                                     <?php else : ?>
                                         <tr>
-                                            <td colspan="7">
+                                            <td colspan="6">
                                                 <center>
                                                     <label><i class="fa fa-search"></i> Data not found</label>
                                                 </center>

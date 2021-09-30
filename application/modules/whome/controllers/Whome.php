@@ -81,6 +81,20 @@ class Whome extends CI_Controller
 		$value['a_detail'] = $get_about[0]->detail;
 		// END ABOUT US
 
+		// PRODUCT
+		$get_product = $this->Master_model->get_data_product();
+		$value['p_title_one'] = $get_product[0]->title_one;
+		$value['p_title_two'] = $get_product[0]->title_two;
+		$value['p_detail'] = $get_product[0]->detail;
+		// END PRODUCT
+
+		// LIST PRODUCT
+		$get_lpproduct = $this->Master_model->get_data_lpproduct();
+		$value['lp_product'] = $get_lpproduct;
+		$get_lpproduct_c = $this->Master_model->get_data_lpproduct_count();
+		$value['t_lproduct'] = $get_lpproduct_c[0]->t_lproduct;
+		// END LIST PRODUCT
+
 		$this->load->view('modes/head', $value);
 		$this->load->view('modes/top-header', $value);
 		$this->load->view('modes/alert');
