@@ -41,6 +41,7 @@
 					<a href="#!" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">list_alt</i></span><span class="pc-mtext">Conctent All in One</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
 					<ul class="pc-submenu">
 						<li class="pc-item <?= $this->uri->segment(1) == "sliders" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('sliders') ?>">Sliders</a></li>
+						<li class="pc-item <?= $this->uri->segment(1) == "product" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('product') ?>">Product</a></li>
 						<li class="pc-item <?= $this->uri->segment(1) == "clients" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('clients') ?>">Clients</a></li>
 						<li class="pc-item <?= $this->uri->segment(1) == "counters" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('counters') ?>">Counters</a></li>
 						<li class="pc-item <?= $this->uri->segment(1) == "background" ? "active" : ""; ?>"><a class="pc-link" href="<?= base_url('background') ?>">Background</a></li>
