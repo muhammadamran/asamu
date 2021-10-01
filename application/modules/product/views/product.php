@@ -143,8 +143,8 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Title 1</th>
-                                        <th>Title 2</th>
+                                        <th>Title One</th>
+                                        <th>Title Two</th>
                                         <th>Created Date</th>
                                         <th style="text-align: center;">Status</th>
                                         <th>Action</th>
