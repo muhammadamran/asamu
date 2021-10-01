@@ -16,6 +16,12 @@ class Services_model extends CI_Model
            FROM tbl_services_home WHERE status='1' ORDER BY id_services_home DESC")->result_array();
     }
 
+    public function get_services_thome_d()
+    {
+        return $this->db->query("SELECT *
+           FROM tbl_services_home WHERE status='1' ORDER BY id_services_home DESC")->result();
+    }
+
     public function update_services_home($table, $dataHServices, $ID)
     {
 
@@ -41,6 +47,12 @@ class Services_model extends CI_Model
         return $this->db->query("SELECT *
            FROM tbl_services_home WHERE status='2' ORDER BY id_services_home DESC")->result_array();
     }
+
+    public function get_services_ponehome_d()
+    {
+        return $this->db->query("SELECT *
+           FROM tbl_services_home WHERE status='2' ORDER BY id_services_home DESC")->result();
+    }
     // END P1 SERVICES HOME
     // P2 SERVICES HOME
     public function get_services_ptwochome_count()
@@ -53,6 +65,12 @@ class Services_model extends CI_Model
     {
         return $this->db->query("SELECT *
            FROM tbl_services_home WHERE status='3' ORDER BY id_services_home DESC")->result_array();
+    }
+
+    public function get_services_ptwochome_d()
+    {
+        return $this->db->query("SELECT *
+           FROM tbl_services_home WHERE status='3' ORDER BY id_services_home DESC")->result();
     }
     // END P2 SERVICES HOME
     // LIST SERVICES

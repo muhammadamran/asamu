@@ -158,42 +158,35 @@
 </section>
 <!-- End Product -->
 <!-- Services -->
-<section class="about_section layout_padding-bottom">
+<section class="about_section layout_padding-bottom" style="background: linear-gradient(67deg, transparent, #aeb0ff, transparent);">
    <div class="container">
       <div class="heading_container heading_center" style="margin-bottom: 50px">
          <h2>
-            Our <span>Services</span>
+            <?= $th_title1; ?> <span><?= $th_title2; ?></span>
          </h2>
-         <p>
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-         </p>
+         <p><?= $th_detail; ?></p>
       </div>
-      <div class="row">
+      <hr>
+      <div class="row" style="margin-top: 50px">
          <div class="col-md-7">
             <div class="detail-box">
                <div class="heading_container">
-                  <h2>
-                     About
+                  <h2 style="font-size: 40px;">
+                     <?= $p1_title; ?>
                   </h2>
                </div>
                <p align="justify">
-                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                  in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-                  are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-                  the middle of text. All
+                  <?= $p1_detail; ?>
                </p>
             </div>
             <div class="detail-box">
                <div class="heading_container">
-                  <h2>
-                     About
+                  <h2 style="font-size: 20px;">
+                     <?= $p2_title; ?>
                   </h2>
                </div>
                <p align="justify">
-                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                  in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-                  are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-                  the middle of text. All
+                  <?= $p2_detail; ?>
                </p>
             </div>
          </div>

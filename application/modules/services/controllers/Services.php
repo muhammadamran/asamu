@@ -75,7 +75,7 @@ class Services extends CI_Controller
             }
             // END MASTER MODEL
 
-            // DATA SERVICES HOME4
+            // DATA SERVICES HOME
             // TITLE
             $get_count = $this->Services_model->get_services_thome_count();
             $value['t_title'] = $get_count[0]->t_title;

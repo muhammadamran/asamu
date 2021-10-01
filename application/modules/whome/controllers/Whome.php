@@ -10,6 +10,7 @@ class Whome extends CI_Controller
 		//LOAD MODELS
 		$this->load->model('Whome_model');
 		$this->load->model('Master_model');
+		$this->load->model('Services/Services_model');
 	}
 
 	public function index()
@@ -94,6 +95,31 @@ class Whome extends CI_Controller
 		$get_lpproduct_c = $this->Master_model->get_data_lpproduct_count();
 		$value['t_lproduct'] = $get_lpproduct_c[0]->t_lproduct;
 		// END LIST PRODUCT
+
+		// DATA SERVICES HOME
+		// TITLE
+		$get_count = $this->Services_model->get_services_thome_count();
+		$value['t_title'] = $get_count[0]->t_title;
+		$get_services_thome_d = $this->Services_model->get_services_thome_d();
+		$value['th_title1'] = $get_services_thome_d[0]->title_one;
+		$value['th_title2'] = $get_services_thome_d[0]->title_two;
+		$value['th_detail'] = $get_services_thome_d[0]->detail;
+		// END TITLE
+		// P1
+		$get_count = $this->Services_model->get_services_ponehome_count();
+		$value['pone_title'] = $get_count[0]->pone_title;
+		$get_services_ponehome_d = $this->Services_model->get_services_ponehome_d();
+		$value['p1_title'] = $get_services_ponehome_d[0]->title;
+		$value['p1_detail'] = $get_services_ponehome_d[0]->detail;
+		// END P1
+		// P2
+		$get_count = $this->Services_model->get_services_ptwochome_count();
+		$value['ptwo_title'] = $get_count[0]->ptwo_title;
+		$get_services_ptwochome_d = $this->Services_model->get_services_ptwochome_d();
+		$value['p2_title'] = $get_services_ptwochome_d[0]->title;
+		$value['p2_detail'] = $get_services_ptwochome_d[0]->detail;
+		// END P2
+		// END DATA SERVICES HOME
 
 		$this->load->view('modes/head', $value);
 		$this->load->view('modes/top-header', $value);
