@@ -129,8 +129,12 @@
                                                     </select>
                                                 </div>
                                                 <div class="form-group col-md-12">
+                                                    <label class="form-label" for="Detail One">Detail One</label>
+                                                    <textarea type="text" name="detail_one" class="form-control" id="Detail One" placeholder="Detail One"></textarea>
+                                                </div>
+                                                <div class="form-group col-md-12">
                                                     <label class="form-label" for="Detail">Detail</label>
-                                                    <textarea type="text" name="detail" class="form-control" id="Detail" placeholder="Detail"></textarea>
+                                                    <textarea type="text" name="detail" class="texteditor" id="Detail" placeholder="Detail"></textarea>
                                                     <input type="hidden" name="created_date" value="<?= date('Y-m-d h:m:i') ?>">
                                                     <input type="hidden" name="created_by" value="<?= $this->session->userdata('username'); ?>">
                                                 </div>
@@ -297,3 +301,9 @@
     </div>
 </section>
 <!-- [ Main Content ] end -->
+
+<script type="text/javascript" src="<?= base_url('modes/ckeditor/ckeditor.js'); ?>"></script>
+<script type="text/javascript" src="<?= base_url('modes/ckeditor/adapters/jquery.js'); ?>"></script>
+<script type="text/javascript">
+    $('textarea.texteditor').ckeditor();
+</script>
