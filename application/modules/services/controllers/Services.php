@@ -12,7 +12,6 @@ class Services extends CI_Controller
         $this->load->model('Master_model');
     }
 
-    // FUNCTION LIST SERVICES IN HERE
     // LIST SERVICES
     public function services_list()
     {
@@ -76,11 +75,25 @@ class Services extends CI_Controller
             }
             // END MASTER MODEL
 
-            // DATA SERVICES HOME
+            // DATA SERVICES HOME4
+            // TITLE
             $get_count = $this->Services_model->get_services_thome_count();
             $value['t_title'] = $get_count[0]->t_title;
             $get_services_thome = $this->Services_model->get_services_thome();
             $value['services_thome'] = $get_services_thome;
+            // END TITLE
+            // P1
+            $get_count = $this->Services_model->get_services_ponehome_count();
+            $value['pone_title'] = $get_count[0]->pone_title;
+            $get_services_ponehome = $this->Services_model->get_services_ponehome();
+            $value['services_pone'] = $get_services_ponehome;
+            // END P1
+            // P2
+            $get_count = $this->Services_model->get_services_ptwochome_count();
+            $value['ptwo_title'] = $get_count[0]->ptwo_title;
+            $get_services_ptwochome = $this->Services_model->get_services_ptwochome();
+            $value['services_ptwo'] = $get_services_ptwochome;
+            // END P2
             // END DATA SERVICES HOME
 
             // DATA SERVICES LIST
@@ -97,89 +110,6 @@ class Services extends CI_Controller
         }
     }
 
-    // ADD DATA SERVICES HOME
-    public function addingssh()
-    {
-        $dataHServices = array(
-            'title_one' => $this->input->post('title_one'),
-            'title_two' => $this->input->post('title_two'),
-            'detail' => $this->input->post('detail'),
-            'created_date' => $this->input->post('created_date'),
-            'created_by' => $this->input->post('created_by'),
-            'status' => '1'
-        );
-
-        $this->db->insert('tbl_services_home', $dataHServices);
-        $this->session->set_flashdata('success', "Data saved successfully!");
-        redirect('services/services_list');
-    }
-
-    // UPDATING SERVICES HOME
-    public function updatingssh()
-    {
-        $ID = $this->input->post('id_services_home');
-
-        $dataHServices = array(
-            'title_one' => $this->input->post('title_one'),
-            'title_two' => $this->input->post('title_two'),
-            'detail' => $this->input->post('detail'),
-        );
-
-        $this->Services_model->update_services_home('tbl_services_home', $dataHServices, $ID);
-        $this->session->set_flashdata('success', "Data saved successfully!");
-        redirect('services/services_list');
-    }
-
-    // DELETE LIST SERVICES
-    public function deletelssh()
-    {
-        $where = $this->input->post('id_services_home');
-
-        $this->Services_model->delete_services_home($where);
-        $this->session->set_flashdata('deletes', "Empty");
-        redirect('services/services_list');
-    }
-
-    // ADDING LIST SERVICES
-    public function addinglservices()
-    {
-        $dataLServices = array(
-            'name_services' => $this->input->post('name_services'),
-            'slogan' => $this->input->post('slogan')
-        );
-
-        $this->db->insert('tbl_services', $dataLServices);
-        $this->session->set_flashdata('success', "Data saved successfully!");
-        redirect('services/services_list');
-    }
-
-    // UPDATING LIST SERVICES
-    public function updatinglservices()
-    {
-        $ID = $this->input->post('id_services');
-
-        $dataLServices = array(
-            'name_services' => $this->input->post('name_services'),
-            'slogan' => $this->input->post('slogan')
-        );
-
-        $this->Services_model->update_list_services('tbl_services', $dataLServices, $ID);
-        $this->session->set_flashdata('success', "Data saved successfully!");
-        redirect('services/services_list');
-    }
-
-    // DELETE LIST SERVICES
-    public function deletelservices()
-    {
-        $where = $this->input->post('id_services');
-
-        $this->Services_model->delete_list_services($where);
-        $this->session->set_flashdata('deletes', "Empty");
-        redirect('services/services_list');
-    }
-    // END FUNCTION LIST SERVICES IN HERE
-
-    // FUNCTION CONTENT SERVICES IN HERE
     // CONTENT SERVICES
     public function services_content()
     {
@@ -261,6 +191,153 @@ class Services extends CI_Controller
         }
     }
 
+    // CONTROL TITLE SERVICES HOME
+    // ADD DATA
+    public function addingssh()
+    {
+        $dataHServices = array(
+            'title_one' => $this->input->post('title_one'),
+            'title_two' => $this->input->post('title_two'),
+            'detail' => $this->input->post('detail'),
+            'created_date' => $this->input->post('created_date'),
+            'created_by' => $this->input->post('created_by'),
+            'status' => '1'
+        );
+
+        $this->db->insert('tbl_services_home', $dataHServices);
+        $this->session->set_flashdata('success', "Data saved successfully!");
+        redirect('services/services_list');
+    }
+
+    // UPDATING
+    public function updatingssh()
+    {
+        $ID = $this->input->post('id_services_home');
+
+        $dataHServices = array(
+            'title_one' => $this->input->post('title_one'),
+            'title_two' => $this->input->post('title_two'),
+            'detail' => $this->input->post('detail'),
+        );
+
+        $this->Services_model->update_services_home('tbl_services_home', $dataHServices, $ID);
+        $this->session->set_flashdata('success', "Data saved successfully!");
+        redirect('services/services_list');
+    }
+
+    // DELETE
+    public function deletelssh()
+    {
+        $where = $this->input->post('id_services_home');
+
+        $this->Services_model->delete_services_home($where);
+        $this->session->set_flashdata('deletes', "Empty");
+        redirect('services/services_list');
+    }
+    // END CONTROL TITLE SERVICES HOME
+
+    // CONTROL P1 SERVICES HOME
+    // ADD
+    public function addingpsh()
+    {
+        $dataHServices = array(
+            'title' => $this->input->post('title'),
+            'detail' => $this->input->post('detail'),
+            'created_date' => $this->input->post('created_date'),
+            'created_by' => $this->input->post('created_by'),
+            'status' => '2'
+        );
+
+        $this->db->insert('tbl_services_home', $dataHServices);
+        $this->session->set_flashdata('success', "Data saved successfully!");
+        redirect('services/services_list');
+    }
+
+    // UPDATING
+    public function updatingpsh()
+    {
+        $ID = $this->input->post('id_services_home');
+
+        $dataHServices = array(
+            'title' => $this->input->post('title'),
+            'detail' => $this->input->post('detail'),
+        );
+
+        $this->Services_model->update_services_home('tbl_services_home', $dataHServices, $ID);
+        $this->session->set_flashdata('success', "Data saved successfully!");
+        redirect('services/services_list');
+    }
+
+    // DELETE
+    public function deletelpsh()
+    {
+        $where = $this->input->post('id_services_home');
+
+        $this->Services_model->delete_services_home($where);
+        $this->session->set_flashdata('deletes', "Empty");
+        redirect('services/services_list');
+    }
+    // END CONTROL P1 SERVICES HOME
+
+    // CONTROL P2 SERVICES HOME
+    // ADD
+    public function addingpshtwo()
+    {
+        $dataHServices = array(
+            'title' => $this->input->post('title'),
+            'detail' => $this->input->post('detail'),
+            'created_date' => $this->input->post('created_date'),
+            'created_by' => $this->input->post('created_by'),
+            'status' => '3'
+        );
+
+        $this->db->insert('tbl_services_home', $dataHServices);
+        $this->session->set_flashdata('success', "Data saved successfully!");
+        redirect('services/services_list');
+    }
+    // END CONTROL P2 SERVICES HOME
+
+    // CONTROL LIST SERVICES
+    // ADD
+    public function addinglservices()
+    {
+        $dataLServices = array(
+            'name_services' => $this->input->post('name_services'),
+            'slogan' => $this->input->post('slogan')
+        );
+
+        $this->db->insert('tbl_services', $dataLServices);
+        $this->session->set_flashdata('success', "Data saved successfully!");
+        redirect('services/services_list');
+    }
+
+    // UPDATING 
+    public function updatinglservices()
+    {
+        $ID = $this->input->post('id_services');
+
+        $dataLServices = array(
+            'name_services' => $this->input->post('name_services'),
+            'slogan' => $this->input->post('slogan')
+        );
+
+        $this->Services_model->update_list_services('tbl_services', $dataLServices, $ID);
+        $this->session->set_flashdata('success', "Data saved successfully!");
+        redirect('services/services_list');
+    }
+
+    // DELETE
+    public function deletelservices()
+    {
+        $where = $this->input->post('id_services');
+
+        $this->Services_model->delete_list_services($where);
+        $this->session->set_flashdata('deletes', "Empty");
+        redirect('services/services_list');
+    }
+    // END CONTROL LIST SERVICES
+
+    // CONTROL CONTENT SERVICES
     // FUNCTION UPLOAD PHOTO
     public function uploadphoto()
     {
@@ -301,7 +378,7 @@ class Services extends CI_Controller
         }
     }
 
-    // ADDING CONTENT SERVICES
+    // ADD
     public function addingcservices()
     {
         $picphoto = '';
@@ -340,7 +417,7 @@ class Services extends CI_Controller
                 'status' => '1'
             );
 
-            $this->db->insert('tbl_services_dtl', $dataCServices);
+            $this->db->insert('tbl_services_list', $dataCServices);
             $this->session->set_flashdata('success', "Data saved successfully!");
             redirect('services/services_content');
         } else {
@@ -348,6 +425,6 @@ class Services extends CI_Controller
             redirect('services/services_content');
         }
     }
-    // END FUNCTION CONTENT SERVICES IN HERE
+    // CONTROL CONTENT SERVICES
 
 }
