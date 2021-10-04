@@ -98,9 +98,9 @@
                   <li><a href="#">Alibaba Gold Supplier</a></li>
                </ul>
             </li>
-            <li class="dropdown"><a href="#"><span>Team</span> <i class="bi bi-chevron-down"></i></a>
+            <li class="dropdown"><a class="nav-link scrollto <?= $this->uri->segment(1) == "wteam" ? "active" : ""; ?>" href="<?= base_url(''); ?>" href="#"><span>Team</span> <i class="bi bi-chevron-down"></i></a>
                <ul>
-                  <li><a href="#">Team of Expert</a></li>
+                  <li><a class="<?= $this->uri->segment(1) == "wteam" ? "active" : ""; ?>" href="<?= base_url('wteam'); ?>">Team of Expert</a></li>
                </ul>
             </li>
             <li><a class="nav-link scrollto <?= $this->uri->segment(1) == "wcontactus" ? "active" : ""; ?>" href="<?= base_url('wcontactus'); ?>">Contact Us</a></li>
