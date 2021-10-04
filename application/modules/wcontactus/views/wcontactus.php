@@ -5,11 +5,11 @@
          <div class="col-12 col-sm-9 col-xl-6">
             <div class="breadcrumb-content text-center">
                <div class="heading_container heading_center">
-                  <h2 style="text-transform:uppercase">
-                     Contact Us
+                  <h2>
+                     CONTACT <span>US</span>
                   </h2>
                   <p>
-                     We'd Love to Hear From You!
+                     There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
                   </p>
                </div>
             </div>
