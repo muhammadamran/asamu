@@ -89,13 +89,13 @@
                   <li><a class="<?= $this->uri->segment(1) == "wvisionmission" ? "active" : ""; ?>" href="<?= base_url('wvisionmission'); ?>">Vision & Mission</a></li>
                </ul>
             </li>
-            <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <li class="dropdown"><a class="nav-link scrollto <?= $this->uri->segment(1) == "wservices" ? "active" : ""; ?>" href="<?= base_url(''); ?>" href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
                <ul>
-                  <li><a href="#">Air Cargo & Air Courier</a></li>
-                  <li><a href="#">Ocean FCL & LCL</a></li>
-                  <li><a href="#">Project Shipment</a></li>
-                  <li><a href="#">Customs Clearance</a></li>
-                  <li><a href="#">Alibaba Gold Supplier</a></li>
+                  <li><a href="<?= base_url('wservices'); ?>">Air Cargo & Air Courier</a></li>
+                  <li><a href="<?= base_url('wservices'); ?>">Ocean FCL & LCL</a></li>
+                  <li><a href="<?= base_url('wservices'); ?>">Project Shipment</a></li>
+                  <li><a href="<?= base_url('wservices'); ?>">Customs Clearance</a></li>
+                  <li><a href="<?= base_url('wservices'); ?>">Alibaba Gold Supplier</a></li>
                </ul>
             </li>
             <li class="dropdown"><a class="nav-link scrollto <?= $this->uri->segment(1) == "wteam" ? "active" : ""; ?>" href="<?= base_url(''); ?>" href="#"><span>Team</span> <i class="bi bi-chevron-down"></i></a>

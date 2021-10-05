@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="<?= base_url('assets/web/css/style.css'); ?>">
 <!-- HEADER -->
 <div class="breadcrumb-area bg-img bg-black-overlay section-padding-130 hero-image">
    <div class="container">
